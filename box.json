@@ -19,14 +19,14 @@
  {
  "kind": "styling",
  "tag": "com-sap-sample-coloredbox-styling",
- "url": "https://www.sample.com/customwidgets/coloredbox/coloredbox_styling.js",
+ "url": "https://cbeyondatanmd.github.io/widgets/coloredbox_styling.js",
  "integrity": "",
  "ignoreIntegrity": true
  },
  {
  "kind": "builder",
  "tag": "com-sap-sample-coloredbox-builder",
- "url": "https://www.sample.com/customwidgets/coloredbox/coloredbox_builder.js",
+ "url": "https://cbeyondatanmd.github.io/widgets/coloredbox_builder.js",
  "integrity": "",
  "ignoreIntegrity": true
  }
