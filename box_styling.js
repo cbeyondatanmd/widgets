@@ -13,7 +13,12 @@
  <input type="submit" style="display:none;">
  </fieldset>
  </form>
- `;
+  <style>
+ :host {
+ display: block;
+ padding: 1em 1em 1em 1em;
+ }
+ </style>`;
  class BoxStylingPanel extends HTMLElement {
  constructor() {
  super();
