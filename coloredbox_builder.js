@@ -45,5 +45,5 @@ this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.
  return this._shadowRoot.getElementById("builder_opacity").value;
  }
  }
- customElements.define("com-sap-sample-coloredbox-builder", ColoredBoxBuilderPanel);
+ customElements.define("com-sample-box", Box);
 })();
