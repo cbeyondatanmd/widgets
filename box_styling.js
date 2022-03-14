@@ -6,7 +6,7 @@
  <legend>Box Properties</legend>
  <table>
  <tr>
- <td>Color</td>
+ <td>Color Settings</td>
  <td><input id="styling_color" type="text" size="40" maxlength="40"></td>
  </tr>
  </table>
