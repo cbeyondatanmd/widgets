@@ -6,19 +6,14 @@
  <legend>Box Properties</legend>
  <table>
  <tr>
- <td>Color Settings</td>
+ <td>Color</td>
  <td><input id="styling_color" type="text" size="40" maxlength="40"></td>
  </tr>
  </table>
  <input type="submit" style="display:none;">
  </fieldset>
  </form>
-  <style>
- :host {
- display: block;
- padding: 1em 1em 1em 1em;
- }
- </style>`;
+ `;
  class BoxStylingPanel extends HTMLElement {
  constructor() {
  super();
@@ -40,6 +35,19 @@ this._submit.bind(this));
  }
  set color(newColor) {
  this._shadowRoot.getElementById("styling_color").value = newColor;
+// Find a <table> element with id="myTable":
+var table = this._shadowRoot.getElementById("myTable");
+
+// Create an empty <tr> element and add it to the 1st position of the table:
+var row = table.insertRow(0);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+
+// Add some text to the new cells:
+cell1.innerHTML = "NEW CELL1";
+cell2.innerHTML = "NEW CELL2";
  }
  get color() {
  return this._shadowRoot.getElementById("styling_color").value;
