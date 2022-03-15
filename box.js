@@ -5,15 +5,7 @@
 
 </table>
 
- <style>
- :host {
- border-radius: 25px;
- border-width: 4px;
- border-color: black;
- border-style: solid;
- display: block;
- } 
- </style>
+
  `;
  class Box extends HTMLElement {
  constructor() {
