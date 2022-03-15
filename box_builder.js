@@ -33,14 +33,10 @@ this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.
  this.dispatchEvent(new CustomEvent("propertiesChanged", {
  detail: {
  properties: {
- opacity: this.opacity
+ addUrl: this._shadowRoot.getElementById("builder_opacity").value
  }
  }
  }));
-    var table = this._shadowRoot.getElementById("myTable");
-    var row = table.insertRow(0);
-    var cell1 = row.insertCell(0);
-    cell1.innerHTML=  '<a href="'+ changedProperties["addUrl"].split('|')[1] +'">'+ changedProperties["addUrl"].split('|')[0] +'</a>';
  }
  set opacity(newOpacity) {
  this._shadowRoot.getElementById("builder_opacity").value = newOpacity;
