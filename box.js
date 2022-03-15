@@ -34,14 +34,7 @@
     var table = this.shadowRoot.getElementById("myTable");
     var row = table.insertRow(0);
     var cell1 = row.insertCell(0);
-  
-    var link = this.shadowRoot.createElement("a");
-    link.setAttribute("href", changedProperties["dumb"].split('|')[1])
-
-    var linkText = this.shadowRoot.createTextNode(changedProperties["dumb"].split('|')[0]);
-    link.appendChild(linkText);
-    cell1.appendChild(link);  
-  
+    cell1.innerHTML=  '<a href="'+ changedProperties["dumb"].split('|')[1] +'">'+ changedProperties["dumb"].split('|')[0] +'</a>';
  }  
  if ("color" in changedProperties) {
  this.style["background-color"] = changedProperties["color"];
