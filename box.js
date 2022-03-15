@@ -22,11 +22,11 @@
  this._props = { ...this._props, ...changedProperties };
  }
  onCustomWidgetAfterUpdate(changedProperties) {
- if ("dumb" in changedProperties) {
+ if ("addUrl" in changedProperties) {
     var table = this.shadowRoot.getElementById("myTable");
     var row = table.insertRow(0);
     var cell1 = row.insertCell(0);
-    cell1.innerHTML=  '<a href="'+ changedProperties["dumb"].split('|')[1] +'">'+ changedProperties["dumb"].split('|')[0] +'</a>';
+    cell1.innerHTML=  '<a href="'+ changedProperties["addUrl"].split('|')[1] +'">'+ changedProperties["addUrl"].split('|')[0] +'</a>';
  }  
  if ("color" in changedProperties) {
  this.style["background-color"] = changedProperties["color"];
