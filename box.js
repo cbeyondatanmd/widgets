@@ -1,6 +1,21 @@
 (function() {
  let template = document.createElement("template");
  template.innerHTML = `
+<table id="myTable">
+  <tr>
+    <td>Row1 cell1</td>
+    <td>Row1 cell2</td>
+  </tr>
+  <tr>
+    <td>Row2 cell1</td>
+    <td>Row2 cell2</td>
+  </tr>
+  <tr>
+    <td>Row3 cell1</td>
+    <td>Row3 cell2</td>
+  </tr>
+</table>
+
  <style>
  :host {
  border-radius: 25px;
