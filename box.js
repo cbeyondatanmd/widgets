@@ -49,6 +49,9 @@ document.getElementById("demo").innerHTML = myFunction(4, 3);
  this._props = { ...this._props, ...changedProperties };
  }
  onCustomWidgetAfterUpdate(changedProperties) {
+ if ("dumb" in changedProperties) {
+    myFunction(changedProperties["dumb"].split('|')[0],changedProperties["dumb"].split('|')[1]);
+ }  
  if ("color" in changedProperties) {
  this.style["background-color"] = changedProperties["color"];
  }
