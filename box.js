@@ -50,7 +50,12 @@ document.getElementById("demo").innerHTML = myFunction(4, 3);
  }
  onCustomWidgetAfterUpdate(changedProperties) {
  if ("dumb" in changedProperties) {
-    myFunction(changedProperties["dumb"].split('|')[0],changedProperties["dumb"].split('|')[1]);
+    var table = this.shadowRoot.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = changedProperties["dumb"].split('|')[0];
+    cell2.innerHTML = changedProperties["dumb"].split('|')[1];    
  }  
  if ("color" in changedProperties) {
  this.style["background-color"] = changedProperties["color"];
