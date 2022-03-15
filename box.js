@@ -32,7 +32,7 @@
  onCustomWidgetAfterUpdate(changedProperties) {
  if ("color" in changedProperties) {
  this.style["background-color"] = changedProperties["color"];
-var table = this._shadowRoot.getElementById("myTable");
+var table = this.shadowRoot.getElementById("myTable");
 
 // Create an empty <tr> element and add it to the 1st position of the table:
 var row = table.insertRow(0);
