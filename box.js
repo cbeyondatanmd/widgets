@@ -3,7 +3,7 @@
  template.innerHTML = `
 <script src="https://code.jquery.com/jquery.js">
 </script>
- 
+ <script>
 $("#myTable").click(function(){
    $(this).addClass('selected').siblings().removeClass('selected');    
    var value=$(this).find('td:first').html();
