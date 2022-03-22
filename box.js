@@ -11,11 +11,12 @@
 	}
 	/* Define the default color for all the table rows */
 	.hoverTable tr{
-		background: #b8d1f3;
+		background: rgb(41, 49, 58);
+         	foreground-color: rgb(255, 255, 255);		
 	}
 	/* Define the hover highlight color for the table row */
     .hoverTable tr:hover {
-          background-color: #ffff99;
+          background-color: rgb(40, 56, 72);
     }
 </style> 
 <table id="myTable" class="hoverTable">
