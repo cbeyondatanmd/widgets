@@ -25,14 +25,29 @@
     .hoverTable tr:hover {
           background-color: rgb(40, 56, 72);
     }
-.hoverTable	a:link,a:visited,a:hover,a:active {
-	  color: white;
-	  background-color: transparent;
-	  text-decoration: none;
-	  display: block;
-	  height:100%;
-	  width:100%;	  
-	  text-align:left; 
+a {
+
+	background-color:rgb(41, 49, 58);;
+	cursor:pointer;
+	color:white;
+	font-family:Calibri;
+	font-size:10.5pt;
+	font-weight:bold;
+	text-decoration:none;
+	padding:10pt 15pt;
+    display: block;
+	height:100%;
+    width:100%;	     
+}
+
+a:hover {
+	background-color:rgb(47, 62, 83);
+}
+a:active {
+	position:relative;
+	top:1px;
+}
+
 
 align-items:center
 	  font-family: "Calibri"; 
