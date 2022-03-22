@@ -77,6 +77,7 @@
 				var table = this.shadowRoot.getElementById("myTable");
 				var row = table.insertRow(0);
 				var cell1 = row.insertCell(0);
+				cell1.setAttribute("style", "cursor:pointer;");
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
 				cell1.innerHTML = '<a style="cursor: pointer;">' + changedProperties["addUrl"].split('|')[0] + '</a>';
