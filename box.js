@@ -81,7 +81,7 @@
 				var table = this.shadowRoot.getElementById("myTable");
 				var row = table.insertRow(0);
 				var cell1 = row.insertCell(0);
-				cell1.setAttribute("style", "cursor:pointer;");
+				cell1.setAttribute("style", "cursor:pointer; height:25pt;");
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
 				cell1.innerHTML = '<a style="font-family: "Calibri"; font-size: 10.5pt; font-weight: bold; cursor: pointer;">' + changedProperties["addUrl"].split('|')[0] + '</a>';
