@@ -7,9 +7,11 @@
 
 table, tr, td {
 
-	background-color:rgb(41, 49, 58);	     
+	background-color:rgb(41, 49, 58);	   
+    width:100%;
 
 }
+
 
 a {
 
@@ -23,7 +25,7 @@ a {
 	padding:10pt 15pt;
     display: block;
 	height:100%;
-    width:73%;	     
+    width:83%;	     
 }
 
 a:hover {
