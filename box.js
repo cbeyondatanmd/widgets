@@ -18,19 +18,11 @@
     .hoverTable tr:hover {
           background-color: rgb(40, 56, 72);
     }
-a:link, a:visited {
-  background-color: rgb(41, 49, 58);
-  color: white;
-
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  width:100%; 
-}
-
-a:hover, a:active {
-  background-color: rgb(40, 56, 72);
-}
+	a:link,a:visited,a:hover,a:active {
+	  color: white;
+	  background-color: transparent;
+	  text-decoration: none;
+	}
 </style> 
 <table id="myTable" class="hoverTable">
 
@@ -85,7 +77,14 @@ a:hover, a:active {
 				var table = this.shadowRoot.getElementById("myTable");
 				var row = table.insertRow(0);
 				var cell1 = row.insertCell(0);
+				if (changedProperties["addUrl"].split('|')[1].length === 0)
+				{
+				cell1.innerHTML = '<a>' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				}
+				else 
+				{
 				cell1.innerHTML = '<a href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				}
 				cell1.addEventListener("click", () => {
 					this._selectedItem = changedProperties["addUrl"].split('|')[0];
 				});
