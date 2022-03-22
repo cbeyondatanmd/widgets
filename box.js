@@ -7,7 +7,7 @@
 		border-collapse:collapse; 
 	}
 	.hoverTable td{ 
-		padding:7px; border:rgb(41, 49, 58) 1px solid;
+		border:rgb(41, 49, 58) 1px solid;
 	}
 	/* Define the default color for all the table rows */
 	.hoverTable tr{
