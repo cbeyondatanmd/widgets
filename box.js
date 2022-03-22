@@ -1,7 +1,8 @@
 (function() {
  let template = document.createElement("template");
  template.innerHTML = `
- <script>
+<script src="https://code.jquery.com/jquery.js">
+</script>
  
 $("#myTable").click(function(){
    $(this).addClass('selected').siblings().removeClass('selected');    
