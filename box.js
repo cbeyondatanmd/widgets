@@ -1,6 +1,15 @@
 (function() {
  let template = document.createElement("template");
  template.innerHTML = `
+ <script>
+ 
+$("#table tr").click(function(){
+   $(this).addClass('selected').siblings().removeClass('selected');    
+   var value=$(this).find('td:first').html();
+   alert(value);    
+});
+
+</script>
 <style style="text/css">
   	.hoverTable{
 		width:100%; 
