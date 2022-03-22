@@ -84,7 +84,7 @@
 				}
 				else 
 				{
-				cell1.innerHTML = '<a style="cursor: pointer;" href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a style="width:100%; cursor: pointer;" href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
 				}
 				cell1.addEventListener("click", () => {
 					this._selectedItem = changedProperties["addUrl"].split('|')[0];
