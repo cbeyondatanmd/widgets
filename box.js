@@ -1,6 +1,7 @@
 (function() {
 	let template = document.createElement("template");
 	template.innerHTML = `
+	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" />
 <style style="text/css">
   	.hoverTable{
 		width:100%; 
