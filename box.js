@@ -110,7 +110,6 @@ a:active {
 				var table = this.shadowRoot.getElementById("myTable");
 				var row = table.insertRow(0);
 				var cell1 = row.insertCell(0);
-				cell1.setAttribute("style", "cursor:pointer; height:25pt; text-align:center;");
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
 				cell1.innerHTML = '<a href="" onclick="return false;"><i class="fa-solid fa-user fa-lg"></i>' + changedProperties["addUrl"].split('|')[0] + '</a>';
