@@ -46,8 +46,7 @@
     var cell1 = row.insertCell(0);
     cell1.innerHTML=  '<a href="'+ changedProperties["addUrl"].split('|')[1] +'">'+ changedProperties["addUrl"].split('|')[0] +'</a>';
 cell1.addEventListener("click",() => {
-	console.log(this._props['color']);
-    alert(changedProperties["addUrl"].split('|')[0]);
+	this._props['selectedItem']=changedProperties["addUrl"].split('|')[0];
 });	 
  }  
  if ("color" in changedProperties) {
