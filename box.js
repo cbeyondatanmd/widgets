@@ -3,28 +3,12 @@
 	template.innerHTML = `
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" />
 <style style="text/css">
-  	.hoverTable{
-		width:100%; 
-		border-collapse:collapse; 
-	}
-	.hoverTable td{ 
-		border:rgb(41, 49, 58) 1px solid;
-	}
-	/* Define the default color for all the table rows */
-	.hoverTable tr{
-		background: rgb(41, 49, 58);
-         	color: white;
-		  text-align:left; 
-		  vertical-align: middle;
-		  font-family: "Calibri"; 
-		  font-size: 10.5pt; 
-		  font-weight: bold; 
-		  cursor: pointer;		
-	}
-	/* Define the hover highlight color for the table row */
-    .hoverTable tr:hover {
-          background-color: rgb(40, 56, 72);
-    }
+table {
+
+	background-color:rgb(41, 49, 58);;
+    
+}
+
 a {
 
 	background-color:rgb(41, 49, 58);;
@@ -48,16 +32,8 @@ a:active {
 	top:1px;
 }
 
-
-align-items:center
-	  font-family: "Calibri"; 
-	  font-size: 10.5pt; 
-	  font-weight: bold; 
-	  cursor: pointer;	  
-	}
-
 </style> 
-<table id="myTable" class="hoverTable">
+<table id="myTable">
 
 </table>
 
