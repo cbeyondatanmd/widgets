@@ -112,11 +112,11 @@ a:active {
 				var cell1 = row.insertCell(0);
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
-				cell1.innerHTML = '<a href="" onclick="return false;"><i class="fa-solid fa-user fa-lg"></i>' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a href="" onclick="return false;"><i class="fa-solid fa-user fa-lg"></i>' + &nbsp;&nbsp; + changedProperties["addUrl"].split('|')[0] + &nbsp;&nbsp; + '</a>';
 				}
 				else 
 				{
-				cell1.innerHTML = '<a href="' + changedProperties["addUrl"].split('|')[1] + '"><i class="fa-solid fa-user fa-lg"></i>' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a href="' + changedProperties["addUrl"].split('|')[1] + '"><i class="fa-solid fa-user fa-lg"></i>' + &nbsp;&nbsp; + changedProperties["addUrl"].split('|')[0] + &nbsp;&nbsp; + '</a>';
 				}
 				cell1.addEventListener("click", () => {
 					this._selectedItem = changedProperties["addUrl"].split('|')[0];
