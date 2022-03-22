@@ -22,7 +22,7 @@
 	  color: white;
 	  background-color: transparent;
 	  text-decoration: none;
-	  display: inline-block;
+	  display: block;
 	  height:100%;
 	  width:100%;	  
 	  text-align:center; 
