@@ -81,14 +81,14 @@
 				var table = this.shadowRoot.getElementById("myTable");
 				var row = table.insertRow(0);
 				var cell1 = row.insertCell(0);
-				cell1.setAttribute("style", "cursor:pointer; height:25pt;");
+				cell1.setAttribute("style", "cursor:pointer; height:25pt; text-align:center;");
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
-				cell1.innerHTML = '<a style="text-align:center font-family: "Calibri"; font-size: 10.5pt; font-weight: bold; cursor: pointer;">' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a style="text-align:center; font-family: "Calibri"; font-size: 10.5pt; font-weight: bold; cursor: pointer;">' + changedProperties["addUrl"].split('|')[0] + '</a>';
 				}
 				else 
 				{
-				cell1.innerHTML = '<a style="text-align:center font-family: "Calibri"; font-size: 10.5pt; font-weight: bold; cursor: pointer;" href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a style="text-align:center; font-family: "Calibri"; font-size: 10.5pt; font-weight: bold; cursor: pointer;" href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
 				}
 				cell1.addEventListener("click", () => {
 					this._selectedItem = changedProperties["addUrl"].split('|')[0];
