@@ -26,19 +26,19 @@
 
  `;
 class Box extends /* ... */ {
- var _text;
- setText(newText) {
- this._text = newText;
+ var _selectedItem;
+ setSelected(newSelected) {
+ this._selectedItem = newSelected;
  // fire "properties changed"
  this.dispatchEvent(new CustomEvent("propertiesChanged", {
  detail: {
  properties: {
- text: this._text
+ selectedItem: this._selectedItem
  }
  }));
  }
- getText() {
- return this._text;
+ getSelected() {
+ return this._selectedItem;
  }
 };
  
