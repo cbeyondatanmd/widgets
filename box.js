@@ -44,7 +44,7 @@ a:active {
 <table id="myTable">
 <tr>
 <td>
-<a onclick="return false;" href="#"><i class="fa-solid fa-user fa-lg"></i>&nbsp;&nbsp;DASHBOARD&nbsp;&nbsp;</a>
+<a onclick="return false;" href="/sap/fpa/ui/app.html#/analyticapp&/aa/E5094E0008018CB1B7A6999F14E3E0D1"><i class="fa-solid fa-user fa-lg"></i>&nbsp;&nbsp;WORKFLOW&nbsp;&nbsp;</a>
 </td>
 </tr>
 <tr>
