@@ -25,7 +25,7 @@
 
 
  `;
-class Box extends /* ... */ {
+class Box extends selectedItem {
  var _selectedItem;
  setSelected(newSelected) {
  this._selectedItem = newSelected;
