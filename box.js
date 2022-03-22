@@ -14,6 +14,7 @@
 		background: rgb(41, 49, 58);
          	color: white;
 		  text-align:left; 
+		  vertical-align: middle;
 		  font-family: "Calibri"; 
 		  font-size: 10.5pt; 
 		  font-weight: bold; 
@@ -31,6 +32,7 @@
 	  height:100%;
 	  width:100%;	  
 	  text-align:left; 
+vertical-align: middle;	  
 	  font-family: "Calibri"; 
 	  font-size: 10.5pt; 
 	  font-weight: bold; 
