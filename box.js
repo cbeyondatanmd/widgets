@@ -1,7 +1,24 @@
 (function() {
  let template = document.createElement("template");
  template.innerHTML = `
-<table id="myTable">
+<style style="text/css">
+  	.hoverTable{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.hoverTable td{ 
+		padding:7px; border:#4e95f4 1px solid;
+	}
+	/* Define the default color for all the table rows */
+	.hoverTable tr{
+		background: #b8d1f3;
+	}
+	/* Define the hover highlight color for the table row */
+    .hoverTable tr:hover {
+          background-color: #ffff99;
+    }
+</style> 
+<table id="myTable" class="hoverTable">
 
 </table>
 
