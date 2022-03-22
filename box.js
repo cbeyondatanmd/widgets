@@ -1,15 +1,6 @@
 (function() {
  let template = document.createElement("template");
  template.innerHTML = `
-<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
- <script>
-$("#myTable").click(function(){
-   $(this).addClass('selected').siblings().removeClass('selected');    
-   var value=$(this).find('td:first').html();
-   alert(value);    
-});
-
-</script>
 <style style="text/css">
   	.hoverTable{
 		width:100%; 
@@ -54,6 +45,9 @@ $("#myTable").click(function(){
     var row = table.insertRow(0);
     var cell1 = row.insertCell(0);
     cell1.innerHTML=  '<a href="'+ changedProperties["addUrl"].split('|')[1] +'">'+ changedProperties["addUrl"].split('|')[0] +'</a>';
+cell1.addEventListener("click",function(){
+    alert(changedProperties["addUrl"].split('|')[0]);
+});	 
  }  
  if ("color" in changedProperties) {
  this.style["background-color"] = changedProperties["color"];
