@@ -21,7 +21,7 @@
 a:link, a:visited {
   background-color: rgb(41, 49, 58);
   color: white;
-  padding: 15px 25px;
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
