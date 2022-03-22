@@ -21,7 +21,7 @@ $("#myTable").click(function(){
 	/* Define the default color for all the table rows */
 	.hoverTable tr{
 		background: rgb(41, 49, 58);
-         	foreground-color: rgb(255, 255, 255);		
+         	foreground: rgb(255, 255, 255);		
 	}
 	/* Define the hover highlight color for the table row */
     .hoverTable tr:hover {
