@@ -94,7 +94,7 @@
 				cell1.setAttribute("style", "cursor:pointer; height:25pt; text-align:center;");
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
-				cell1.innerHTML = '<a>' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a href="" onclick="return false;">' + changedProperties["addUrl"].split('|')[0] + '</a>';
 				}
 				else 
 				{
