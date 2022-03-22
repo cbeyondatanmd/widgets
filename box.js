@@ -84,11 +84,11 @@
 				cell1.setAttribute("style", "cursor:pointer;");
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
-				cell1.innerHTML = '<a style="cursor: pointer;">' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a style="font-family: "Calibri"; font-size: 10.5pt; font-weight: bold; cursor: pointer;">' + changedProperties["addUrl"].split('|')[0] + '</a>';
 				}
 				else 
 				{
-				cell1.innerHTML = '<a style="cursor: pointer;" href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a style="font-family: "Calibri"; font-size: 10.5pt; font-weight: bold; cursor: pointer;" href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
 				}
 				cell1.addEventListener("click", () => {
 					this._selectedItem = changedProperties["addUrl"].split('|')[0];
