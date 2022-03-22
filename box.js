@@ -113,11 +113,11 @@ align-items:center
 				cell1.setAttribute("style", "cursor:pointer; height:25pt; text-align:center;");
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
-				cell1.innerHTML = '<a href="" onclick="return false;">' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a href="" onclick="return false;"><i class="fa-solid fa-user fa-lg">' + changedProperties["addUrl"].split('|')[0] + '</a>';
 				}
 				else 
 				{
-				cell1.innerHTML = '<a href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a href="' + changedProperties["addUrl"].split('|')[1] + '"><i class="fa-solid fa-user fa-lg">' + changedProperties["addUrl"].split('|')[0] + '</a>';
 				}
 				cell1.addEventListener("click", () => {
 					this._selectedItem = changedProperties["addUrl"].split('|')[0];
