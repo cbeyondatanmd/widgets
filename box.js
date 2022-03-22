@@ -22,12 +22,11 @@
 	  color: white;
 	  background-color: transparent;
 	  text-decoration: none;
+	  display: inline-block;
+	  height:100%;
+	  width:100%;	  
 	}
-	td a {
-  display: inline-block;
-  height:100%;
-  width:100%;
-}
+
 </style> 
 <table id="myTable" class="hoverTable">
 
