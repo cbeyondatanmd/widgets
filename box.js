@@ -44,12 +44,12 @@ a:active {
 <table id="myTable">
 <tr>
 <td>
-<a onclick="return false;" href="/sap/fpa/ui/app.html#/analyticapp&/aa/E5094E0008018CB1B7A6999F14E3E0D1"><i class="fa-solid fa-user fa-lg"></i>&nbsp;&nbsp;WORKFLOW&nbsp;&nbsp;</a>
+<a href="/sap/fpa/ui/app.html#/analyticapp&/aa/E5094E0008018CB1B7A6999F14E3E0D1"><i class="fa-solid fa-user fa-lg"></i>&nbsp;&nbsp;WORKFLOW&nbsp;&nbsp;</a>
 </td>
 </tr>
 <tr>
 <td>
-<a onclick="return false;" href="#"><i class="fa-solid fa-user fa-lg"></i>&nbsp;&nbsp;CONTEXT&nbsp;&nbsp;</a>
+<a href="/sap/fpa/ui/app.html#/analyticapp&/aa/1D014E0008045C61D98AAEB6273E52D0"><i class="fa-solid fa-user fa-lg"></i>&nbsp;&nbsp;DASHBOARD&nbsp;&nbsp;</a>
 </td>
 </tr>
 </table>
