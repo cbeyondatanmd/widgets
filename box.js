@@ -32,7 +32,8 @@
 	  height:100%;
 	  width:100%;	  
 	  text-align:left; 
-vertical-align: middle;	  
+
+align-items:center
 	  font-family: "Calibri"; 
 	  font-size: 10.5pt; 
 	  font-weight: bold; 
