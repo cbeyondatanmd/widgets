@@ -1,8 +1,10 @@
 (function() {
 	let template = document.createElement("template");
 	template.innerHTML = `
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" />
-<style style="text/css">
+<head>
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" />
+<style>
+
 table {
 
 	background-color:rgb(41, 49, 58);;
@@ -32,10 +34,25 @@ a:active {
 	top:1px;
 }
 
-</style> 
-<table id="myTable">
 
+      
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+<td>
+<a onclick="return false;" href="#"><i class="fa-solid fa-user fa-lg"></i>&nbsp;&nbsp;DASHBOARD&nbsp;&nbsp;</a>
+</td>
+</tr>
+<tr>
+<td>
+<a onclick="return false;" href="#"><i class="fa-solid fa-user fa-lg"></i>&nbsp;&nbsp;CONTEXT&nbsp;&nbsp;</a>
+</td>
+</tr>
 </table>
+</body>
 
 
  `;
