@@ -23,6 +23,11 @@
 	  background-color: transparent;
 	  text-decoration: none;
 	}
+	td a {
+  display: inline-block;
+  height:100%;
+  width:100%;
+}
 </style> 
 <table id="myTable" class="hoverTable">
 
@@ -84,7 +89,7 @@
 				}
 				else 
 				{
-				cell1.innerHTML = '<a style="width:100%; cursor: pointer;" href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
+				cell1.innerHTML = '<a style="cursor: pointer;" href="' + changedProperties["addUrl"].split('|')[1] + '">' + changedProperties["addUrl"].split('|')[0] + '</a>';
 				}
 				cell1.addEventListener("click", () => {
 					this._selectedItem = changedProperties["addUrl"].split('|')[0];
