@@ -12,13 +12,18 @@
 	/* Define the default color for all the table rows */
 	.hoverTable tr{
 		background: rgb(41, 49, 58);
-         	color: white;		
+         	color: white;
+		  text-align:center; 
+		  font-family: "Calibri"; 
+		  font-size: 10.5pt; 
+		  font-weight: bold; 
+		  cursor: pointer;		
 	}
 	/* Define the hover highlight color for the table row */
     .hoverTable tr:hover {
           background-color: rgb(40, 56, 72);
     }
-	a:link,a:visited,a:hover,a:active {
+.hoverTable	a:link,a:visited,a:hover,a:active {
 	  color: white;
 	  background-color: transparent;
 	  text-decoration: none;
