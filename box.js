@@ -25,6 +25,23 @@
 
 
  `;
+class Box extends /* ... */ {
+ var _text;
+ setText(newText) {
+ this._text = newText;
+ // fire "properties changed"
+ this.dispatchEvent(new CustomEvent("propertiesChanged", {
+ detail: {
+ properties: {
+ text: this._text
+ }
+ }));
+ }
+ getText() {
+ return this._text;
+ }
+};
+ 
  class Box extends HTMLElement {
  constructor() {
  super();
