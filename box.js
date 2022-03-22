@@ -122,12 +122,6 @@ a:active {
 					this._selectedItem = changedProperties["addUrl"].split('|')[0];
 				});
 			}
-			if ("color" in changedProperties) {
-				this.style["background-color"] = changedProperties["color"];
-			}
-			if ("opacity" in changedProperties) {
-				this.style["opacity"] = changedProperties["opacity"];
-			}
 		}
 	}
 	customElements.define("com-sample-box", Box);
