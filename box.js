@@ -19,16 +19,17 @@
           background-color: rgb(40, 56, 72);
     }
 a:link, a:visited {
-  background-color: #f44336;
+  background-color: rgb(41, 49, 58);
   color: white;
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  width:100%; 
 }
 
 a:hover, a:active {
-  background-color: red;
+  background-color: rgb(40, 56, 72);
 }
 </style> 
 <table id="myTable" class="hoverTable">
