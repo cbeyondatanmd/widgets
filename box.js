@@ -25,23 +25,8 @@
 
 
  `;
-class Box extends selectedItem {
- var _selectedItem;
- setSelected(newSelected) {
- this._selectedItem = newSelected;
- // fire "properties changed"
- this.dispatchEvent(new CustomEvent("propertiesChanged", {
- detail: {
- properties: {
- selectedItem: this._selectedItem
- }
- }));
- }
- getSelected() {
- return this._selectedItem;
- }
-};
- 
+
+
  class Box extends HTMLElement {
  constructor() {
  super();
