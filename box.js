@@ -5,10 +5,10 @@
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" />
 <style>
 
-table {
+table, tr, td {
 
-	background-color:rgb(41, 49, 58);;
-    
+	background-color:rgb(41, 49, 58);	     
+
 }
 
 a {
@@ -23,7 +23,7 @@ a {
 	padding:10pt 15pt;
     display: block;
 	height:100%;
-    width:100%;	     
+    width:73%;	     
 }
 
 a:hover {
@@ -37,10 +37,11 @@ a:active {
 
       
 </style>
+
 </head>
 <body>
 
-<table>
+<table id="myTable">
 <tr>
 <td>
 <a onclick="return false;" href="#"><i class="fa-solid fa-user fa-lg"></i>&nbsp;&nbsp;DASHBOARD&nbsp;&nbsp;</a>
@@ -52,9 +53,15 @@ a:active {
 </td>
 </tr>
 </table>
+<script>
+				var table = document.getElementById("myTable");
+				var row = table.insertRow(0);
+				var cell1 = row.insertCell(0);
+				
+				cell1.innerHTML = '<a href="" onclick="return false;"><i class="fa-solid fa-user fa-lg"></i>WORKFLOW</a>';
+
+</script>
 </body>
-
-
  `;
 
 
