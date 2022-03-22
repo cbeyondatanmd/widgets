@@ -13,7 +13,7 @@
 	.hoverTable tr{
 		background: rgb(41, 49, 58);
          	color: white;
-		  text-align:center; 
+		  text-align:left; 
 		  font-family: "Calibri"; 
 		  font-size: 10.5pt; 
 		  font-weight: bold; 
@@ -30,7 +30,7 @@
 	  display: block;
 	  height:100%;
 	  width:100%;	  
-	  text-align:center; 
+	  text-align:left; 
 	  font-family: "Calibri"; 
 	  font-size: 10.5pt; 
 	  font-weight: bold; 
