@@ -188,7 +188,10 @@ a:active {
 			var row = table.insertRow(0);
 			var cell = row.insertCell(0);
 			
-			cell.innerHTML = '<a href="" onclick="return false;"><i class="user-icon"></i>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';			
+			cell.innerHTML = '<a href="" onclick="return false;"><i class="user-icon"></i>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';	
+			cell.addEventListener("click", () => {
+				this._selectedItem = caption;
+			});			
         }
 
 		clearContext() {
