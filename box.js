@@ -172,11 +172,7 @@ a:active {
         {
             this._selectedItem = newSelected;
             // fire "properties changed"
-	    var cell this.shadowRoot.getElementById(newSelected);
-	    var anchor this.shadowRoot.getElementById(newSelected + "a");
-		
-	    cell.classList.add("sel");
- 	    anchor.classList.add("sela");
+
 		
             this.dispatchEvent(
                 new CustomEvent("propertiesChanged", 
