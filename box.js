@@ -170,8 +170,14 @@ a:active {
 		}
         setSelected(newSelected) 
         {
-            this._selectedItem = newSelected;
+            //this._selectedItem = newSelected;
             // fire "properties changed"
+	    var cell this.shadowRoot.getElementById(newSelected);
+	    var anchor this.shadowRoot.getElementById(newSelected + "a");
+		
+	    cell.classList.add("sel");
+ 	    anchor.classList.add("sela");
+		
             this.dispatchEvent(
                 new CustomEvent("propertiesChanged", 
                     {
@@ -198,7 +204,7 @@ a:active {
 				var table = this.shadowRoot.getElementById("myTable");
 				var row = table.insertRow(0);
 				var cell1 = row.insertCell(0);
-				cell1.classname = "sel";
+				
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
 				cell1.innerHTML = '<a href="" onclick="return false;"><i class="user-icon"></i>&nbsp;&nbsp;' + changedProperties["addUrl"].split('|')[0] + '&nbsp;&nbsp;</a>';
