@@ -60,18 +60,6 @@ a:active {
 	top:1px;
 }
 
-.user-icon {
-
-    display: inline-block;
-    vertical-align: middle;
-    background-size: contain;
-
-	height:22px;
-    width:22px;	
-
-
-}
-
 .icon { 
   width: 16px;
   height: 16px;
