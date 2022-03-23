@@ -172,6 +172,7 @@ a:active {
         {
             this._selectedItem = newSelected;
             // fire "properties changed"
+var cell this.shadowRoot.getElementById(newSelected);
 
 		
             this.dispatchEvent(
