@@ -220,5 +220,5 @@ a:active {
 			}
 		}
 	}
-	customElements.define("com-sample-box", Box);
+	customElements.define("cBeyondata-SidePanel", Box);
 })();
