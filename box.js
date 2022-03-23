@@ -170,7 +170,7 @@ a:active {
 		}
         setSelected(newSelected) 
         {
-            //this._selectedItem = newSelected;
+            this._selectedItem = newSelected;
             // fire "properties changed"
 	    var cell this.shadowRoot.getElementById(newSelected);
 	    var anchor this.shadowRoot.getElementById(newSelected + "a");
