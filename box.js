@@ -73,7 +73,7 @@ a:active {
 
 </head>
 <body>
-<p>NAVIGATION</p>
+<p>&nbsp;&nbsp;NAVIGATION</p>
 <table>
 <tr>
 <td>
@@ -126,7 +126,7 @@ a:active {
 </td>
 </tr>
 </table>
-<p>ADMIN</p>
+<p>&nbsp;&nbsp;ADMIN</p>
 <table>
 <tr>
 <td>
