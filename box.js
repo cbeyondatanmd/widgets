@@ -78,7 +78,7 @@ a:active {
   display: inline-block;
   background-size: contain;
   vertical-align: top;
-  filter: brightness(.1) invert(.6) sepia(.5) hue-rotate(180deg) saturate(200%) opacity(90%);
+  filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(60%);
 }
 
 </style>
@@ -149,10 +149,6 @@ a:active {
 <p id="context"></p>
 <table id="myTable">
 </table>
-<script>
-document.getElementById("labor").classList.add('sel');
-document.getElementById("labora").classList.add('sela');
-</script>
 </body>
  `;
 
@@ -202,6 +198,7 @@ document.getElementById("labora").classList.add('sela');
 				var table = this.shadowRoot.getElementById("myTable");
 				var row = table.insertRow(0);
 				var cell1 = row.insertCell(0);
+				cell1.classname = "sel";
 				if (changedProperties["addUrl"].split('|')[1].length === 0)
 				{
 				cell1.innerHTML = '<a href="" onclick="return false;"><i class="user-icon"></i>&nbsp;&nbsp;' + changedProperties["addUrl"].split('|')[0] + '&nbsp;&nbsp;</a>';
