@@ -1,0 +1,70 @@
+{
+  "id": "com.cbeyondata.sidepanel",
+  "version": "1.0.0",
+  "name": "SidePanel",
+  "description": "BAS Side Panel",
+  "newInstancePrefix": "SidePanel",
+  "icon": "https://cbeyondatanmd.github.io/widgets/icon.svg",
+  "vendor": "cBeyondata",
+  "eula": "",
+  "license": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-cbeyondata-sidepanel",
+      "url": "https://cbeyondatanmd.github.io/widgets/box.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {},
+  "methods": {
+    "getSelected": {
+      "returnType": "string",
+      "description": "Returns the selected sidebar item."
+    },
+    "setSelected": {
+      "description": "Sets the selected sidebar item.",
+      "parameters": [
+        {
+          "name": "newSelected",
+          "type": "string",
+          "description": "Selected item ID."
+        }
+      ]
+    },
+    "addContext": {
+      "description": "Adds context memebers to sidebar.",
+      "parameters": [
+        {
+          "name": "caption",
+          "type": "string",
+          "description": "Text to display in the sidebar."
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "description": "BASE64 encoded SVG."
+        }
+      ]
+    },
+    "clearContext": {
+      "description": "Clears context members from sidebar."
+    },
+    "setContextHeader": {
+      "description": "Updates context header caption.",
+      "parameters": [
+        {
+          "name": "caption",
+          "type": "string",
+          "description": "Text to display in the sidebar context header."
+        }
+      ]
+    }
+  },
+  "events": {
+    "onClick": {
+      "description": "Called when the user clicks the Sidebar."
+    }
+  }
+}
