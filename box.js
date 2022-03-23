@@ -170,28 +170,39 @@ a:active {
 		}
         setSelected(newSelected) 
         {
-            this._selectedItem = newSelected;
-            // fire "properties changed"
-	    var cell = this.shadowRoot.getElementById(newSelected);
-	    var anchor = this.shadowRoot.getElementById(newSelected + "A");
-		
-	    cell.classList.add("sel");
- 	    anchor.classList.add("sela");
+			this._selectedItem = newSelected;
 
-		
-            this.dispatchEvent(
-                new CustomEvent("propertiesChanged", 
-                    {
-                        detail: {
-                            properties: {
-                                            selectedItem: this._selectedItem
-                                        }
-                                }
-                    }
-                ))}
+			var cell = this.shadowRoot.getElementById(newSelected);
+			var anchor = this.shadowRoot.getElementById(newSelected + "A");
+			
+			cell.classList.add("sel");
+			anchor.classList.add("sela");
+		}
 
         getSelected() {
             return this._selectedItem;
+        }
+
+		addContext(caption, icon) {
+			var table = this.shadowRoot.getElementById("myTable");
+			var row = table.insertRow(0);
+			var cell = row.insertCell(0);
+			
+			cell.innerHTML = '<a href="" onclick="return false;"><i class="user-icon"></i>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';			
+        }
+
+		clearContext() {
+			var table = this.shadowRoot.getElementById("myTable");
+			while(table.rows.length > 0) 
+				{
+					table.deleteRow(0);
+			  	}
+        }
+
+		setContextHeader(caption) {
+			var p = this.shadowRoot.getElementById("context");
+			
+			p.innerHTML = caption;			
         }
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
@@ -201,23 +212,7 @@ a:active {
 			};
 		}
 		onCustomWidgetAfterUpdate(changedProperties) {
-			if ("addUrl" in changedProperties) {
-				var table = this.shadowRoot.getElementById("myTable");
-				var row = table.insertRow(0);
-				var cell1 = row.insertCell(0);
-				
-				if (changedProperties["addUrl"].split('|')[1].length === 0)
-				{
-				cell1.innerHTML = '<a href="" onclick="return false;"><i class="user-icon"></i>&nbsp;&nbsp;' + changedProperties["addUrl"].split('|')[0] + '&nbsp;&nbsp;</a>';
-				}
-				else 
-				{
-				cell1.innerHTML = '<a href="' + changedProperties["addUrl"].split('|')[1] + '"><i class="user-icon"></i>&nbsp;&nbsp;' + changedProperties["addUrl"].split('|')[0] + '&nbsp;&nbsp;</a>';
-				}
-				cell1.addEventListener("click", () => {
-					this._selectedItem = changedProperties["addUrl"].split('|')[0];
-				});
-			}
+
 		}
 	}
 	customElements.define("com-cbeyondata-sidepanel", Box);
