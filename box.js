@@ -191,7 +191,13 @@ a:active {
 			cell.innerHTML = '<a href="" onclick="return false;"><i class="user-icon"></i>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';			
         }
 
-
+		clearContext() {
+			var table = this.shadowRoot.getElementById("myTable");
+			while(table.rows.length > 0) 
+				{
+					table.deleteRow(0);
+			  	}
+        }
 
 		setContextHeader(caption) {
 			var p = this.shadowRoot.getElementById("context");
