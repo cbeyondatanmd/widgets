@@ -30,7 +30,6 @@ body {
 p {
 
 	background-color:rgb(41, 49, 58);
-	cursor:pointer;
 	color:rgb(221, 210, 211);
 	font-family:Calibri;
 	font-size:10.5pt;
