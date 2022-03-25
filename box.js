@@ -98,6 +98,7 @@ a:active {
 			});
 			this._props = {};
 			var _selectedItem;
+			var _oldSelectedItem = "";
 
 		}
         setSelected(newSelected) 
@@ -105,15 +106,16 @@ a:active {
             var cell;
             var anchor;
 
-            if (this._selectedItem.length != 0)
+            if (this._oldSelectedItem.length != 0)
             {
-                cell = this.shadowRoot.getElementById(this._selectedItem);
-                anchor = this.shadowRoot.getElementById(this._selectedItem + "A");
+                cell = this.shadowRoot.getElementById(this._oldSelectedItem);
+                anchor = this.shadowRoot.getElementById(this._oldSelectedItem + "A");
                 
                 cell.classList.remove("sel");
                 anchor.classList.remove("sela");
             }
 
+			this._oldSelectedItem = newSelected;
 			this._selectedItem = newSelected;
 
 			cell = this.shadowRoot.getElementById(newSelected);
