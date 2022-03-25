@@ -60,9 +60,6 @@ td:active {
 	top:1px;
     background-color:rgb(200, 62, 83);
 }
-a:active {
-    background-color:rgb(200, 62, 83);
-}
 
 .icon { 
   width: 16px;
