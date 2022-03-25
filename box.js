@@ -58,7 +58,6 @@ a:hover {
 td:active {
 	position:relative;
 	top:1px;
-    background-color:rgb(200, 62, 83);
 }
 
 .icon { 
