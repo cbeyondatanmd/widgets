@@ -55,9 +55,13 @@ a {
 a:hover {
 	background-color:rgb(47, 62, 83);
 }
-a:active, td:active {
+td:active {
 	position:relative;
 	top:1px;
+    background-color:rgb(200, 62, 83);
+}
+a:active {
+    background-color:rgb(200, 62, 83);
 }
 
 .icon { 
