@@ -102,10 +102,22 @@ a:active {
 		}
         setSelected(newSelected) 
         {
+            var cell;
+            var anchor;
+
+            if (this._selectedItem.length != 0)
+            {
+                cell = this.shadowRoot.getElementById(this._selectedItem);
+                anchor = this.shadowRoot.getElementById(this._selectedItem + "A");
+                
+                cell.classList.remove("sel");
+                anchor.classList.remove("sela");
+            }
+
 			this._selectedItem = newSelected;
 
-			var cell = this.shadowRoot.getElementById(newSelected);
-			var anchor = this.shadowRoot.getElementById(newSelected + "A");
+			cell = this.shadowRoot.getElementById(newSelected);
+			anchor = this.shadowRoot.getElementById(newSelected + "A");
 			
 			cell.classList.add("sel");
 			anchor.classList.add("sela");
