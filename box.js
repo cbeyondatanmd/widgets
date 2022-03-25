@@ -106,7 +106,7 @@ a:active {
             var cell;
             var anchor;
 
-            if (this._oldSelectedItem.length != 0)
+            if (this._oldSelectedItem)
             {
                 cell = this.shadowRoot.getElementById(this._oldSelectedItem);
                 anchor = this.shadowRoot.getElementById(this._oldSelectedItem + "A");
