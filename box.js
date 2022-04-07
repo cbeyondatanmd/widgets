@@ -3,9 +3,7 @@
 	template.innerHTML = `
 <head>
 <style>
-body {
-  overflow-y: scroll;
-}
+
 table, tr, td {
 
 	background-color:rgb(41, 49, 58);	   
