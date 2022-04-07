@@ -72,7 +72,7 @@ td:active {
 </style>
 </head>
 <body>
-<div style="overflow-y:auto;">
+<div style="overflow-x:auto;">
 <p>NAVIGATION</p>
 <table id="tableNavigation">
 </table>
