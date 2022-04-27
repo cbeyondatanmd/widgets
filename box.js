@@ -137,9 +137,13 @@ td:active {
 			cell.innerHTML = '<a href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';	
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
-			});			
+			});		
+            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement);
+            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getRootNode.document);
+            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getRootNode);
+            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.document.querySelector("#__table2-reactTableContainer > div > div > div:nth-child(1) > div.htmlTableWrapper > div.freezeSectiontopRight > div.tableDivTable.reactTable > div:nth-child(1) > div.tableCell.cell2d47891b98.tableDivCell.headerCell.Categorynone.headerCell.colDimMember.dimensionMember > span"));
             console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector("#__table2-reactTableContainer > div > div > div:nth-child(1) > div.htmlTableWrapper > div.freezeSectiontopRight > div.tableDivTable.reactTable > div:nth-child(1) > div.tableCell.cell2d47891b98.tableDivCell.headerCell.Categorynone.headerCell.colDimMember.dimensionMember > span"));
-	}
+    	}
 
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
