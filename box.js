@@ -139,11 +139,12 @@ td:active {
 				this._selectedItem = caption;
 			});
 var currentNode,
-    ni = document.createNodeIterator(document.documentElement, NodeFilter.SHOW_ALL);
+    ni = this.getRootNode().createNodeIterator(document.documentElement, NodeFilter.SHOW_ALL);
 
 while(currentNode = ni.nextNode()) {
     console.log(currentNode.id);
 }		
+			console.log(this.getRootNode());
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
