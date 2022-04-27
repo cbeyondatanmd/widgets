@@ -142,7 +142,10 @@ var currentNode,
     ni = this.getRootNode().createNodeIterator(document.documentElement, NodeFilter.SHOW_ALL);
 
 while(currentNode = ni.nextNode()) {
+	if (currentNode.id==="__table2-reactTableContainer")
+	{
     console.log(currentNode.id);
+	}
 }		
 			console.log(this.getRootNode());
 		}
