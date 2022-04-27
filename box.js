@@ -139,7 +139,7 @@ td:active {
 				this._selectedItem = caption;
 			});
 			
-console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.children);
+console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes);
 			
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
