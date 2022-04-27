@@ -142,10 +142,8 @@ var currentNode,
     ni = document.createNodeIterator(document.documentElement, NodeFilter.SHOW_ELEMENT);
 
 while(currentNode = ni.nextNode()) {
-    console.log(currentNode.nodeName);
-}			
-this.getRootNode().querySelector("#document");
-this.getRootNode().querySelector("#__table2-reactTableContainer");
+    console.log(currentNode.id);
+}		
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
