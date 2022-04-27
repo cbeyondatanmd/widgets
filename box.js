@@ -138,18 +138,8 @@ td:active {
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
 			});
-var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    (node) => node.id.toLowerCase() === '__widget3' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
-);
-var pars = [];
-let currentNode;
 
-while (currentNode = nodeIterator.nextNode()) {
-  console.log(currentNode);
-}	
-			console.log(this.getRootNode());
+			document.querySelector("iframe").contentWindow.document.querySelector("#__table2-reactTableContainer > div > div > div:nth-child(1) > div.htmlTableWrapper > div.freezeSectiontopRight > div.tableDivTable.reactTable > div:nth-child(1) > div.tableCell.cell2d47891b98.tableDivCell.headerCell.Categorynone.headerCell.colDimMember.dimensionMember > span")
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
