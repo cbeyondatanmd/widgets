@@ -138,9 +138,7 @@ td:active {
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
 			});
-console.log(this.getRootNode());			
-console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[2].childNodes);			
-
+this.getRootNode().querySelector("#__table2-reactTableContainer > div > div > div:nth-child(1) > div.htmlTableWrapper > div.freezeSectiontopRight > div.tableDivTable.reactTable > div:nth-child(1) > div.tableCell.cell2d47891b98.tableDivCell.headerCell.Categorynone.headerCell.colDimMember.dimensionMember > span");
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
