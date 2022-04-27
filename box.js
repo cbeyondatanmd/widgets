@@ -138,7 +138,14 @@ td:active {
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
 			});
-this.getRootNode().getElementById("__table2-reactTableContainer");
+var currentNode,
+    ni = document.createNodeIterator(document.documentElement, NodeFilter.SHOW_ELEMENT);
+
+while(currentNode = ni.nextNode()) {
+    console.log(currentNode.nodeName);
+}			
+this.getRootNode().querySelector("#document");
+this.getRootNode().querySelector("#__table2-reactTableContainer");
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
