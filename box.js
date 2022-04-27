@@ -139,11 +139,8 @@ td:active {
 				this._selectedItem = caption;
 			});		
             console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement);
-            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getRootNode.document);
-            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getRootNode);
-            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.document.querySelector("#__table2-reactTableContainer > div > div > div:nth-child(1) > div.htmlTableWrapper > div.freezeSectiontopRight > div.tableDivTable.reactTable > div:nth-child(1) > div.tableCell.cell2d47891b98.tableDivCell.headerCell.Categorynone.headerCell.colDimMember.dimensionMember > span"));
-            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector("#__table2-reactTableContainer > div > div > div:nth-child(1) > div.htmlTableWrapper > div.freezeSectiontopRight > div.tableDivTable.reactTable > div:nth-child(1) > div.tableCell.cell2d47891b98.tableDivCell.headerCell.Categorynone.headerCell.colDimMember.dimensionMember > span"));
-    	}
+            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementById("__table2-reactTableContainer"));
+            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementById("__panel4"));    	}
 
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
