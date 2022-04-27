@@ -137,11 +137,10 @@ td:active {
 			cell.innerHTML = '<a href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';	
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
-			});		
-            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement);
-            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementById("__table2-reactTableContainer"));
-            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementById("__panel4"));    	}
-
+			});
+			
+console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.children);
+			
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
 			var row = table.insertRow(0);
