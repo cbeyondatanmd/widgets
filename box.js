@@ -141,7 +141,7 @@ td:active {
 var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    (node) => node.id.toLowerCase() === '___shell0' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+    (node) => node.id.toLowerCase() === '__xmlview0--navCon' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
 );
 var pars = [];
 let currentNode;
