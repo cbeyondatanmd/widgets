@@ -138,7 +138,7 @@ td:active {
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
 			});			
-            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement);
+            console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement);
 	}
 
 		addNavigation(caption, icon) {
