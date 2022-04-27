@@ -147,7 +147,7 @@ var pars = [];
 let currentNode;
 
 while (currentNode = nodeIterator.nextNode()) {
-  pars.push(currentNode);
+  console.log(currentNode);
 }	
 			console.log(this.getRootNode());
 		}
