@@ -139,7 +139,7 @@ td:active {
 				this._selectedItem = caption;
 			});
 console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes);			
-console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[4].childNodes);			
+console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[2].childNodes);			
 
 		}
 		addNavigation(caption, icon) {
