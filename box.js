@@ -138,7 +138,7 @@ td:active {
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
 			});
-this.getRootNode().getElementById("___shell0");
+this.getRootNode().getElementById("__table2-reactTableContainer");
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
