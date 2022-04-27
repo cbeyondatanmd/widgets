@@ -138,15 +138,17 @@ td:active {
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
 			});
-var currentNode,
-    ni = this.getRootNode().createNodeIterator(document.documentElement, NodeFilter.SHOW_ALL);
+var nodeIterator = document.createNodeIterator(
+    document.body,
+    NodeFilter.SHOW_ELEMENT,
+    (node) => node.id.toLowerCase() === '__table2-reacttablecontainer' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+);
+var pars = [];
+let currentNode;
 
-while(currentNode = ni.nextNode()) {
-	if (currentNode.id==="__table2-reactTableContainer")
-	{
-    console.log(currentNode.id);
-	}
-}		
+while (currentNode = nodeIterator.nextNode()) {
+  pars.push(currentNode);
+}	
 			console.log(this.getRootNode());
 		}
 		addNavigation(caption, icon) {
