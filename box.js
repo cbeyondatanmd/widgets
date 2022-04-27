@@ -139,7 +139,7 @@ td:active {
 				this._selectedItem = caption;
 			});
 var currentNode,
-    ni = document.createNodeIterator(document.documentElement, NodeFilter.SHOW_ELEMENT);
+    ni = document.createNodeIterator(document.documentElement, NodeFilter.SHOW_ALL);
 
 while(currentNode = ni.nextNode()) {
     console.log(currentNode.id);
