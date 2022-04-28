@@ -139,19 +139,8 @@ td:active {
 				this._selectedItem = caption;
 			});
 
-			var nodeIterator = document.createNodeIterator(
-				document.body,
-				NodeFilter.SHOW_ELEMENT,
-				(node) => node.id.toLowerCase() === '__table2-reacttablecontainer'  ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
-			);
-			var pars = [];
-			let currentNode;
-
-			while (currentNode = nodeIterator.nextNode()) {
-			console.log(currentNode);
-			}
-			console.log(document.querySelectorAll('[title="Prior Spend plan"]'));
-			document.querySelectorAll('[title="Prior Spend plan"]')[1].outerText = "Testing";
+			//console.log(document.querySelectorAll('[title="Prior Spend plan"]'));
+			//document.querySelectorAll('[title="Prior Spend plan"]')[1].outerText = "Testing";
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
