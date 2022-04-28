@@ -140,7 +140,11 @@ td:active {
 			});
 
 			//console.log(document.querySelectorAll('[title="Prior Spend plan"]'));
-			document.querySelectorAll('[title="Prior Spend plan"]')[1].innerText = caption;
+			var nodeList = document.querySelectorAll('[title="Prior Spend plan"]');
+			if (nodeList)
+			{
+				nodeList[1].innerText = caption;
+			}
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
