@@ -143,7 +143,10 @@ td:active {
 			var nodeList = document.querySelectorAll('[title="Prior Spend plan"]');
 			if (nodeList)
 			{
-				nodeList[1].innerText = caption;
+				if (nodeList.length>1)
+				{
+					nodeList[1].innerText = caption;
+				}
 			}
 		}
 		addNavigation(caption, icon) {
