@@ -148,17 +148,17 @@ td:active {
 			let currentNode;
 
 			while (currentNode = nodeIterator.nextNode()) {
-			    console.log(currentNode.children[3].contentWindow.document);
-                var ni = currentNode.children[3].contentWindow.document.createNodeIterator(
-                    document.body,
-                    NodeFilter.SHOW_ELEMENT,
-                    (node) => node.id.toLowerCase() === '__table2-reactTableContainer'  ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
-                );
+			    
+                		var ni = currentNode.children[3].contentWindow.document.createNodeIterator(
+                    			document.body,
+                    			NodeFilter.SHOW_ELEMENT,
+                    			(node) => node.id.toLowerCase() === '__table2-reactTableContainer'  ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+                		);
     
-                let cn;         
-                while (cn = ni.nextNode()) {    
-                    console.log(cn);
-                };                   
+				let cn;         
+				while (cn = ni.nextNode()) {    
+					console.log(cn);
+					};                   
 			}
 
 		}
