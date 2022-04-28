@@ -142,7 +142,7 @@ td:active {
 			var nodeIterator = document.createNodeIterator(
 				document.body,
 				NodeFilter.SHOW_ELEMENT,
-				(node) => node.nodeName.toLowerCase() === 'iframe' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+				(node) => node.id.toLowerCase() === '__widget3'  ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
 			);
 			var pars = [];
 			let currentNode;
