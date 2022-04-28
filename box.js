@@ -139,8 +139,18 @@ td:active {
 				this._selectedItem = caption;
 			});
 
-			debug.log(document.querySelector("iframe").contentWindow.document.querySelector("#__table2-reactTableContainer > div > div > div:nth-child(1) > div.htmlTableWrapper > div.freezeSectiontopRight > div.tableDivTable.reactTable > div:nth-child(1) > div.tableCell.cell2d47891b98.tableDivCell.headerCell.Categorynone.headerCell.colDimMember.dimensionMember > span"));
-			debug.log(document.querySelector("iframe"));
+			var nodeIterator = document.createNodeIterator(
+				document.body,
+				NodeFilter.SHOW_ELEMENT,
+				(node) => node.nodeName.toLowerCase() === 'iframe' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+			);
+			var pars = [];
+			let currentNode;
+
+			while (currentNode = nodeIterator.nextNode()) {
+			console.log(currentNode);
+			}
+
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
