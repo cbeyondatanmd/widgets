@@ -142,23 +142,13 @@ td:active {
 			var nodeIterator = document.createNodeIterator(
 				document.body,
 				NodeFilter.SHOW_ELEMENT,
-				(node) => node.id.toLowerCase() === '__widget3'  ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+				(node) => node.id.toLowerCase() === '__table2-reacttablecontainer'  ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
 			);
-
+			var pars = [];
 			let currentNode;
 
 			while (currentNode = nodeIterator.nextNode()) {
-			    
-                		var ni = currentNode.children[3].contentWindow.document.createNodeIterator(
-                    			currentNode.children[3].contentWindow.document.body,
-                    			NodeFilter.SHOW_ELEMENT,
-                    			(node) => node.id.toLowerCase() === '__table2-reactTableContainer'  ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
-                		);
-    
-				let cn;         
-				while (cn = ni.nextNode()) {    
-					console.log(cn);
-					};                   
+			console.log(currentNode);
 			}
 
 		}
