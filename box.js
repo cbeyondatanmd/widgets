@@ -150,7 +150,7 @@ td:active {
 			while (currentNode = nodeIterator.nextNode()) {
 			console.log(currentNode);
 			}
-
+			console.log(document.querySelectorAll('[title="Prior Spend plan"]'));
 		}
 		addNavigation(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
