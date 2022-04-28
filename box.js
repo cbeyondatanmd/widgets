@@ -150,7 +150,7 @@ td:active {
 			while (currentNode = nodeIterator.nextNode()) {
 			    
                 		var ni = currentNode.children[3].contentWindow.document.createNodeIterator(
-                    			document.body,
+                    			currentNode.children[3].contentWindow.document.body,
                     			NodeFilter.SHOW_ELEMENT,
                     			(node) => node.id.toLowerCase() === '__table2-reactTableContainer'  ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
                 		);
