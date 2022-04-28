@@ -148,7 +148,7 @@ td:active {
 			let currentNode;
 
 			while (currentNode = nodeIterator.nextNode()) {
-			console.log(currentNode);
+			console.log(currentNode.children[3].contentWindow.document);
 			}
 
 		}
