@@ -165,8 +165,7 @@ td:active {
 
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
-                this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]')[0].style.visibility = "hidden";
-                this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]')[0].style.lineHeight = 0;
+                this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]')[0].hidden = !this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]')[0].hidden;
 			});			
         }
 
