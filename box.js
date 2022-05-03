@@ -154,7 +154,7 @@ td:active {
 			var row = table.insertRow(0);
 			var cell = row.insertCell(0);
 			cell.id = caption;
-			if (parentname)
+			if (parenname)
 			{
 				if (parentname !== "" && parentname!=="*")
 				{
@@ -165,7 +165,7 @@ td:active {
 
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
-                document.querySelectorAll('[parentname="'+caption+'"]')[0].style.visibility = "hidden";
+                this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]')[0].style.visibility = "hidden";
 			});			
         }
 
