@@ -11,6 +11,13 @@ table, tr, td {
 
 }
 
+.childNav {
+
+	background-color:rgb(31, 39, 48);	   
+    width:100%;
+
+}
+
 td {
 padding:0pt 5pt;
 }
@@ -159,6 +166,8 @@ td:active {
 				if (parentname !== "" && parentname!=="*")
 				{
 					row.setAttribute("parentname", parentname);
+                    row.classList.add("childNav");
+                    cell.classList.add("childNav");
 				}
 			}
 			cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';		
