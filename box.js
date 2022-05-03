@@ -149,14 +149,23 @@ td:active {
 				}
 			}
 		}
-		addNavigation(caption, icon) {
+		addNavigation(caption, icon, parentname) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
 			var row = table.insertRow(0);
 			var cell = row.insertCell(0);
 			cell.id = caption;
+			if (parenname)
+			{
+				if (parentname !== "" && parentname!=="*")
+				{
+					row.setAttribute("parentname", parentname);
+				}
+			}
 			cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';		
+
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
+                document.querySelectorAll('[parentname="'+caption+'"]')[0].style.visibility = "hidden";
 			});			
         }
 
