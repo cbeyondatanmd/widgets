@@ -33,8 +33,43 @@
         }
       ]
     },
+    "addNavigation": {
+      "description": "Adds navigation members to sidebar.",
+      "parameters": [
+        {
+          "name": "caption",
+          "type": "string",
+          "description": "Text to display in the sidebar."
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "description": "BASE64 encoded SVG."
+        },
+        {
+          "name": "parentname",
+          "type": "string",
+          "description": "Name of parent node. Blank if not parent, asterisk if is parent."
+        }
+      ]
+    },
+    "addAdmin": {
+      "description": "Adds admin members to sidebar.",
+      "parameters": [
+        {
+          "name": "caption",
+          "type": "string",
+          "description": "Text to display in the sidebar."
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "description": "BASE64 encoded SVG."
+        }
+      ]
+    },
     "addContext": {
-      "description": "Adds context memebers to sidebar.",
+      "description": "Adds context members to sidebar.",
       "parameters": [
         {
           "name": "caption",
