@@ -154,7 +154,7 @@ td:active {
 			var row = table.insertRow(0);
 			var cell = row.insertCell(0);
 			cell.id = caption;
-			if (parenname)
+			if (parentname)
 			{
 				if (parentname !== "" && parentname!=="*")
 				{
