@@ -138,7 +138,7 @@ td:active {
 			anchor.classList.add("sela");
             if (cell.parentElement.hidden)
             {
-                this.ensureSelectedVisible("BUDGET");
+               // this.ensureSelectedVisible("BUDGET");
             }
 		}
 
@@ -191,31 +191,27 @@ td:active {
 					
 
 			cell.addEventListener("click", () => {
-                ensureSelectedVisible(caption);
+                this._selectedItem = caption;
+                var childRows = this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]');
+                var rotate = false;
+                for (let i = 0; i < childRows.length; i++) {
+                    childRows[i].hidden = !childRows[i].hidden;
+                    rotate=childRows[i].hidden;
+                  }                
+                
+                var parentCaratNode = this.shadowRoot.getElementById(caption+'C');
+                if (parentCaratNode)
+                {
+                    if (rotate) 
+                    {
+                        parentCaratNode.classList.remove("rotated"); 
+                    }
+                    else
+                    {
+                        parentCaratNode.classList.add("rotated");
+                    }
+                }
 			});			
-        }
-
-        ensureSelectedVisible(caption) {
-            this._selectedItem = caption;
-            var childRows = this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]');
-            var rotate = false;
-            for (let i = 0; i < childRows.length; i++) {
-                childRows[i].hidden = !childRows[i].hidden;
-                rotate=childRows[i].hidden;
-              }                
-            
-            var parentCaratNode = this.shadowRoot.getElementById(caption+'C');
-            if (parentCaratNode)
-            {
-                if (rotate) 
-                {
-                    parentCaratNode.classList.remove("rotated"); 
-                }
-                else
-                {
-                    parentCaratNode.classList.add("rotated");
-                }
-            }
         }
 
 		addAdmin(caption, icon) {
