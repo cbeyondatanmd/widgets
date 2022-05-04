@@ -178,7 +178,7 @@ td:active {
                 row.classList.add("childNav");
                 row.hidden=true;
                 cell.classList.add("childNav");
-                cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';
+                cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';
             }
             else
             {
