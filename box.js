@@ -176,6 +176,7 @@ td:active {
             {
                 row.setAttribute("parentname", parentname);
                 row.classList.add("childNav");
+                row.hidden=true;
                 cell.classList.add("childNav");
                 cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';
             }
