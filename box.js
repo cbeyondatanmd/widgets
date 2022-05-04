@@ -20,7 +20,7 @@ table, tr, td {
 
 .rotated {
     transform: rotate(90deg); /* Equal to rotateZ(45deg) */
-    transition-duration:0.5s;
+    transition-duration:0.25s;
   
   }
 
