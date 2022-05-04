@@ -167,6 +167,14 @@ td:active {
             return this._selectedItem;
         }
 
+        getClientHeight() {
+            var rtn = 0;
+            for (let i = 0; i < this.shadowRoot.getRootNode().children.length; i++) {
+                rtn += this.shadowRoot.getRootNode().children[i].clientHeight;
+              }
+            return rtn;
+        }
+
 		addContext(caption, icon) {
 			var table = this.shadowRoot.getElementById("tableContext");
 			var row = table.insertRow(0);
