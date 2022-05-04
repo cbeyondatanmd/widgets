@@ -139,7 +139,7 @@ td:active {
             if (cell.parentElement.hidden)
             {
 		var caption =  cell.parentNode.getAttribute("parentname").toString();
-                this._selectedItem = caption;
+                
                 var childRows = this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]');
                 var rotate = false;
 		
