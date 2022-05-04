@@ -136,6 +136,10 @@ td:active {
 			
 			cell.classList.add("sel");
 			anchor.classList.add("sela");
+            if (cell.parentElement.hidden)
+            {
+                cell.parentElement.parentElement.click();
+            }
 		}
 
         getSelected() {
