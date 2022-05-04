@@ -157,14 +157,14 @@ td:active {
 			});
 
 			//console.log(document.querySelectorAll('[title="Prior Spend plan"]'));
-			var nodeList = document.querySelectorAll('[title="Prior Spend plan"]');
-			if (nodeList)
-			{
-				if (nodeList.length>1)
-				{
-					nodeList[1].innerText = caption;
-				}
-			}
+			//var nodeList = document.querySelectorAll('[title="Prior Spend plan"]');
+			//if (nodeList)
+			//{
+			//	if (nodeList.length>1)
+			//	{
+			//		nodeList[1].innerText = caption;
+			//	}
+			//}
 		}
 		addNavigation(caption, icon, parentname) {
 			var table = this.shadowRoot.getElementById("tableNavigation");
