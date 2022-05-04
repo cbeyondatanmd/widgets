@@ -200,11 +200,11 @@ td:active {
                 {
                     if (rotate) 
                     {
-                        parentCaratNode.classList.add("rotated");
+                        parentCaratNode.classList.remove("rotated"); 
                     }
                     else
                     {
-                        parentCaratNode.classList.remove("rotated");
+                        parentCaratNode.classList.add("rotated");
                     }
                 }
 			});			
