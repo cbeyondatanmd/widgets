@@ -168,9 +168,14 @@ td:active {
 					row.setAttribute("parentname", parentname);
                     row.classList.add("childNav");
                     cell.classList.add("childNav");
+                    cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;<img class="icon" src="data:image/svg+xml;base64,' + icon + '"/></a>';
 				}
+            }
+            else
+            {
+                cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';
 			}
-			cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';		
+					
 
 			cell.addEventListener("click", () => {
 				this._selectedItem = caption;
