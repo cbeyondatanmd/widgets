@@ -138,7 +138,7 @@ td:active {
 			anchor.classList.add("sela");
             if (cell.parentElement.hidden)
             {
-                cell.parentElement.parentElement.click();
+                this.eventFire(this.shadowRoot.getElementById("BUDGET"),"click")
             }
 		}
 
@@ -238,6 +238,16 @@ td:active {
 			
 			p.innerHTML = caption;			
         }
+
+        eventFire(el, etype){
+            if (el.fireEvent) {
+              el.fireEvent('on' + etype);
+            } else {
+              var evObj = document.createEvent('Events');
+              evObj.initEvent(etype, true, false);
+              el.dispatchEvent(evObj);
+            }
+          }
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
