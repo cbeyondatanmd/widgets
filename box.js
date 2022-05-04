@@ -138,7 +138,7 @@ td:active {
 			anchor.classList.add("sela");
             if (cell.parentElement.hidden)
             {
-                this.eventFire(this.shadowRoot.getElementById("BUDGET"),"click")
+                this.ensureSelectedVisible("BUDGET");
             }
 		}
 
@@ -191,27 +191,31 @@ td:active {
 					
 
 			cell.addEventListener("click", () => {
-				this._selectedItem = caption;
-                var childRows = this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]');
-                var rotate = false;
-                for (let i = 0; i < childRows.length; i++) {
-                    childRows[i].hidden = !childRows[i].hidden;
-                    rotate=childRows[i].hidden;
-                  }                
-                
-                var parentCaratNode = this.shadowRoot.getElementById(caption+'C');
-                if (parentCaratNode)
-                {
-                    if (rotate) 
-                    {
-                        parentCaratNode.classList.remove("rotated"); 
-                    }
-                    else
-                    {
-                        parentCaratNode.classList.add("rotated");
-                    }
-                }
+                ensureSelectedVisible(caption);
 			});			
+        }
+
+        ensureSelectedVisible(caption) {
+            this._selectedItem = caption;
+            var childRows = this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]');
+            var rotate = false;
+            for (let i = 0; i < childRows.length; i++) {
+                childRows[i].hidden = !childRows[i].hidden;
+                rotate=childRows[i].hidden;
+              }                
+            
+            var parentCaratNode = this.shadowRoot.getElementById(caption+'C');
+            if (parentCaratNode)
+            {
+                if (rotate) 
+                {
+                    parentCaratNode.classList.remove("rotated"); 
+                }
+                else
+                {
+                    parentCaratNode.classList.add("rotated");
+                }
+            }
         }
 
 		addAdmin(caption, icon) {
