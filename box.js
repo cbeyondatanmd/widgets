@@ -161,15 +161,17 @@ td:active {
 			var row = table.insertRow(0);
 			var cell = row.insertCell(0);
 			cell.id = caption;
-			if (parentname)
-			{
-				if (parentname !== "" && parentname!=="*")
-				{
-					row.setAttribute("parentname", parentname);
-                    row.classList.add("childNav");
-                    cell.classList.add("childNav");
-                    cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;<img class="icon" src="data:image/svg+xml;base64,' + icon + '"/></a>';
-				}
+
+            if (parentname==="*")
+            {
+                cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;<img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0"/></a>';
+            }
+            else if (parentname)
+            {
+                row.setAttribute("parentname", parentname);
+                row.classList.add("childNav");
+                cell.classList.add("childNav");
+                cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';
             }
             else
             {
