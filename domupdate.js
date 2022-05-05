@@ -33,7 +33,10 @@
 				if (nodeList.length>1)
 				{
 					//nodeList[1].innerText = text;
-					nodeList[1].getElementsByTagName("span")[0].innerText = text;
+					for (let i = 1; i < cars.length; i++) {
+						  nodeList[i].getElementsByTagName("span")[0].innerText = text;
+						}
+					
 				}
 			}		
         }
