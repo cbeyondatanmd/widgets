@@ -41,6 +41,7 @@
 							      e.target.innerText = text;
 							  }
 							})
+						console.log(e.target);
 						  nodeList[i].getElementsByTagName("span")[0].innerText = text;
 						}
 					
