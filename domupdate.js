@@ -39,7 +39,7 @@
 							console.log(e.target);
 							if (e.target.innerText.length > 0) 
 							  {
-								  if (e.target.innerText !== text.replace(/\n/g,"")) 
+								  if (e.target.innerText !== text.replace(/\n/g,"") && e.target.innerText !== text) 
 								  {
 								      e.target.innerText = text;
 								  }
