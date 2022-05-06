@@ -39,7 +39,7 @@
 							console.log(e.target);
 							  if (e.target.innerText !== text) 
 							  {
-							     // e.target.innerText = "text";
+							      e.target.innerText = text;
 							  }
 							})
 						
