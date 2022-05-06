@@ -28,25 +28,25 @@
 
 		setTextByAttributeValue(name, value, text) {
 			var nodeList = document.querySelectorAll('['+name+'="'+value+'"]');
+            var handleChange = (e) => {
+                console.log(e.target);
+                if (e.target.innerText.length > 0) 
+                  {
+                      if (e.target.innerText !== text.replace(/\n/g,"") && e.target.innerText !== text) 
+                      {
+                          e.target.innerText = text;
+                      }
+                  }
+                }
 			if (nodeList)
 			{
 				if (nodeList.length>1)
 				{
 					//nodeList[1].innerText = text;
 					for (let i = 0; i < nodeList.length; i++) {
-						nodeList[i].getElementsByTagName("span")[0].innerText = text;					
-						nodeList[i].getElementsByTagName("span")[0].addEventListener('DOMSubtreeModified' , (e) => {
-							console.log(e.target);
-							if (e.target.innerText.length > 0) 
-							  {
-								  if (e.target.innerText !== text.replace(/\n/g,"") && e.target.innerText !== text) 
-								  {
-								      e.target.innerText = text;
-								  }
-							  }
-							})
-						
-
+                            nodeList[i].getElementsByTagName("span")[0].removeEventListener('DOMSubtreeModified' , handleChange)
+                            nodeList[i].getElementsByTagName("span")[0].innerText = text;					
+                            nodeList[i].getElementsByTagName("span")[0].addEventListener('DOMSubtreeModified' , handleChange);
 						}
 					
 				}
