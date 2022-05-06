@@ -37,9 +37,12 @@
 						
 						nodeList[i].getElementsByTagName("span")[0].addEventListener('DOMSubtreeModified' , (e) => {
 							console.log(e.target);
-							  if (e.target.innerText !== text) 
+							if (e.target.innerText.length > 0) 
 							  {
-							      e.target.innerText = text;
+								  if (e.target.innerText !== text) 
+								  {
+								      e.target.innerText = text;
+								  }
 							  }
 							})
 						
