@@ -34,6 +34,13 @@
 				{
 					//nodeList[1].innerText = text;
 					for (let i = 0; i < nodeList.length; i++) {
+						
+						nodeList[i].getElementsByTagName("span")[0].addEventListener('DOMSubtreeModified' , (e) => {
+							  if (e.target.innerText !== text) 
+							  {
+							      e.target.innerText = text;
+							  }
+							})
 						  nodeList[i].getElementsByTagName("span")[0].innerText = text;
 						}
 					
