@@ -34,7 +34,7 @@
 				{
 					//nodeList[1].innerText = text;
 					for (let i = 0; i < nodeList.length; i++) {
-						
+						nodeList[i].getElementsByTagName("span")[0].innerText = text;					
 						nodeList[i].getElementsByTagName("span")[0].addEventListener('DOMSubtreeModified' , (e) => {
 							console.log(e.target);
 							if (e.target.innerText.length > 0) 
@@ -46,7 +46,7 @@
 							  }
 							})
 						
-						  nodeList[i].getElementsByTagName("span")[0].innerText = text;
+
 						}
 					
 				}
