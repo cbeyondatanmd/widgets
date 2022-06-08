@@ -40,7 +40,7 @@
                 }
 			if (nodeList)
 			{
-				if (nodeList.length>0)
+				if (nodeList.length > 0)
 				{
 					//nodeList[1].innerText = text;
 					for (let i = 0; i < nodeList.length; i++) {
