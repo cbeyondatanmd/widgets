@@ -49,8 +49,8 @@
                         nodeList[i].getElementsByTagName("span")[0].innerHTML = nodeList[i].getElementsByTagName("span")[0].innerHTML + html;
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
-			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", function() {
-  alert("Hello World");
+			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", function(e) {
+  e.target.innerText='cool';
 });
 						}
                         //    nodeList[i].getElementsByTagName("span")[0].removeEventListener('DOMSubtreeModified' , handleChange);	
@@ -61,10 +61,6 @@
 				}
 			}		
         }
-handleClick()
-		{
-			alert("test");
-		}
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
 				...this._props,
