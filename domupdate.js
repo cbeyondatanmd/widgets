@@ -26,7 +26,7 @@
 
 		}
 
-		setTextByAttributeValue(name, value, text) {
+		setTextByAttributeValue(name, value, text, html) {
 			var nodeList = document.querySelectorAll('['+name+'="'+value+'"]');
             var handleChange = (e) => {
                 console.log(e.target);
