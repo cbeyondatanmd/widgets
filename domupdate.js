@@ -54,7 +54,10 @@
 				}
 			}		
         }
-
+handleClick()
+		{
+			alert("test");
+		}
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
 				...this._props,
