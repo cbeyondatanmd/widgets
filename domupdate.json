@@ -36,6 +36,11 @@
             "name": "text",
             "type": "string",
             "description": "Text string to set as the innerText."
+          },
+          {
+            "name": "html",
+            "type": "string",
+            "description": "Text string to set as the innerHtml."
           }
         ]
       }
