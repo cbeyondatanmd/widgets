@@ -50,7 +50,7 @@
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
 			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", function(e) {
-  e.target.innerText='cool';
+  console.log(e.target);
 });
 						}
                         //    nodeList[i].getElementsByTagName("span")[0].removeEventListener('DOMSubtreeModified' , handleChange);	
