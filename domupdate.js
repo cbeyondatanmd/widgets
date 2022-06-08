@@ -46,9 +46,11 @@
                         nodeList[i].getElementsByTagName("span")[0].innerHTML = nodeList[i].getElementsByTagName("span")[0].innerHTML + html;
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
-			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", event=> {
+			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", e=> {
+				console.log(e.target);
 				var event = new Event("onClick");
 				this.dispatchEvent(event);
+				
 });
 						}
                         //    nodeList[i].getElementsByTagName("span")[0].removeEventListener('DOMSubtreeModified' , handleChange);	
