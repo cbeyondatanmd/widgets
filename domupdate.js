@@ -47,7 +47,11 @@
 					for (let i = 0; i < nodeList.length; i++) {
 						nodeList[i].getElementsByTagName("span")[0].innerText = text;
                         nodeList[i].getElementsByTagName("span")[0].innerHTML = nodeList[i].getElementsByTagName("span")[0].innerHTML + html;
-                        //    nodeList[i].getElementsByTagName("span")[0].removeEventListener('DOMSubtreeModified' , handleChange);				
+			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", function() {
+  alert("Hello World");
+});
+                        //    nodeList[i].getElementsByTagName("span")[0].removeEventListener('DOMSubtreeModified' , handleChange);	
+						
                         //    nodeList[i].getElementsByTagName("span")[0].addEventListener('DOMSubtreeModified' , handleChange);
 						}
 					
