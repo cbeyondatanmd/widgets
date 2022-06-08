@@ -47,7 +47,7 @@
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
 			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", e=> {
-				console.log(e.target);
+				_selectedItem = e.target.parentNode.parentNode.getAttribute("title");
 				var event = new Event("onClick");
 				this.dispatchEvent(event);
 				
