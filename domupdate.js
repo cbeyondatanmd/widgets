@@ -16,10 +16,7 @@
 				mode: "open"
 			});
 			shadowRoot.appendChild(template.content.cloneNode(true));
-			this.addEventListener("click", event => {
-				var event = new Event("onClick");
-				this.dispatchEvent(event);
-			});
+
 			this._props = {};
 			var _selectedItem;
 			var _oldSelectedItem = "";
@@ -49,8 +46,9 @@
                         nodeList[i].getElementsByTagName("span")[0].innerHTML = nodeList[i].getElementsByTagName("span")[0].innerHTML + html;
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
-			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", function(e) {
-  console.log(e.target);
+			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", e=> {
+                this.dispatchEvent(e);
+
 });
 						}
                         //    nodeList[i].getElementsByTagName("span")[0].removeEventListener('DOMSubtreeModified' , handleChange);	
@@ -61,6 +59,7 @@
 				}
 			}		
         }
+
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
 				...this._props,
