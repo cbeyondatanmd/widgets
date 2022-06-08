@@ -19,6 +19,10 @@
     ],
     "properties": {},
     "methods": {
+            "getSelected": {
+      "returnType": "string",
+      "description": "Returns the selected sidebar item."
+    },
       "setTextByAttributeValue": {
         "description": "Set the text of an element based on attribute name and value.",
         "parameters": [
