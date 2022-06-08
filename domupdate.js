@@ -35,6 +35,7 @@
                       if (e.target.innerText !== text.replace(/\n/g,"") && e.target.innerText !== text) 
                       {
                           e.target.innerText = text;
+			              e.target.innerHTML = e.target.innerHTML + html;
                       }
                   }
                 }
@@ -45,6 +46,7 @@
 					//nodeList[1].innerText = text;
 					for (let i = 0; i < nodeList.length; i++) {
 						nodeList[i].getElementsByTagName("span")[0].innerText = text;
+                        nodeList[i].getElementsByTagName("span")[0].innerHTML = nodeList[i].getElementsByTagName("span")[0].innerHTML + html;
                         //    nodeList[i].getElementsByTagName("span")[0].removeEventListener('DOMSubtreeModified' , handleChange);				
                         //    nodeList[i].getElementsByTagName("span")[0].addEventListener('DOMSubtreeModified' , handleChange);
 						}
