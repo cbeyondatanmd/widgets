@@ -47,7 +47,7 @@
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
 			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", e=> {
-				_selectedItem = e.target.parentNode.parentNode.getAttribute("title");
+				this._selectedItem = e.target.parentNode.parentNode.getAttribute("title");
 				var event = new Event("onClick");
 				this.dispatchEvent(event);
 				
@@ -61,7 +61,9 @@
 				}
 			}		
         }
-
+        getSelected() {
+            return this._selectedItem;
+        }
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
 				...this._props,
