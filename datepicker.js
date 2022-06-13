@@ -20,7 +20,7 @@
 	   >
 	    <m:Panel
 		    id ="DatePanel"
-		    headerText="Choose Date"
+		    headerText=""
 		    width="auto">
 		    <m:Label text="" labelFor="dateInput"/>
 		    <m:DatePicker
