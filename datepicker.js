@@ -25,7 +25,7 @@
 		    <m:Label text="" labelFor="dateInput"/>
 		    <m:DatePicker
 			    id="dateInput"
-			    placeholder="Enter Date ..."
+			    placeholder=""
 			    change="onButtonPressed"
 			    class="sapUiSmallMarginBottom"/>
 		    
