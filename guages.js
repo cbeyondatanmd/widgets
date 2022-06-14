@@ -75,7 +75,7 @@
 		
 		render(val, info, color) {
 			var val1 = val * 0.01;
-			var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
+			var x = this.svg_circle_arc_path(500, 500, 450, -180, val1 * 360.0 - 180);
 			var rounded = Math.round( val * 10 ) / 10;
 
 			
@@ -88,7 +88,7 @@
 		
 		polar_to_cartesian(cx, cy, radius, angle) {
 		    var radians;
-		    radians = (angle - 90) * Math.PI / 180.0;
+		    radians = (angle - 180) * Math.PI / 360.0;
 		    return [Math.round((cx + radius * Math.cos(radians)) * 100) / 100, Math.round((cy + radius * Math.sin(radians)) * 100) / 100];
 		}
 		
