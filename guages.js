@@ -15,7 +15,7 @@
 		}
 		
 		.metric {
-		  padding: 50%;
+		  padding: 10%;
 		}
 		
 		.metric svg {
