@@ -6,7 +6,7 @@
 			border-radius: 10px;
 			border-width: 0px;
 			border-color: black;
-			border-style: solid;
+			border-style: none;
 			display: block;
 		} 
 
