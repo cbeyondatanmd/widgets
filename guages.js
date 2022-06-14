@@ -39,11 +39,11 @@
 		  <div class="row">
 		    <div class="col-md-4 col-sm-4">
 		      <div class="metric participation" data-ratio=".95">
-		        <svg viewBox="0 0 1000 500">
+
 			    
 					<text class='percentage' text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">0%</text>
 					<text class='title' text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal"></text>
-  	            </svg>
+
 		      </div>
 		    </div>
 		  </div>
