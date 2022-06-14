@@ -27,7 +27,7 @@
 			    id="dateInput"
 			    placeholder=""
 			    change="onButtonPressed"
-			    class="sapUiSmallMarginBottom"/>
+			    class="sapUiNoMargin"/>
 		    
 	    </m:Panel>
 	   
