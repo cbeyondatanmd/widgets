@@ -120,5 +120,5 @@
 		}
 	}
 	
-	customElements.define("com-demo-gauge", Gauges);
+	customElements.define("com-demo-gauges", Gauges);
 })();
