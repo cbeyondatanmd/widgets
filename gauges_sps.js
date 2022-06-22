@@ -43,5 +43,5 @@
 		}
 	}
 
-customElements.define("com-demo-gauges-sps", GaugesSps);
+customElements.define("com-demo-gauge-sps", GaugesSps);
 })
