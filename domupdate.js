@@ -47,7 +47,14 @@
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
 			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", e=> {
+				if (e.target.parentNode.parentNode.getAttribute("title"))
+				{
 				this._selectedItem = e.target.parentNode.parentNode.getAttribute("title");
+				}
+				else
+				{
+					this._selectedItem = e.target.parentNode.parentNode.parentNode.getAttribute("title");
+				}
 				var event = new Event("onClick");
 				this.dispatchEvent(event);
 				
