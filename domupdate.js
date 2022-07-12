@@ -42,15 +42,10 @@
 				{
 					//nodeList[1].innerText = text;
 					for (let i = 0; i < nodeList.length; i++) {
-						if (nodeList[i].getElementsByTagName("span")>0)
-						{
+
 						nodeList[i].getElementsByTagName("span")[0].innerHTML = text;
-                        nodeList[i].getElementsByTagName("span")[0].innerHTML = nodeList[i].getElementsByTagName("span")[0].innerHTML + html;
-						}
-						else
-						{
-						nodeList[i].innerHTML = html + text;						
-						}
+                        			nodeList[i].getElementsByTagName("span")[0].innerHTML = nodeList[i].getElementsByTagName("span")[0].innerHTML + html;
+
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
 			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", e=> {
