@@ -47,7 +47,32 @@
             "description": "Text string to set as the innerHtml."
           }
         ]
-      }
+      },
+      "setTextByAttributeValueList": {
+        "description": "Set the text of an element based on attribute name and value.",
+        "parameters": [
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Attribute Name."
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "description": "Attribute Value."
+          },
+          {
+            "name": "text",
+            "type": "string",
+            "description": "Text string to set as the innerText."
+          },
+          {
+            "name": "html",
+            "type": "string",
+            "description": "Text string to set as the innerHtml."
+          }
+        ]
+      }        
     },
       "events": {
     "onClick": {
