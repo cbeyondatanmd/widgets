@@ -96,9 +96,9 @@
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
 			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", e=> {
-				if (e.target.parentNode.parentNode.getAttribute("title"))
+				if (e.target.parentNode.getAttribute("title"))
 				{
-				this._selectedItem = e.target.parentNode.parentNode.getAttribute("title");
+				this._selectedItem = e.target.parentNode.getAttribute("title");
 				}
 				else
 				{
