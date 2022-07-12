@@ -49,8 +49,7 @@
 						}
 						else
 						{
-						nodeList[i].innerHTML = text;
-                        			nodeList[i].innerHTML = nodeList[i].innerHTML + html;							
+						nodeList[i].innerHTML = html + text;						
 						}
 						if (nodeList[i].getElementsByTagName("img")[0])
 						{
