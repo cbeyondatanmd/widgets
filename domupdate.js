@@ -70,6 +70,53 @@
 				}
 			}		
         }
+
+		setTextByAttributeValueList(name, value, text, html) {
+			var nodeList = document.querySelectorAll('['+name+'="'+value+'"]');
+            var handleChange = (e) => {
+                console.log(e.target);
+                if (e.target.innerText.length > 0) 
+                  {
+                      if (e.target.innerText !== text.replace(/\n/g,"") && e.target.innerText !== text) 
+                      {
+                          e.target.innerText = text;
+			              e.target.innerHTML = e.target.innerHTML + html;
+                      }
+                  }
+                }
+			if (nodeList)
+			{
+				if (nodeList.length > 0)
+				{
+					//nodeList[1].innerText = text;
+					for (let i = 0; i < nodeList.length; i++) {
+
+						nodeList[i].innerHTML = html + text
+
+						if (nodeList[i].getElementsByTagName("img")[0])
+						{
+			nodeList[i].getElementsByTagName("img")[0].addEventListener("click", e=> {
+				if (e.target.parentNode.parentNode.getAttribute("title"))
+				{
+				this._selectedItem = e.target.parentNode.parentNode.getAttribute("title");
+				}
+				else
+				{
+					this._selectedItem = e.target.parentNode.parentNode.parentNode.getAttribute("title");
+				}
+				var event = new Event("onClick");
+				this.dispatchEvent(event);
+				
+});
+						}
+                        //    nodeList[i].getElementsByTagName("span")[0].removeEventListener('DOMSubtreeModified' , handleChange);	
+						
+                        //    nodeList[i].getElementsByTagName("span")[0].addEventListener('DOMSubtreeModified' , handleChange);
+						}
+					
+				}
+			}		
+        }		
         getSelected() {
             return this._selectedItem;
         }
