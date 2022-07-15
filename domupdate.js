@@ -5,6 +5,7 @@
 </head>
 <body>
 <p>DOMUpdate</p>
+<button title="Open Discussion" class="c1199 c1197 c11108"><span class="c11101 c11111 c11112 c11104 c11123"><span class="sapIcon-conversations c11124 c11119 c11120" role="presentation" aria-hidden="true"></span></span></button>
 </body>
  `;
 
