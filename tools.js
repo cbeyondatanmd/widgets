@@ -24,25 +24,22 @@
 		}
 
 		postMessage(url, body, csrf) {
-			var data = "{\"action\":\"postDiscussionComment\",\"data\":{\"commentText\":\"test\",\"contentType\":\"COMMENT\",\"discussionId\":\"513D4F85141A61167E6A58FDB3AC2D4D\",\"discussionType\":\"GROUP\",\"strangers\":[],\"title\":\"\",\"commentType\":\"CONVERSATION\",\"cellAssociation\":{\"reportId\":\"\",\"drillState\":\"\",\"hierarchy\":\"\"}}}";
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
 
-			var xhr = new XMLHttpRequest();
-			xhr.withCredentials = true;
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
 
-			xhr.addEventListener("readystatechange", function() {
-			  if(this.readyState === 4) {
-			    console.log(this.responseText);
-			  }
-			});
+xhr.open("GET", "https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/epm/session?action=logon",false);
+// WARNING: Cookies will be stripped away by the browser before sending the request.
+xhr.setRequestHeader("X-CSRF-Token", "Fetch");
 
-			xhr.open("POST", "https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/fpa/collaboration?tenant=A",false);
+xhr.send();
 
-			xhr.setRequestHeader("X-CSRF-Token", csrf);
-			xhr.setRequestHeader("Content-Type", "text/plain");
-
-			xhr.send(data);
-
-			return xhr.responseText;
+			return xhr.getResponseHeader("x-csrf-token");
             }	
         	
 
