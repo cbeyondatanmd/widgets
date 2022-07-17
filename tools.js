@@ -40,7 +40,7 @@
 			xhr.send();
 			
 			var csrfx = xhr.getResponseHeader("x-csrf-token");
-			
+			var data = "{\"action\":\"postDiscussionComment\",\"data\":{\"commentText\":\"test\",\"contentType\":\"COMMENT\",\"discussionId\":\"513D4F85141A61167E6A58FDB3AC2D4D\",\"discussionType\":\"GROUP\",\"strangers\":[],\"title\":\"\",\"commentType\":\"CONVERSATION\",\"cellAssociation\":{\"reportId\":\"\",\"drillState\":\"\",\"hierarchy\":\"\"}}}";			
 			xhr = new XMLHttpRequest();
 			xhr.withCredentials = true;
 
