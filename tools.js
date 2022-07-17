@@ -30,9 +30,6 @@
                 myHeaders.append("Accept-Language", "en");
                 myHeaders.append("Connection", "keep-alive");
                 myHeaders.append("Content-Type", "application/json;charset=UTF-8");
-                myHeaders.append("Cookie", "signature; __VCAP_ID__=c481ae72-ec4f-48fe-6f03-05ab; JSESSIONID=s%3ApB27F6tDBgPmcOOj25jyYjAzO0F9jHQ8.7riKxLYF1Dwhhxss0U0dFzjzLh5VIaLmfOteFpxqK4M");
-                myHeaders.append("Origin", "https://cbeyondata.us10.hcs.cloud.sap");
-                myHeaders.append("Referer", "https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/ui/app.html");
                 myHeaders.append("Sec-Fetch-Dest", "empty");
                 myHeaders.append("Sec-Fetch-Mode", "cors");
                 myHeaders.append("Sec-Fetch-Site", "same-origin");
@@ -44,7 +41,7 @@
                 myHeaders.append("sec-ch-ua-platform", "\"Windows\"");
                 myHeaders.append("x-correlationid", "34487464-8012-4802-8432-212305989911");
                 
-                var raw = "{\"action\":\"postDiscussionComment\",\"data\":{\"commentText\":\"test\",\"contentType\":\"COMMENT\",\"discussionId\":\"513D4F85141A61167E6A58FDB3AC2D4D\",\"discussionType\":\"GROUP\",\"strangers\":[],\"title\":\"\",\"commentType\":\"CONVERSATION\",\"cellAssociation\":{\"reportId\":\"\",\"drillState\":\"\",\"hierarchy\":\"\"}}}";
+                var raw = "{\"action\":\"postDiscussionComment\",\"data\":{\"commentText\":\"fromcustomwidget\",\"contentType\":\"COMMENT\",\"discussionId\":\"513D4F85141A61167E6A58FDB3AC2D4D\",\"discussionType\":\"GROUP\",\"strangers\":[],\"title\":\"\",\"commentType\":\"CONVERSATION\",\"cellAssociation\":{\"reportId\":\"\",\"drillState\":\"\",\"hierarchy\":\"\"}}}";
                 
                 var requestOptions = {
                   method: 'POST',
