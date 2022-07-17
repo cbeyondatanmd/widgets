@@ -24,36 +24,25 @@
 		}
 
 		postMessage(url, body, csrf) {
-                var rtn = "mf";
-                var myHeaders = new Headers();
-                myHeaders.append("Accept", "application/json, text/javascript, */*; q=0.01");
-                myHeaders.append("Accept-Language", "en");
-                myHeaders.append("Connection", "keep-alive");
-                myHeaders.append("Content-Type", "application/json;charset=UTF-8");
-                myHeaders.append("Sec-Fetch-Dest", "empty");
-                myHeaders.append("Sec-Fetch-Mode", "cors");
-                myHeaders.append("Sec-Fetch-Site", "same-origin");
-                myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36");
-		myHeaders.append("X-CSRF-Token", csrf);
-                myHeaders.append("X-Requested-With", "XMLHttpRequest");
-                myHeaders.append("sec-ch-ua", "\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"");
-                myHeaders.append("sec-ch-ua-mobile", "?0");
-                myHeaders.append("sec-ch-ua-platform", "\"Windows\"");
-                
-                var raw = "{\"action\":\"postDiscussionComment\",\"data\":{\"commentText\":\"fromcustomwidget\",\"contentType\":\"COMMENT\",\"discussionId\":\"513D4F85141A61167E6A58FDB3AC2D4D\",\"discussionType\":\"GROUP\",\"strangers\":[],\"title\":\"\",\"commentType\":\"CONVERSATION\",\"cellAssociation\":{\"reportId\":\"\",\"drillState\":\"\",\"hierarchy\":\"\"}}}";
-                
-                var requestOptions = {
-                  method: 'POST',
-                  headers: myHeaders,
-                  body: raw,
-                  redirect: 'follow'
-                };
-                
-                fetch("https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/fpa/collaboration?tenant=A", requestOptions)
-                  .then(response => response.text())
-                  .then(result => console.log(result))
-                  .catch(error => console.log('error', error));                
-                return rtn;
+			var data = "{\"action\":\"postDiscussionComment\",\"data\":{\"commentText\":\"test\",\"contentType\":\"COMMENT\",\"discussionId\":\"513D4F85141A61167E6A58FDB3AC2D4D\",\"discussionType\":\"GROUP\",\"strangers\":[],\"title\":\"\",\"commentType\":\"CONVERSATION\",\"cellAssociation\":{\"reportId\":\"\",\"drillState\":\"\",\"hierarchy\":\"\"}}}";
+
+			var xhr = new XMLHttpRequest();
+			xhr.withCredentials = true;
+
+			xhr.addEventListener("readystatechange", function() {
+			  if(this.readyState === 4) {
+			    console.log(this.responseText);
+			  }
+			});
+
+			xhr.open("POST", "https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/fpa/collaboration?tenant=A",false);
+
+			xhr.setRequestHeader("X-CSRF-Token", csrf);
+			xhr.setRequestHeader("Content-Type", "text/plain");
+
+			xhr.send(data);
+
+			return xhr.responseText();
             }	
         	
 
