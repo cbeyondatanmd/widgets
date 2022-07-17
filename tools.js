@@ -1,0 +1,82 @@
+{
+    "id": "com.cbeyondata.domupdate",
+    "version": "1.0.0",
+    "name": "DOM Update",
+    "description": "BAS DOM Update",
+    "newInstancePrefix": "DOMUpdate",
+    "icon": "https://cbeyondatanmd.github.io/widgets/object-group.svg",
+    "vendor": "cBeyondata",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-cbeyondata-domupdate",
+        "url": "https://cbeyondatanmd.github.io/widgets/domupdate.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {},
+    "methods": {
+            "getSelected": {
+      "returnType": "string",
+      "description": "Returns the selected sidebar item."
+    },
+      "setTextByAttributeValue": {
+        "description": "Set the text of an element based on attribute name and value.",
+        "parameters": [
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Attribute Name."
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "description": "Attribute Value."
+          },
+          {
+            "name": "text",
+            "type": "string",
+            "description": "Text string to set as the innerText."
+          },
+          {
+            "name": "html",
+            "type": "string",
+            "description": "Text string to set as the innerHtml."
+          }
+        ]
+      },
+      "setTextByAttributeValueList": {
+        "description": "Set the text of an element based on attribute name and value.",
+        "parameters": [
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Attribute Name."
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "description": "Attribute Value."
+          },
+          {
+            "name": "text",
+            "type": "string",
+            "description": "Text string to set as the innerText."
+          },
+          {
+            "name": "html",
+            "type": "string",
+            "description": "Text string to set as the innerHtml."
+          }
+        ]
+      }        
+    },
+      "events": {
+    "onClick": {
+      "description": "Called when the user clicks the Objects."
+    }
+  }
+}
