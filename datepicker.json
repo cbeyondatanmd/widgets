@@ -1,0 +1,59 @@
+{
+  "id": "com.sap.sac.datePicker",
+  "version": "1.0.0",
+  "name": "Date Picker",
+  "description": "Date Picker",
+  "newInstancePrefix": "datePicker",
+  "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTE1MiA2NEgyOTZWMjRDMjk2IDEwLjc1IDMwNi43IDAgMzIwIDBDMzMzLjMgMCAzNDQgMTAuNzUgMzQ0IDI0VjY0SDM4NEM0MTkuMyA2NCA0NDggOTIuNjUgNDQ4IDEyOFY0NDhDNDQ4IDQ4My4zIDQxOS4zIDUxMiAzODQgNTEySDY0QzI4LjY1IDUxMiAwIDQ4My4zIDAgNDQ4VjEyOEMwIDkyLjY1IDI4LjY1IDY0IDY0IDY0SDEwNFYyNEMxMDQgMTAuNzUgMTE0LjcgMCAxMjggMEMxNDEuMyAwIDE1MiAxMC43NSAxNTIgMjRWNjR6TTQ4IDI0OEgxMjhWMTkySDQ4VjI0OHpNNDggMjk2VjM2MEgxMjhWMjk2SDQ4ek0xNzYgMjk2VjM2MEgyNzJWMjk2SDE3NnpNMzIwIDI5NlYzNjBINDAwVjI5NkgzMjB6TTQwMCAxOTJIMzIwVjI0OEg0MDBWMTkyek00MDAgNDA4SDMyMFY0NjRIMzg0QzM5Mi44IDQ2NCA0MDAgNDU2LjggNDAwIDQ0OFY0MDh6TTI3MiA0MDhIMTc2VjQ2NEgyNzJWNDA4ek0xMjggNDA4SDQ4VjQ0OEM0OCA0NTYuOCA1NS4xNiA0NjQgNjQgNDY0SDEyOFY0MDh6TTI3MiAxOTJIMTc2VjI0OEgyNzJWMTkyeiIvPjwvc3ZnPg==",
+  "vendor": "cBeyondata",
+  "eula": "",
+  "license": "",
+  "imports": [ "input-controls" ],
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-sap-sac-datepicker",
+      "url": "https://cbeyondatanmd.github.io/widgets/datepicker.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "metadata": {
+      "type": "string",
+      "description": "For internal use",
+      "default": ""
+    },
+    "date": {
+      "type": "string",
+      "description": "Date",
+      "default": ""
+    }
+  },
+  "methods": {
+    "getDate": {
+      "returnType": "string",
+      "description": "Get date",
+      "parameters": [],
+      "body": "return this.date;"
+    },
+    "setDate": {
+      "description": "Set date",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "string",
+          "description": "The new date"
+        }
+      ],
+      "body": "this.date = value;"
+    }
+
+  },
+  "events": {
+    "onStart": {
+      "description": "onStart events trigger"
+    }
+ 
+  }
+}
