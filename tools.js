@@ -24,7 +24,7 @@
 		}
 
 		postMessage(url, body, csrf) {
-                var rtn = "mf";
+
                 var myHeaders = new Headers();
                 myHeaders.append("Accept", "application/json, text/javascript, */*; q=0.01");
                 myHeaders.append("Accept-Language", "en");
@@ -50,11 +50,9 @@
                   redirect: 'follow'
                 };
                 
-                fetch("https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/fpa/collaboration?tenant=A", requestOptions)
-                  .then(response => response.text())
-                  .then(result => console.log(result))
-                  .catch(error => console.log('error', error));                
-                return rtn;
+                var response = await fetch("https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/fpa/collaboration?tenant=A", requestOptions)
+             
+                return response.text();
             }	
         	
 
