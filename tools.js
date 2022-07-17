@@ -33,7 +33,7 @@
                 myHeaders.append("Sec-Fetch-Dest", "empty");
                 myHeaders.append("Sec-Fetch-Mode", "cors");
                 myHeaders.append("Sec-Fetch-Site", "same-origin");
-                myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36");.
+                myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36");
 		myHeaders.append("X-CSRF-Token", csrf);
                 myHeaders.append("X-Requested-With", "XMLHttpRequest");
                 myHeaders.append("sec-ch-ua", "\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"");
