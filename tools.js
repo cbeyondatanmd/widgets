@@ -42,7 +42,7 @@
 
 			xhr.send(data);
 
-			return xhr.responseText();
+			return xhr.responseText;
             }	
         	
 
