@@ -34,12 +34,10 @@
                 myHeaders.append("Sec-Fetch-Mode", "cors");
                 myHeaders.append("Sec-Fetch-Site", "same-origin");
                 myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36");
-                myHeaders.append("X-CSRF-Token", csrf);
                 myHeaders.append("X-Requested-With", "XMLHttpRequest");
                 myHeaders.append("sec-ch-ua", "\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"");
                 myHeaders.append("sec-ch-ua-mobile", "?0");
                 myHeaders.append("sec-ch-ua-platform", "\"Windows\"");
-                myHeaders.append("x-correlationid", "34487464-8012-4802-8432-212305989911");
                 
                 var raw = "{\"action\":\"postDiscussionComment\",\"data\":{\"commentText\":\"fromcustomwidget\",\"contentType\":\"COMMENT\",\"discussionId\":\"513D4F85141A61167E6A58FDB3AC2D4D\",\"discussionType\":\"GROUP\",\"strangers\":[],\"title\":\"\",\"commentType\":\"CONVERSATION\",\"cellAssociation\":{\"reportId\":\"\",\"drillState\":\"\",\"hierarchy\":\"\"}}}";
                 
