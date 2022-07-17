@@ -56,9 +56,9 @@
               .then(response => response.text())
               .then(result => console.log(result))
               .catch(error => console.log('error', error));
-              return "neat";
+                return "neato";
             }	
-        }	
+        	
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
