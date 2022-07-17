@@ -9,7 +9,7 @@
  `;
 
 
-	class Tools extends HTMLElement {
+	class Toolsy extends HTMLElement {
 		constructor() {
 			super();
 			let shadowRoot = this.attachShadow({
@@ -38,5 +38,5 @@
 
 		}
 	}
-	customElements.define("com-cbeyondata-tools", Tools);
+	customElements.define("com-cbeyondata-tools", Toolsy);
 })();
