@@ -25,6 +25,7 @@
 
 		postMessage(url, body, csrf) {
 			var xhr = new XMLHttpRequest();
+            var token = "";
 			xhr.withCredentials = true;
 
 			xhr.addEventListener("readystatechange", function() {
@@ -33,29 +34,26 @@
 			  }
 			});
 
-			xhr.open("GET", "https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/epm/session?action=logon",false);
-			// WARNING: Cookies will be stripped away by the browser before sending the request.
-			xhr.setRequestHeader("X-CSRF-Token", "Fetch");
+            if (crsf==="true")
+            {
+                xhr.open("GET", "https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/epm/session?action=logon",false);
+                xhr.setRequestHeader("X-CSRF-Token", "Fetch");
+                xhr.send();                
+                token = xhr.getResponseHeader("x-csrf-token");
+            }
 
-			xhr.send();
-			
-			var csrfx = xhr.getResponseHeader("x-csrf-token");
-			var data = "{\"action\":\"postDiscussionComment\",\"data\":{\"commentText\":\"test\",\"contentType\":\"COMMENT\",\"discussionId\":\"513D4F85141A61167E6A58FDB3AC2D4D\",\"discussionType\":\"GROUP\",\"strangers\":[],\"title\":\"\",\"commentType\":\"CONVERSATION\",\"cellAssociation\":{\"reportId\":\"\",\"drillState\":\"\",\"hierarchy\":\"\"}}}";			
 			xhr = new XMLHttpRequest();
 			xhr.withCredentials = true;
 
-			xhr.addEventListener("readystatechange", function() {
-			  if(this.readyState === 4) {
-			    console.log(this.responseText);
-			  }
-			});
+			xhr.open("POST",url,false);
 
-			xhr.open("POST", "https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/fpa/collaboration?tenant=A",false);
+            if (crsf==="true")
+            {
+                xhr.setRequestHeader("X-CSRF-Token", token);
+                xhr.setRequestHeader("Content-Type", "text/plain");
+            }
 
-			xhr.setRequestHeader("X-CSRF-Token", csrfx);
-			xhr.setRequestHeader("Content-Type", "text/plain");
-
-			xhr.send(data);
+			xhr.send(body);
 
 			return xhr.responseText
             }	
