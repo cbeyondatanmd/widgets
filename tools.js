@@ -54,7 +54,7 @@
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
 				...this._props,
-				...changedPropertiestru
+				...changedProperties
 			};
 		}
 		onCustomWidgetAfterUpdate(changedProperties) {
