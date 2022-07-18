@@ -25,44 +25,36 @@
 
 		postMessage(url, body, csrf) {
 			var xhr = new XMLHttpRequest();
-            var token = "";
 			xhr.withCredentials = true;
 
-			xhr.addEventListener("readystatechange", function() {
-			  if(this.readyState === 4) {
-			    console.log(this.responseText);
-			  }
-			});
+			xhr.open("POST",window.origin + url,false);
 
-            if (csrf==="true")
+            if (csrf)
             {
-                xhr.open("GET", "https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/epm/session?action=logon",false);
-                xhr.setRequestHeader("X-CSRF-Token", "Fetch");
-                xhr.send();                
-                token = xhr.getResponseHeader("x-csrf-token");
+                xhr.setRequestHeader("X-CSRF-Token", csrf);                
             }
 
-			xhr = new XMLHttpRequest();
-			xhr.withCredentials = true;
-
-			xhr.open("POST",url,false);
-
-            if (csrf==="true")
-            {
-                xhr.setRequestHeader("X-CSRF-Token", token);
-                xhr.setRequestHeader("Content-Type", "text/plain");
-            }
-
+            xhr.setRequestHeader("Content-Type", "text/plain");
 			xhr.send(body);
 
 			return xhr.responseText
-            }	
-        	
+            }	  
+
+        getCSRFToken()
+        {
+			var xhr = new XMLHttpRequest();
+			xhr.withCredentials = true;
+
+            xhr.open("GET", window.origin + "/sap/fpa/services/rest/epm/session?action=logon",false);
+            xhr.setRequestHeader("X-CSRF-Token", "Fetch");
+            xhr.send();                
+            return xhr.getResponseHeader("x-csrf-token");           
+        }
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
 				...this._props,
-				...changedProperties
+				...changedPropertiestru
 			};
 		}
 		onCustomWidgetAfterUpdate(changedProperties) {
