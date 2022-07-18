@@ -34,7 +34,7 @@
 			  }
 			});
 
-            if (crsf==="true")
+            if (csrf==="true")
             {
                 xhr.open("GET", "https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/services/rest/epm/session?action=logon",false);
                 xhr.setRequestHeader("X-CSRF-Token", "Fetch");
@@ -47,7 +47,7 @@
 
 			xhr.open("POST",url,false);
 
-            if (crsf==="true")
+            if (csrf==="true")
             {
                 xhr.setRequestHeader("X-CSRF-Token", token);
                 xhr.setRequestHeader("Content-Type", "text/plain");
