@@ -5,6 +5,15 @@
 </head>
 <body>
 <p>Tools</p>
+<div id="__button141" data-sap-ui="__button141" class="sapEpmToolbarItem sapEpmToolbarElement sapEpmUiPageTipEnabled">
+    <button type="button" id="__button142" data-sap-ui="__button142" title="Version Management" class="sapEpmUiButton">
+        <div id="__button142-inner" class="sapEpmUiButtonInner">
+            <div id="__icon351" data-sap-ui="__icon351" class="sapEpmUiIcon">
+                <span id="__icon352" data-sap-ui="__icon352" role="presentation" aria-hidden="true" aria-label="versions" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL" style="font-family: 'fpa\2dicons';"></span>
+            </div>
+        </div>
+    </button>
+</div>
 </body>
  `;
 
