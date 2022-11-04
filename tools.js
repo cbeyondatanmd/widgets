@@ -4,7 +4,11 @@
 <head>
 </head>
 <body>
-<p>Tools</p>
+        <div id="__button142-inner" class="sapEpmUiButtonInner">
+            <div id="__icon351" data-sap-ui="__icon351" class="sapEpmUiIcon">
+                <span id="__icon352" data-sap-ui="__icon352" role="presentation" aria-hidden="true" aria-label="versions" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL" style="font-family: 'fpa\2dicons';"></span>
+            </div>
+        </div>
 </body>
  `;
 
