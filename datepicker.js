@@ -191,7 +191,7 @@
          }
          
      }
-    customElements.require("com-sap-sac-datepicker", DatePicker);
+    customElements.define("com-sap-sac-datepicker", DatePicker);
 
     // UTILS
     function loadthis(that) {
