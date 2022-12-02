@@ -7,26 +7,12 @@
 table, tr, td {
 
 	background-color:rgb(41, 49, 58);	   
-    width:100%;
+    
 
 }
 
-.childNav {
 
-	background-color:rgb(31, 39, 48);	   
-    width:100%;
 
-}
-
-.rotated {
-    transform: rotate(90deg); /* Equal to rotateZ(45deg) */
-    transition-duration:0.25s;
-  
-  }
-
-td {
-padding:0pt 5pt;
-}
 
 .sel {
     background-color:rgb(242, 98, 28);
