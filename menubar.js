@@ -5,7 +5,7 @@
 <style>
 
 table, tr, td {
-	background-color:rgb(41, 49, 58);	   
+	background-color:rgb(239, 245, 249);	   
 }
 
 th {   
@@ -18,12 +18,12 @@ th {
 
 
 body {
-  background-color: rgb(41, 49, 58);
+  background-color: rgb(239, 245, 249);	   
 }
 
 p {
 
-	background-color:rgb(41, 49, 58);
+	background-color:rgb(239, 245, 249);	   
 	color:rgb(221, 210, 211);
 	font-family:Calibri;
 	font-size:10.5pt;
