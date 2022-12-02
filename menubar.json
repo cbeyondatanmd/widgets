@@ -1,0 +1,109 @@
+{
+  "id": "com.cbeyondata.menubar",
+  "version": "1.0.0",
+  "name": "MenuBar",
+  "description": "BAS Menu Bar",
+  "newInstancePrefix": "MenuBar",
+  "icon": "https://cbeyondatanmd.github.io/widgets/menubar.svg",
+  "vendor": "cBeyondata",
+  "eula": "",
+  "license": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-cbeyondata-menubar",
+      "url": "https://cbeyondatanmd.github.io/widgets/menubar.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {},
+  "methods": {
+    "getClientHeight": {
+      "returnType": "string",
+      "description": "Returns the height required to show all items."
+    },    
+    "getSelected": {
+      "returnType": "string",
+      "description": "Returns the selected menubar item."
+    },
+    "setSelected": {
+      "description": "Sets the selected menubar item.",
+      "parameters": [
+        {
+          "name": "newSelected",
+          "type": "string",
+          "description": "Selected item ID."
+        }
+      ]
+    },
+    "addNavigation": {
+      "description": "Adds navigation members to menubar.",
+      "parameters": [
+        {
+          "name": "caption",
+          "type": "string",
+          "description": "Text to display in the menubar."
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "description": "BASE64 encoded SVG."
+        },
+        {
+          "name": "parentname",
+          "type": "string",
+          "description": "Name of parent node. Blank if not parent, asterisk if is parent."
+        }
+      ]
+    },
+    "addAdmin": {
+      "description": "Adds admin members to menubar.",
+      "parameters": [
+        {
+          "name": "caption",
+          "type": "string",
+          "description": "Text to display in the menubar."
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "description": "BASE64 encoded SVG."
+        }
+      ]
+    },
+    "addContext": {
+      "description": "Adds context members to menubar.",
+      "parameters": [
+        {
+          "name": "caption",
+          "type": "string",
+          "description": "Text to display in the menubar."
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "description": "BASE64 encoded SVG."
+        }
+      ]
+    },
+    "clearContext": {
+      "description": "Clears context members from menubar."
+    },
+    "setContextHeader": {
+      "description": "Updates context header caption.",
+      "parameters": [
+        {
+          "name": "caption",
+          "type": "string",
+          "description": "Text to display in the menubar context header."
+        }
+      ]
+    }
+  },
+  "events": {
+    "onClick": {
+      "description": "Called when the user clicks the Menubar."
+    }
+  }
+}
