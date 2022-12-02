@@ -16,9 +16,6 @@ th {
     background-color:rgb(242, 98, 28);
 }
 
-.sela {
-	background-color:rgb(52, 75, 95);
-}
 
 body {
   background-color: rgb(41, 49, 58);
@@ -45,7 +42,6 @@ a {
 	padding:10pt 14pt;
     display: block;
 	height:100%;
-    width:88%;
 
 }
 
@@ -109,7 +105,6 @@ td:active {
                 anchor = this.shadowRoot.getElementById(this._oldSelectedItem + "A");
                 
                 cell.classList.remove("sel");
-                anchor.classList.remove("sela");
             }
 
 			this._oldSelectedItem = newSelected;
@@ -119,7 +114,6 @@ td:active {
 			anchor = this.shadowRoot.getElementById(newSelected + "A");
 			
 			cell.classList.add("sel");
-			anchor.classList.add("sela");
             if (cell.parentElement.hidden)
             {
 		var caption =  cell.parentNode.getAttribute("parentname").toString();
