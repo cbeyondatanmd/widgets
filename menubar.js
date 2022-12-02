@@ -14,7 +14,7 @@ table {
 tr, td {
 
 	background-color:rgb(41, 49, 58);	   
-    width:50px;
+    width:20px;
 
 }
 
