@@ -5,36 +5,55 @@
 <style>
 
 table, tr, td {
-	background-color:rgb(132, 133, 134);	   
+
+	background-color:rgb(41, 49, 58);	   
+    width:100%;
+
 }
 
-th {   
-    width:100px;
+.childNav {
+
+	background-color:rgb(31, 39, 48);	   
+    width:100%;
+
+}
+
+.rotated {
+    transform: rotate(90deg); /* Equal to rotateZ(45deg) */
+    transition-duration:0.25s;
+  
+  }
+
+td {
+padding:0pt 5pt;
 }
 
 .sel {
     background-color:rgb(242, 98, 28);
 }
 
+.sela {
+	background-color:rgb(52, 75, 95);
+}
 
 body {
-  background-color: rgb(132, 133, 134);	   
+  background-color: rgb(41, 49, 58);
 }
 
 p {
 
-	background-color:rgb(132, 133, 134);	   
+	background-color:rgb(41, 49, 58);
 	color:rgb(221, 210, 211);
 	font-family:Calibri;
 	font-size:10.5pt;
 	font-weight:bold;
-	padding:0pt 0pt;
+padding:0pt 5pt;
 }
 
 a {
 
 	cursor:pointer;
-	color:white;	   
+	color:white;
 	font-family:Calibri;
 	font-size:10.5pt;
 	font-weight:bold;
@@ -42,11 +61,12 @@ a {
 	padding:10pt 14pt;
     display: block;
 	height:100%;
-filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(60%);
+  
+
 }
 
 a:hover {
-	background-color:rgb(249, 251, 253);
+	background-color:rgb(47, 62, 83);
 }
 td:active {
 	position:relative;
@@ -59,6 +79,7 @@ td:active {
   display: inline-block;
   background-size: contain;
   vertical-align: top;
+  filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(60%);
 }
 
 </style>
