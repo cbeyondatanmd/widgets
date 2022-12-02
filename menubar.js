@@ -7,7 +7,7 @@
 table {
 
 	background-color:rgb(41, 49, 58);	   
-    width:100%;
+
 
 }
 
