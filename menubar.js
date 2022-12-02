@@ -65,7 +65,7 @@ td:active {
   display: inline-block;
   background-size: contain;
   vertical-align: top;
-  fill:rgb(66, 124, 172);
+  filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(80%);
 }
 
 </style>
