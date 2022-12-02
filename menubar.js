@@ -14,7 +14,7 @@ table {
 tr, td {
 
 	background-color:rgb(41, 49, 58);	   
-    width:75px;
+    width:50px;
 
 }
 
@@ -76,7 +76,7 @@ a:hover {
 	background-color:rgb(47, 62, 83);
 }
 td:active {
-	position:static;
+	position:relative;
 	top:1px;
 }
 
