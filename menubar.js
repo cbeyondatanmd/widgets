@@ -4,10 +4,17 @@
 <head>
 <style>
 
-table, tr, td {
+table {
 
 	background-color:rgb(41, 49, 58);	   
     width:100%;
+
+}
+
+tr, td {
+
+	background-color:rgb(41, 49, 58);	   
+    width:100px;
 
 }
 
@@ -25,7 +32,7 @@ table, tr, td {
   }
 
 td {
-padding:0pt 5pt;
+padding:0pt 0pt;
 }
 
 .sel {
