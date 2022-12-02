@@ -6,7 +6,7 @@
 
 table, tr, td {
 
-	background-color:rgb(80, 80, 80);	   
+	background-color:rgb(239, 245, 249);	   
     
 
 }
@@ -23,12 +23,12 @@ table, tr, td {
 }
 
 body {
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(239, 245, 249);
 }
 
 p {
 
-	background-color:rgb(80, 80, 80);
+	background-color:rgb(239, 245, 249);
 	color:rgb(221, 210, 211);
 	font-family:Calibri;
 	font-size:10.5pt;
@@ -39,7 +39,7 @@ padding:0pt 5pt;
 a {
 
 	cursor:pointer;
-	color:white;
+	color:rgb(0,0,0)
 	font-family:Calibri;
 	font-size:10.5pt;
 	font-weight:bold;
@@ -52,7 +52,7 @@ a {
 }
 
 a:hover {
-	background-color:rgb(47, 62, 83);
+	background-color:rgb(229, 235, 239);
 }
 td:active {
 	position:relative;
@@ -65,7 +65,7 @@ td:active {
   display: inline-block;
   background-size: contain;
   vertical-align: top;
-  filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(60%);
+  
 }
 
 </style>
