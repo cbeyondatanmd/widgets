@@ -65,7 +65,7 @@ td:active {
   display: inline-block;
   background-size: contain;
   vertical-align: top;
-  
+  fill:rgb(66, 124, 172);
 }
 
 </style>
