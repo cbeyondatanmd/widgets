@@ -46,7 +46,7 @@ a {
 }
 
 a:hover {
-	background-color:rgb(242, 98, 28);
+	background-color:rgb(249, 251, 253);
 }
 td:active {
 	position:relative;
