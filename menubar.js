@@ -36,18 +36,31 @@ p {
 padding:0pt 5pt;
 }
 
-a {
+.child {
+  position: relative;
+  top: 2px;  /* relative to parent container */
 
+}
+.childtext {
+  position: relative;
+  top: -2px;  /* relative to parent container */
+  
+}
+
+path {
+  fill: #427CAC;
+}
+
+a {
 	cursor:pointer;
-	color:rgb(0,0,0);
+	color:rgb(70,70,70);
 	font-family:Calibri;
 	font-size:10.5pt;
 	font-weight:bold;
 	text-decoration:none;
-	padding:5pt 14pt;
+	padding:7pt 14pt;
     display: block;
 	height:100%;
-  
 
 }
 
@@ -67,10 +80,7 @@ td:active {
   vertical-align: top;
   filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(80%);
 }
-.child {
-  position: relative;
-  top: 4px;  /* relative to parent container */
-}
+
 </style>
 </head>
 <body>
