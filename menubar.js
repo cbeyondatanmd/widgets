@@ -44,7 +44,7 @@ a {
 	font-size:10.5pt;
 	font-weight:bold;
 	text-decoration:none;
-	padding:10pt 14pt;
+	padding:8pt 14pt;
     display: block;
 	height:100%;
   
@@ -69,7 +69,7 @@ td:active {
 }
 .child {
   position: relative;
-  top: 5px;  /* relative to parent container */
+  top: 4px;  /* relative to parent container */
 }
 </style>
 </head>
