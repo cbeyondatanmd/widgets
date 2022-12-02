@@ -4,18 +4,12 @@
 <head>
 <style>
 
-table {
-
+table, tr, td {
 	background-color:rgb(41, 49, 58);	   
-
-
 }
 
-tr, td {
-
-	background-color:rgb(41, 49, 58);	   
-    width:20px;
-
+th {   
+    width:100px;
 }
 
 .childNav {
