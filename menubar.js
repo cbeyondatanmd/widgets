@@ -39,7 +39,7 @@ padding:0pt 5pt;
 a {
 
 	cursor:pointer;
-	color:rgb(0,0,0)
+	color:rgb(0,0,0);
 	font-family:Calibri;
 	font-size:10.5pt;
 	font-weight:bold;
