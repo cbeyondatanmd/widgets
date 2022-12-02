@@ -14,7 +14,7 @@ table {
 tr, td {
 
 	background-color:rgb(41, 49, 58);	   
-    width:100px;
+    width:75px;
 
 }
 
@@ -54,7 +54,7 @@ p {
 	font-family:Calibri;
 	font-size:10.5pt;
 	font-weight:bold;
-padding:0pt 5pt;
+	padding:0pt 5pt;
 }
 
 a {
@@ -77,7 +77,7 @@ a:hover {
 }
 td:active {
 	position:relative;
-	top:1px;
+	top:0px;
 }
 
 .icon { 
