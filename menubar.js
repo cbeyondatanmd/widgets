@@ -34,7 +34,7 @@ p {
 a {
 
 	cursor:pointer;
-	color:white;
+	color:rgb(75, 121, 169);	   
 	font-family:Calibri;
 	font-size:10.5pt;
 	font-weight:bold;
