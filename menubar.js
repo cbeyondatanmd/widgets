@@ -24,7 +24,7 @@ body {
 p {
 
 	background-color:rgb(132, 133, 134);	   
-	color:rgb(221, 210, 211);
+	color:white;
 	font-family:Calibri;
 	font-size:10.5pt;
 	font-weight:bold;
