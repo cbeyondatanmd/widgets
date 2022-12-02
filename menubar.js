@@ -77,7 +77,7 @@ a:hover {
 }
 td:active {
 	position:relative;
-	top:0px;
+	top:1px;
 }
 
 .icon { 
