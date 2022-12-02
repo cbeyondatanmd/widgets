@@ -6,7 +6,7 @@
 
 table, tr, td {
 
-	background-color:rgb(41, 49, 58);	   
+	background-color:rgb(0, 0, 0);	   
     
 
 }
@@ -23,12 +23,12 @@ table, tr, td {
 }
 
 body {
-  background-color: rgb(41, 49, 58);
+  background-color: rgb(0, 0, 0);
 }
 
 p {
 
-	background-color:rgb(41, 49, 58);
+	background-color:rgb(0, 0, 0);
 	color:rgb(221, 210, 211);
 	font-family:Calibri;
 	font-size:10.5pt;
