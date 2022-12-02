@@ -76,7 +76,7 @@ a:hover {
 	background-color:rgb(47, 62, 83);
 }
 td:active {
-
+	position:static;
 	top:1px;
 }
 
