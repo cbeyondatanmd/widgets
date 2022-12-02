@@ -85,10 +85,10 @@ td:active {
 </style>
 </head>
 <body>
-<p>NAVIGATION</p>
 <table id="tableNavigation">
+<tr id="rowMenu">
+</tr>
 </table>
-<p>ADMIN</p>
 <table id="tableAdmin">
 </table>
 <p id="context"></p>
@@ -176,8 +176,7 @@ td:active {
         }
 
 		addContext(caption, icon) {
-			var table = this.shadowRoot.getElementById("tableContext");
-			var row = table.insertRow(0);
+			var row = this.shadowRoot.getElementById("rowMenu");
 			var cell = row.insertCell(0);
 			
 			cell.innerHTML = '<a href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';	
@@ -196,7 +195,7 @@ td:active {
 			//}
 		}
 		addNavigation(caption, icon, parentname) {
-			var table = this.shadowRoot.getElementById("tableNavigation");
+			var table = this.shadowRoot.getElementById("me");
 			var row = table.insertColumn(0);
 			var cell = row.insertCell(0);
 			cell.id = caption;
