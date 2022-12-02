@@ -44,7 +44,7 @@ a {
 	font-size:10.5pt;
 	font-weight:bold;
 	text-decoration:none;
-	padding:8pt 14pt;
+	padding:7pt 14pt;
     display: block;
 	height:100%;
   
