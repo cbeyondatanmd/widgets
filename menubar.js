@@ -46,7 +46,7 @@ a {
 }
 
 a:hover {
-	background-color:rgb(47, 62, 83);
+	background-color:rgb(242, 98, 28);
 }
 td:active {
 	position:relative;
@@ -59,7 +59,6 @@ td:active {
   display: inline-block;
   background-size: contain;
   vertical-align: top;
-  filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(60%);
 }
 
 </style>
