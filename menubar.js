@@ -42,7 +42,7 @@ a {
 	padding:10pt 14pt;
     display: block;
 	height:100%;
-
+filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(60%);
 }
 
 a:hover {
