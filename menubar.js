@@ -195,8 +195,7 @@ td:active {
 			//}
 		}
 		addNavigation(caption, icon, parentname) {
-			var table = this.shadowRoot.getElementById("me");
-			var row = table.insertColumn(0);
+			var row = this.shadowRoot.getElementById("rowMenu");
 			var cell = row.insertCell(0);
 			cell.id = caption;
 
