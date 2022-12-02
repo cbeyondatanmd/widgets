@@ -12,23 +12,6 @@ th {
     width:100px;
 }
 
-.childNav {
-
-	background-color:rgb(31, 39, 48);	   
-    width:100%;
-
-}
-
-.rotated {
-    transform: rotate(90deg); /* Equal to rotateZ(45deg) */
-    transition-duration:0.25s;
-  
-  }
-
-td {
-padding:0pt 0pt;
-}
-
 .sel {
     background-color:rgb(242, 98, 28);
 }
@@ -48,7 +31,7 @@ p {
 	font-family:Calibri;
 	font-size:10.5pt;
 	font-weight:bold;
-	padding:0pt 5pt;
+	padding:0pt 0pt;
 }
 
 a {
@@ -150,17 +133,6 @@ td:active {
                   }                
                 
                 var parentCaratNode = this.shadowRoot.getElementById(caption+'C');
-                if (parentCaratNode)
-                {
-                    if (rotate) 
-                    {
-                        parentCaratNode.classList.remove("rotated"); 
-                    }
-                    else
-                    {
-                        parentCaratNode.classList.add("rotated");
-                    }
-                }
             }
 		}
 
@@ -200,22 +172,9 @@ td:active {
 			var cell = row.insertCell(0);
 			cell.id = caption;
 
-            if (parentname==="*")
-            {
-                cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;<img id="'+caption+'C" class="icon" style="float:right;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTY0IDQ0OGMtOC4xODggMC0xNi4zOC0zLjEyNS0yMi42Mi05LjM3NWMtMTIuNS0xMi41LTEyLjUtMzIuNzUgMC00NS4yNUwxNzguOCAyNTZMNDEuMzggMTE4LjZjLTEyLjUtMTIuNS0xMi41LTMyLjc1IDAtNDUuMjVzMzIuNzUtMTIuNSA0NS4yNSAwbDE2MCAxNjBjMTIuNSAxMi41IDEyLjUgMzIuNzUgMCA0NS4yNWwtMTYwIDE2MEM4MC4zOCA0NDQuOSA3Mi4xOSA0NDggNjQgNDQ4eiIvPjwvc3ZnPg=="/></a>';
-            }
-            else if (parentname)
-            {
-                row.setAttribute("parentname", parentname);
-                row.classList.add("childNav");
-                row.hidden=true;
-                cell.classList.add("childNav");
-                cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';
-            }
-            else
-            {
+
                 cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';
-			}
+
 					
 
 			cell.addEventListener("click", () => {
@@ -227,18 +186,7 @@ td:active {
                     rotate=childRows[i].hidden;
                   }                
                 
-                var parentCaratNode = this.shadowRoot.getElementById(caption+'C');
-                if (parentCaratNode)
-                {
-                    if (rotate) 
-                    {
-                        parentCaratNode.classList.remove("rotated"); 
-                    }
-                    else
-                    {
-                        parentCaratNode.classList.add("rotated");
-                    }
-                }
+
 			});			
         }
 
