@@ -11,10 +11,6 @@ table, tr, td {
 
 }
 
-td {
-border-right-style: dotted;
-}
-
 
 .sel {
     background-color:rgb(242, 98, 28);
