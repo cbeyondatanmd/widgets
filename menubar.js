@@ -11,7 +11,9 @@ table, tr, td {
 
 }
 
-
+td {
+border-right-style: dotted;
+}
 
 
 .sel {
