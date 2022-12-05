@@ -17,8 +17,6 @@
 
 			this._props = {};
 			var _selectedItem;
-			var _oldSelectedItem = "";
-
 		}
 
 loadScreen(key, url) {
@@ -32,10 +30,18 @@ this.shadowRoot.appendChild(iframe);
     }	  
 	  
 showScreen(key) {
-    var iframe = this.shadowRoot.getElementById(key);
 	var rtn = false;
+
+    var iframe = this.shadowRoot.getElementById(this._selectedItem);
 	if (iframe)
 	{
+		iframe.style.visibility = "hidden";
+	}
+
+    iframe = this.shadowRoot.getElementById(key);
+	if (iframe)
+	{
+        this._selectedItem = key;
 		rtn = true;
 		iframe.style.visibility = "visible";
 	}
