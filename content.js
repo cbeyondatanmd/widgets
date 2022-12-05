@@ -28,7 +28,7 @@
 		}
 
 loadScreen(key, url) {
-    var iframe = this.shadowRoot.createElement('iframe');
+    var iframe = document.createElement('iframe');
     iframe.src = url;
     iframe.id = key;
     this.shadowRoot.appendChild(iframe);
