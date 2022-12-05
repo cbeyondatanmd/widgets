@@ -3,10 +3,7 @@
 	template.innerHTML = `
 <head>
 </head>
-<body>
-<div id="cached_screens" style="width:100%; height:100%; position:relative;">
-</div>
-</body>
+<body/>
 `;
 
 
@@ -28,7 +25,8 @@ loadScreen(key, url) {
     var iframe = document.createElement('iframe');
     iframe.src = url;
     iframe.id = key;
-this.shadowRoot.getElementById("cached_screens").appendChild(iframe);
+	iframe.style = "visibility: visible; position:absolute; top:0px; left:0px; width:100%; height:100%; border: none; overflow: hidden;"
+this.shadowRoot.appendChild(iframe);
  
     return "";
     }	  
