@@ -1,0 +1,44 @@
+{
+    "id": "com.cbeyondata.content",
+    "version": "1.0.0",
+    "name": "BAS Content",
+    "description": "BAS Content",
+    "newInstancePrefix": "Content",
+  "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTUwMi42IDE4Mi42bC00NS4yNS00NS4yNUM0NTEuNCAxMzEuNCA0NDMuMyAxMjggNDM0LjggMTI4SDM4NFY4MEMzODQgNTMuNSAzNjIuNSAzMiAzMzYgMzJoLTE2MEMxNDkuNSAzMiAxMjggNTMuNSAxMjggODBWMTI4SDc3LjI1Yy04LjUgMC0xNi42MiAzLjM3NS0yMi42MiA5LjM3NUw5LjM3NSAxODIuNkMzLjM3NSAxODguNiAwIDE5Ni44IDAgMjA1LjNWMzA0aDEyOHYtMzJDMTI4IDI2My4xIDEzNS4xIDI1NiAxNDQgMjU2aDMyQzE4NC45IDI1NiAxOTIgMjYzLjEgMTkyIDI3MnYzMmgxMjh2LTMyQzMyMCAyNjMuMSAzMjcuMSAyNTYgMzM2IDI1NmgzMkMzNzYuOSAyNTYgMzg0IDI2My4xIDM4NCAyNzJ2MzJoMTI4VjIwNS4zQzUxMiAxOTYuOCA1MDguNiAxODguNiA1MDIuNiAxODIuNnpNMzM2IDEyOGgtMTYwVjgwaDE2MFYxMjh6TTM4NCAzNjhjMCA4Ljg3NS03LjEyNSAxNi0xNiAxNmgtMzJjLTguODc1IDAtMTYtNy4xMjUtMTYtMTZ2LTMySDE5MnYzMkMxOTIgMzc2LjkgMTg0LjkgMzg0IDE3NiAzODRoLTMyQzEzNS4xIDM4NCAxMjggMzc2LjkgMTI4IDM2OHYtMzJIMFY0NDhjMCAxNy42MiAxNC4zOCAzMiAzMiAzMmg0NDhjMTcuNjIgMCAzMi0xNC4zOCAzMi0zMnYtMTEyaC0xMjhWMzY4eiIvPjwvc3ZnPg==",
+    "vendor": "cBeyondata",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-cbeyondata-content",
+        "url": "https://cbeyondatanmd.github.io/widgets/content.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {},
+    "methods": {
+      "loadScreen": {
+	  "returnType": "string",
+        "description": "Load Screen.",
+        "parameters": [
+          {
+            "name": "key",
+            "type": "string",
+            "description": "Screen Key."
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL to Load."
+          }
+        ]
+      }        
+    },
+      "events": {
+    "onClick": {
+      "description": "Called when the user clicks the Objects."
+    }
+  }
+}
