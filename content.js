@@ -25,13 +25,22 @@ loadScreen(key, url) {
     var iframe = document.createElement('iframe');
     iframe.src = url;
     iframe.id = key;
-	iframe.style = "visibility: visible; position:absolute; top:0px; left:0px; width:100%; height:100%; border: none; overflow: hidden;"
+	iframe.style = "visibility: hidden; position:absolute; top:0px; left:0px; width:100%; height:100%; border: none; overflow: hidden;"
 this.shadowRoot.appendChild(iframe);
  
     return "";
     }	  
 	  
-
+showScreen(key) {
+    var iframe = getElementById(key);
+	var rtn = false;
+	if (iframe)
+	{
+		rtn = true;
+		iframe.style.visibility = "visible";
+	}
+    return rtn;
+    }	 
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
