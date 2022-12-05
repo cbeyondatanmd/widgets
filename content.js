@@ -30,21 +30,15 @@
 
 		}
 
-		loadScreen(key, url) {
-			
-			var visibility = this.shadowRoot.getElementById("frame1a").style.visibility; 
-			if (visibility === "" || visibility === "hidden")
-			{
-				this.shadowRoot.getElementById("frame1a").style.visibility = "visible"; 			
-				this.shadowRoot.getElementById("frame1b").style.visibility = "hidden"; 			
-			}
-			else
-			{
-				this.shadowRoot.getElementById("frame1b").style.visibility = "visible"; 			
-				this.shadowRoot.getElementById("frame1a").style.visibility = "hidden"; 			
-			}
-			return "";
-            }	  
+loadScreen(key, url) {
+    var iframe = this.shadowRoot.createElement('iframe');
+    iframe.src = url;
+    iframe.id = key;
+    this.shadowRoot.appendChild(iframe);
+ 
+    return "";
+    }	  
+	  
 
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
