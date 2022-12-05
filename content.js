@@ -31,7 +31,7 @@ div>
 
 		loadScreen(key, url) {
 			return ""
-			document.getElementById("frame1a").style.display = "none"; 			
+			this.shadowRoot.getElementById("frame1a").style.display = "none"; 			
             }	  
 
 
