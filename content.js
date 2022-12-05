@@ -3,13 +3,7 @@
 	template.innerHTML = `
 <head>
 </head>
-<body id="ASA12312SASDCX">
-
-
-
-
-
-</body>
+<body style="width:100%; height:100%; position:relative;"/>
 `;
 
 
