@@ -32,7 +32,7 @@ this.shadowRoot.appendChild(iframe);
     }	  
 	  
 showScreen(key) {
-    var iframe = getElementById(key);
+    var iframe = this.shadowRoot.getElementById(key);
 	var rtn = false;
 	if (iframe)
 	{
