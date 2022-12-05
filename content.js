@@ -40,8 +40,8 @@ div>
 			}
 			else
 			{
-				this.shadowRoot.getElementById("frame1a").style.visibility = "hidden"; 			
 				this.shadowRoot.getElementById("frame1b").style.visibility = "visible"; 			
+				this.shadowRoot.getElementById("frame1a").style.visibility = "hidden"; 			
 			}
 			return "";
             }	  
