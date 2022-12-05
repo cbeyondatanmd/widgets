@@ -31,7 +31,7 @@ div>
 		}
 
 		loadScreen(key, url) {
-			return ""
+			
 			var visibility = this.shadowRoot.getElementById("frame1a").style.visibility; 
 			if (visibility === "" || visibility === "hidden")
 			{
@@ -43,7 +43,7 @@ div>
 				this.shadowRoot.getElementById("frame1a").style.visibility = "hidden"; 			
 				this.shadowRoot.getElementById("frame1b").style.visibility = "visible"; 			
 			}
-			
+			return "";
             }	  
 
 
