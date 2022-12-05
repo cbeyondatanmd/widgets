@@ -34,7 +34,18 @@
             "description": "URL to Load."
           }
         ]
-      }        
+      },
+      "showScreen": {
+        "returnType": "boolean",
+          "description": "Show Screen.",
+          "parameters": [
+            {
+              "name": "key",
+              "type": "string",
+              "description": "Screen Key."
+            }
+          ]
+        }               
     },
       "events": {
     "onClick": {
