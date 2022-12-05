@@ -7,7 +7,7 @@
 
 
 <div style="width:100%; padding-bottom:56.25%; position:relative;">
-  <iframe src="https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/ui/tenants/89c3d/bo/application/7F0050867C996BEAEA2CD148810F9CA9?mode=embed" style="position:absolute; top:0px; left:0px; width:100%; height:100%; border: none; overflow: hidden;">
+  <iframe id="frame1a" src="https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/ui/tenants/89c3d/bo/application/7F0050867C996BEAEA2CD148810F9CA9?mode=embed" style="position:absolute; top:0px; left:0px; width:100%; height:100%; border: none; overflow: hidden;">
 div>
 
 
@@ -31,6 +31,7 @@ div>
 
 		loadScreen(key, url) {
 			return ""
+			document.getElementById("frame1a").style.display = "none"; 			
             }	  
 
 
