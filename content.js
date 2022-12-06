@@ -35,6 +35,15 @@ setFilter(filter) {
 	{
 	iframe.contentWindow.postMessage(filter,"*");
 	}
+var i, frames;
+frames = document.getElementsByTagName("iframe");
+for (i = 0; i < frames.length; ++i)
+{
+	if (this._selectedItem !== frames[1].id)
+	{
+	frames[1].contentWindow.postMessage(filter,"*");
+	}
+}	
     return "";
     }	 
 		
@@ -54,7 +63,7 @@ showScreen(key, filter) {
 		rtn = true;
 		iframe.style.visibility = "visible";
 	//	iframe.contentWindow.postMessage("globalFilter|BBFY=BBFY_2022","*")
-		iframe.contentWindow.postMessage(filter,"*");
+	//	iframe.contentWindow.postMessage(filter,"*");
 	}
 	
     return rtn;
