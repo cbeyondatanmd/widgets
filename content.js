@@ -39,9 +39,9 @@ var i, frames;
 frames = document.getElementsByTagName("iframe");
 for (i = 0; i < frames.length; ++i)
 {
-	if (this._selectedItem !== frames[1].id)
+	if (this._selectedItem !== frames[i].id)
 	{
-	frames[1].contentWindow.postMessage(filter,"*");
+	frames[i].contentWindow.postMessage(filter,"*");
 	}
 }	
     return "";
