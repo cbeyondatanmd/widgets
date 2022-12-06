@@ -31,8 +31,10 @@ this.shadowRoot.appendChild(iframe);
 
 setFilter(filter) {
     var iframe = this.shadowRoot.getElementById(this._selectedItem);
+		if (iframe)
+	{
 	iframe.contentWindow.postMessage(filter,"*")
- 
+	}
     return "";
     }	 
 		
