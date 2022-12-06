@@ -38,7 +38,7 @@ setFilter(filter) {
     return "";
     }	 
 		
-showScreen(key) {
+showScreen(key, filter) {
 	var rtn = false;
 
     var iframe = this.shadowRoot.getElementById(this._selectedItem);
@@ -56,6 +56,7 @@ showScreen(key) {
 	//	iframe.contentWindow.postMessage("globalFilter|BBFY=BBFY_2022","*")
 
 	}
+	setFilter(filter);
     return rtn;
     }	 
 
