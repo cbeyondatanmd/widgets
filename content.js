@@ -44,7 +44,7 @@ showScreen(key) {
         this._selectedItem = key;
 		rtn = true;
 		iframe.style.visibility = "visible";
-		iframe.contentWindow.postMessage("globalFilter|BBFY=BBFY_2022","*")
+	//	iframe.contentWindow.postMessage("globalFilter|BBFY=BBFY_2022","*")
 
 	}
     return rtn;
