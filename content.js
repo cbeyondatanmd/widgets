@@ -28,7 +28,14 @@ this.shadowRoot.appendChild(iframe);
  
     return "";
     }	  
-	  
+
+setFilter(filter) {
+    var iframe = this.shadowRoot.getElementById(this._selectedItem);
+	iframe.contentWindow.postMessage(filter,"*")
+ 
+    return "";
+    }	 
+		
 showScreen(key) {
 	var rtn = false;
 
