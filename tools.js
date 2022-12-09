@@ -38,7 +38,16 @@
             xhr.setRequestHeader("Content-Type", "text/plain");
 			xhr.send(body);
 
-			return xhr.responseText
+            const obj = JSON.parse(xhr.responseText);
+            var rtn = [];
+            //document.getElementById("demo").innerHTML = obj.Data.header.findIndex((x) => x === "ID");
+            for (let i = 0; i < obj.Data.member.length; i++) 
+            {
+                rtn.push(obj.Data.member[i][obj.Data.header.findIndex((x) => x === "ID")]);
+            }
+
+			return rtn.join("|");
+
             }	  
 
         getCSRFToken()
