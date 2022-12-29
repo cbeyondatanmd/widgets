@@ -197,7 +197,7 @@ td:active {
 </table>
 
 
-  <div class="dropdown-content" id="LAYOUTS__DC">
+  <div style="left:100px" class="dropdown-content" id="LAYOUTS__DC">
 <label class="container">Org
   <input type="checkbox" checked="checked">
   <span class="checkmark"></span>
