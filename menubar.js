@@ -3,6 +3,109 @@
 	template.innerHTML = `
 <head>
 <style>
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+
+
+.dropdown-content {
+  display: none;
+  border-radius:5px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.show {
+  display: block;
+}
+
+
+
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 25px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  height: 12px;
+  width: 12px;
+  background-color: #FFF;
+  border: 2px solid RGB(66,124,172);
+
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover  {
+  background-color: #eff5f9;
+ border-radius:5px;
+}
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  fill: black;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+  
+}
+.container .checkmark:after {
+  left: 3px;
+  top: 0px;
+  width: 3px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* Style the checkmark/indicator */
 
 table, tr, td {
 
@@ -91,6 +194,29 @@ td:active {
 <p id="context"></p>
 <table id="tableContext">
 </table>
+
+
+  <div class="dropdown-content" id="LAYOUTS">
+<label class="container">Org
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Project
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Object Class
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<hr size=0.5px>
+<label class="container">Advanced...
+
+ 
+</label>
+  </div>
+
+
 </body>
  `;
 
@@ -189,6 +315,7 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
 
 			cell.addEventListener("click", () => {
                 this._selectedItem = caption;
+				document.getElementById(caption).classList.toggle("show");
                 var childRows = this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]');
                 var rotate = false;
                 for (let i = 0; i < childRows.length; i++) {
