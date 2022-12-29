@@ -197,7 +197,7 @@ td:active {
 </table>
 
 
-  <div style="left:100px;top:46px" class="dropdown-content" id="LAYOUTS__DC">
+  <div style="left:123px;top:46px" class="dropdown-content" id="LAYOUTS__DC">
 <label class="container">Org
   <input type="checkbox" checked="checked">
   <span class="checkmark"></span>
@@ -309,7 +309,7 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg width="16" height="16"
 			var row = this.shadowRoot.getElementById("rowMenu");
 			var cell = row.insertCell(0);
 			cell.id = caption;
-
+//this.shadowRoot.activeElement.getBoundingClientRect()
 
 cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="16" height="16" viewBox="0 0 ' + parentname + '"><path d="' + icon + '"></path></svg><span class="childtext">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</span></a>';	
 						
