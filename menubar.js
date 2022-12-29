@@ -315,7 +315,7 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
 
 			cell.addEventListener("click", () => {
                 this._selectedItem = caption;
-				document.getElementById(caption).classList.toggle("show");
+				this.shadowRoot.getElementById(caption).classList.toggle("show");
                 var childRows = this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]');
                 var rotate = false;
                 for (let i = 0; i < childRows.length; i++) {
