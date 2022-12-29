@@ -317,7 +317,8 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
 			cell.addEventListener("click", () => {
                 this._selectedItem = caption;
 				this.shadowRoot.getElementById(caption+"__DC").classList.toggle("show");
-                       
+                       				var event = new Event("onExpand");
+				this.dispatchEvent(event);
                 
 
 			});			
