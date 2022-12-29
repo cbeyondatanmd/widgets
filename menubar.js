@@ -30,7 +30,8 @@
 
 
 .show {
-  display: block;
+  display: inline-block;
+
 }
 
 
