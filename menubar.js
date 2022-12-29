@@ -318,7 +318,7 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
                 this._selectedItem = caption;
 				this.shadowRoot.getElementById(caption+"__DC").classList.toggle("show");
 				
-				if (myDropdown.classList.contains('show'))
+				if (this.shadowRoot.getElementById(caption+"__DC").classList.contains('show'))
 				{
                        				var event = new Event("onExpand");
 				this.dispatchEvent(event);
