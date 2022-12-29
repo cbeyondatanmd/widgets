@@ -196,7 +196,7 @@ td:active {
 </table>
 
 
-  <div class="dropdown-content" id="LAYOUTS">
+  <div class="dropdown-content" id="LAYOUTS__DC">
 <label class="container">Org
   <input type="checkbox" checked="checked">
   <span class="checkmark"></span>
@@ -315,13 +315,8 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
 
 			cell.addEventListener("click", () => {
                 this._selectedItem = caption;
-				this.shadowRoot.getElementById(caption).classList.toggle("show");
-                var childRows = this.shadowRoot.querySelectorAll('[parentname="'+caption+'"]');
-                var rotate = false;
-                for (let i = 0; i < childRows.length; i++) {
-                    childRows[i].hidden = !childRows[i].hidden;
-                    rotate=childRows[i].hidden;
-                  }                
+				this.shadowRoot.getElementById(caption+"__DC").classList.toggle("show");
+                       
                 
 
 			});			
