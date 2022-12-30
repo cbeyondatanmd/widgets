@@ -183,6 +183,10 @@ td:active {
   filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(80%);
 }
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 </style>
 </head>
 <body>
@@ -310,9 +314,16 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg width="16" height="16"
 			var cell = row.insertCell(0);
 			cell.id = caption;
 //this.shadowRoot.activeElement.getBoundingClientRect()
-
+cell.classList.add("dropdown");
 cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="16" height="16" viewBox="0 0 ' + parentname + '"><path d="' + icon + '"></path></svg><span class="childtext">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</span></a>';	
-						
+				addEventListener('mouseout', (event) => {
+					                       				var event = new Event("onCollapse");
+				this.dispatchEvent(event);				
+				});
+		addEventListener('mouseover', (event) => {
+                       				var event = new Event("onExpand");
+				this.dispatchEvent(event);		
+		});
 
 			cell.addEventListener("click", () => {
                 this._selectedItem = caption;
