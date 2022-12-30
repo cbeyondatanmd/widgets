@@ -316,7 +316,9 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg width="16" height="16"
 //this.shadowRoot.activeElement.getBoundingClientRect()
 cell.classList.add("dropdown");
 cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="16" height="16" viewBox="0 0 ' + parentname + '"><path d="' + icon + '"></path></svg><span class="childtext">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</span></a>';	
-				cell.addEventListener('mouseleave', (event) => {
+			if (caption==="LAYOUTS")
+			{
+			cell.addEventListener('mouseleave', (event) => {
 					                       				var event = new Event("onCollapse");
 				this.dispatchEvent(event);				
 				});
@@ -324,7 +326,8 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
                        				var event = new Event("onExpand");
 				this.dispatchEvent(event);		
 		});
-
+			}
+			
 			cell.addEventListener("click", () => {
                 this._selectedItem = caption;
 				this.shadowRoot.getElementById(caption+"__DC").classList.toggle("show");
