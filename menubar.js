@@ -320,7 +320,7 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
 					                       				var event = new Event("onCollapse");
 				this.dispatchEvent(event);				
 				});
-		addEventListener('mouseover', (event) => {
+		addEventListener('mouseenter', (event) => {
                        				var event = new Event("onExpand");
 				this.dispatchEvent(event);		
 		});
