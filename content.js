@@ -29,11 +29,11 @@ this.shadowRoot.appendChild(iframe);
     return "";
     }	  
 
-setFilter(filter) {
+postMessage(message) {
     var iframe = this.shadowRoot.getElementById(this._selectedItem);
 		if (iframe)
 	{
-	iframe.contentWindow.postMessage(filter,"*");
+	iframe.contentWindow.postMessage(message,"*");
 	}
     return "";
     }	 
