@@ -215,7 +215,7 @@ td:active {
             }
             else
             {
-                cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><svg class="child" width="16" height="16" viewBox="0 0 ' + parentname + '"><path d="' + icon + '"></path></svg><span class="childtext">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</span></a>';	
+                cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><svg class="child" width="16" height="16" viewBox="0 0 512 512"><path d="' + icon + '"></path></svg><span class="childtext">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</span></a>';	
 			}
 					
 
