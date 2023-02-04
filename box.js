@@ -4,7 +4,7 @@
 <head>
 <style>
 path {
-  fill: #7E99B0;
+  fill: #AABDD7;
 }
 table, tr, td {
 
