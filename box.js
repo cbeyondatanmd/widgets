@@ -8,7 +8,7 @@ path {
 }
 .childtext {
   position: relative;
-  top: -2px;  /* relative to parent container */
+  top: -3px;  /* relative to parent container */
   
 }
 table, tr, td {
