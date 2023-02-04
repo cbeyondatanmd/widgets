@@ -6,6 +6,11 @@
 path {
   fill: #AABDD7;
 }
+.childtext {
+  position: relative;
+  top: -2px;  /* relative to parent container */
+  
+}
 table, tr, td {
 
 	background-color:rgb(41, 49, 58);	   
