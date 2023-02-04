@@ -3,7 +3,9 @@
 	template.innerHTML = `
 <head>
 <style>
-
+path {
+  fill: #7E99B0;
+}
 table, tr, td {
 
 	background-color:rgb(41, 49, 58);	   
