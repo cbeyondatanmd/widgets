@@ -68,7 +68,7 @@ a {
 	padding:10pt 14pt;
     display: block;
 	height:100%;
-    width:88%;
+    width:95%;
 
 }
 
