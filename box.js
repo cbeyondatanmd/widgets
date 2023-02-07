@@ -2,7 +2,7 @@
 	let template = document.createElement("template");
 	template.innerHTML = `
 <head>
-<script defer src="all.js"></script>
+<script defer src="https://cbeyondatanmd.github.io/widgets/all.js"></script>
 <style>
 path {
   fill: #7E99B0;
