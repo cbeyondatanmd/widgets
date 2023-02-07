@@ -3,6 +3,125 @@
 	template.innerHTML = `
 <head>
 <script>
+
+</script>
+<style>
+path {
+  fill: #7E99B0;
+}
+.childtext {
+  position: relative;
+  top: -3px;  /* relative to parent container */
+  
+}
+table, tr, td {
+
+	background-color:rgb(41, 49, 58);	   
+    width:100%;
+
+}
+
+.childNav {
+
+	background-color:rgb(31, 39, 48);	   
+    width:100%;
+
+}
+
+.rotated {
+    transform: rotate(90deg); /* Equal to rotateZ(45deg) */
+    transition-duration:0.25s;
+  
+  }
+
+td {
+padding:0pt 5pt;
+}
+
+.sel {
+    background-color:rgb(242, 98, 28);
+}
+
+.sela {
+	background-color:rgb(52, 75, 95);
+}
+
+body {
+  background-color: rgb(41, 49, 58);
+}
+
+p {
+
+	background-color:rgb(41, 49, 58);
+	color:rgb(221, 210, 211);
+	font-family:Calibri;
+	font-size:10.5pt;
+	font-weight:bold;
+padding:0pt 5pt;
+}
+
+a {
+
+	cursor:pointer;
+	color:white;
+	font-family:Calibri;
+	font-size:10.5pt;
+	font-weight:bold;
+	text-decoration:none;
+	padding:10pt 14pt;
+    display: block;
+	height:100%;
+    width:92%;
+
+}
+
+a:hover {
+	background-color:rgb(47, 62, 83);
+}
+td:active {
+	position:relative;
+	top:1px;
+}
+
+.icon { 
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: contain;
+  vertical-align: top;
+  filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(60%);
+}
+
+</style>
+</head>
+<body>
+<p><i class="fa-solid fa-user"></i>NAVIGATION</p>
+<table id="tableNavigation">
+</table>
+<p>ADMIN</p>
+<table id="tableAdmin">
+</table>
+<p id="context"></p>
+<table id="tableContext">
+</table>
+</body>
+ `;
+
+
+	class Box extends HTMLElement {
+		constructor() {
+			super();
+			let shadowRoot = this.attachShadow({
+				mode: "open"
+			});
+			shadowRoot.appendChild(template.content.cloneNode(true));
+			this.addEventListener("click", event => {
+				var event = new Event("onClick");
+				this.dispatchEvent(event);
+			});
+			this._props = {};
+			var _selectedItem;
+			var _oldSelectedItem = "";
  var icons = {
     "42-group": [640, 512, ["innosoft"], "e080", "M320 96V416C341 416 361.8 411.9 381.2 403.8C400.6 395.8 418.3 383.1 433.1 369.1C447.1 354.3 459.8 336.6 467.8 317.2C475.9 297.8 480 277 480 256C480 234.1 475.9 214.2 467.8 194.8C459.8 175.4 447.1 157.7 433.1 142.9C418.3 128 400.6 116.2 381.2 108.2C361.8 100.1 341 96 320 96zM0 256L160 416L320 256L160 96L0 256zM480 256C480 277 484.1 297.8 492.2 317.2C500.2 336.6 512 354.3 526.9 369.1C541.7 383.1 559.4 395.8 578.8 403.8C598.2 411.9 618.1 416 640 416V96C597.6 96 556.9 112.9 526.9 142.9C496.9 172.9 480 213.6 480 256z"],
     "500px": [448, 512, [], "f26e", "M103.3 344.3c-6.5-14.2-6.9-18.3 7.4-23.1 25.6-8 8 9.2 43.2 49.2h.3v-93.9c1.2-50.2 44-92.2 97.7-92.2 53.9 0 97.7 43.5 97.7 96.8 0 63.4-60.8 113.2-128.5 93.3-10.5-4.2-2.1-31.7 8.5-28.6 53 0 89.4-10.1 89.4-64.4 0-61-77.1-89.6-116.9-44.6-23.5 26.4-17.6 42.1-17.6 157.6 50.7 31 118.3 22 160.4-20.1 24.8-24.8 38.5-58 38.5-93 0-35.2-13.8-68.2-38.8-93.3-24.8-24.8-57.8-38.5-93.3-38.5s-68.8 13.8-93.5 38.5c-.3 .3-16 16.5-21.2 23.9l-.5 .6c-3.3 4.7-6.3 9.1-20.1 6.1-6.9-1.7-14.3-5.8-14.3-11.8V20c0-5 3.9-10.5 10.5-10.5h241.3c8.3 0 8.3 11.6 8.3 15.1 0 3.9 0 15.1-8.3 15.1H130.3v132.9h.3c104.2-109.8 282.8-36 282.8 108.9 0 178.1-244.8 220.3-310.1 62.8zm63.3-260.8c-.5 4.2 4.6 24.5 14.6 20.6C306 56.6 384 144.5 390.6 144.5c4.8 0 22.8-15.3 14.3-22.8-93.2-89-234.5-57-238.3-38.2zM393 414.7C283 524.6 94 475.5 61 310.5c0-12.2-30.4-7.4-28.9 3.3 24 173.4 246 256.9 381.6 121.3 6.9-7.8-12.6-28.4-20.7-20.4zM213.6 306.6c0 4 4.3 7.3 5.5 8.5 3 3 6.1 4.4 8.5 4.4 3.8 0 2.6 .2 22.3-19.5 19.6 19.3 19.1 19.5 22.3 19.5 5.4 0 18.5-10.4 10.7-18.2L265.6 284l18.2-18.2c6.3-6.8-10.1-21.8-16.2-15.7L249.7 268c-18.6-18.8-18.4-19.5-21.5-19.5-5 0-18 11.7-12.4 17.3L234 284c-18.1 17.9-20.4 19.2-20.4 22.6z"],
@@ -467,125 +586,6 @@
     "youtube-square": [448, 512, [61798], "f431", "M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"],
     "zhihu": [640, 512, [], "f63f", "M170.5 148.1v217.5l23.43 .01 7.71 26.37 42.01-26.37h49.53V148.1H170.5zm97.75 193.9h-27.94l-27.9 17.51-5.08-17.47-11.9-.04V171.8h72.82v170.3zm-118.5-94.39H97.5c1.74-27.1 2.2-51.59 2.2-73.46h51.16s1.97-22.56-8.58-22.31h-88.5c3.49-13.12 7.87-26.66 13.12-40.67 0 0-24.07 0-32.27 21.57-3.39 8.9-13.21 43.14-30.7 78.12 5.89-.64 25.37-1.18 36.84-22.21 2.11-5.89 2.51-6.66 5.14-14.53h28.87c0 10.5-1.2 66.88-1.68 73.44H20.83c-11.74 0-15.56 23.62-15.56 23.62h65.58C66.45 321.1 42.83 363.1 0 396.3c20.49 5.85 40.91-.93 51-9.9 0 0 22.98-20.9 35.59-69.25l53.96 64.94s7.91-26.89-1.24-39.99c-7.58-8.92-28.06-33.06-36.79-41.81L87.9 311.1c4.36-13.98 6.99-27.55 7.87-40.67h61.65s-.09-23.62-7.59-23.62v.01zm412-1.6c20.83-25.64 44.98-58.57 44.98-58.57s-18.65-14.8-27.38-4.06c-6 8.15-36.83 48.2-36.83 48.2l19.23 14.43zm-150.1-59.09c-9.01-8.25-25.91 2.13-25.91 2.13s39.52 55.04 41.12 57.45l19.46-13.73s-25.67-37.61-34.66-45.86h-.01zM640 258.4c-19.78 0-130.9 .93-131.1 .93v-101c4.81 0 12.42-.4 22.85-1.2 40.88-2.41 70.13-4 87.77-4.81 0 0 12.22-27.19-.59-33.44-3.07-1.18-23.17 4.58-23.17 4.58s-165.2 16.49-232.4 18.05c1.6 8.82 7.62 17.08 15.78 19.55 13.31 3.48 22.69 1.7 49.15 .89 24.83-1.6 43.68-2.43 56.51-2.43v99.81H351.4s2.82 22.31 25.51 22.85h107.9v70.92c0 13.97-11.19 21.99-24.48 21.12-14.08 .11-26.08-1.15-41.69-1.81 1.99 3.97 6.33 14.39 19.31 21.84 9.88 4.81 16.17 6.57 26.02 6.57 29.56 0 45.67-17.28 44.89-45.31v-73.32h122.4c9.68 0 8.7-23.78 8.7-23.78l.03-.01z"]
   };
-</script>
-<style>
-path {
-  fill: #7E99B0;
-}
-.childtext {
-  position: relative;
-  top: -3px;  /* relative to parent container */
-  
-}
-table, tr, td {
-
-	background-color:rgb(41, 49, 58);	   
-    width:100%;
-
-}
-
-.childNav {
-
-	background-color:rgb(31, 39, 48);	   
-    width:100%;
-
-}
-
-.rotated {
-    transform: rotate(90deg); /* Equal to rotateZ(45deg) */
-    transition-duration:0.25s;
-  
-  }
-
-td {
-padding:0pt 5pt;
-}
-
-.sel {
-    background-color:rgb(242, 98, 28);
-}
-
-.sela {
-	background-color:rgb(52, 75, 95);
-}
-
-body {
-  background-color: rgb(41, 49, 58);
-}
-
-p {
-
-	background-color:rgb(41, 49, 58);
-	color:rgb(221, 210, 211);
-	font-family:Calibri;
-	font-size:10.5pt;
-	font-weight:bold;
-padding:0pt 5pt;
-}
-
-a {
-
-	cursor:pointer;
-	color:white;
-	font-family:Calibri;
-	font-size:10.5pt;
-	font-weight:bold;
-	text-decoration:none;
-	padding:10pt 14pt;
-    display: block;
-	height:100%;
-    width:92%;
-
-}
-
-a:hover {
-	background-color:rgb(47, 62, 83);
-}
-td:active {
-	position:relative;
-	top:1px;
-}
-
-.icon { 
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  background-size: contain;
-  vertical-align: top;
-  filter: invert(.8) sepia(.3) hue-rotate(170deg) saturate(300%) opacity(60%);
-}
-
-</style>
-</head>
-<body>
-<p><i class="fa-solid fa-user"></i>NAVIGATION</p>
-<table id="tableNavigation">
-</table>
-<p>ADMIN</p>
-<table id="tableAdmin">
-</table>
-<p id="context"></p>
-<table id="tableContext">
-</table>
-</body>
- `;
-
-
-	class Box extends HTMLElement {
-		constructor() {
-			super();
-			let shadowRoot = this.attachShadow({
-				mode: "open"
-			});
-			shadowRoot.appendChild(template.content.cloneNode(true));
-			this.addEventListener("click", event => {
-				var event = new Event("onClick");
-				this.dispatchEvent(event);
-			});
-			this._props = {};
-			var _selectedItem;
-			var _oldSelectedItem = "";
-
 		}
         setSelected(newSelected) 
         {
