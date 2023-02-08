@@ -359,10 +359,10 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
         }
 
 		clearContext() {
-			var table = this.shadowRoot.getElementById("tableContext");
-			while(table.rows.length > 0) 
+			var row = this.shadowRoot.getElementById("rowMenu");
+			while(row.cells.length > 0) 
 				{
-					table.deleteRow(0);
+					row.deleteCell(0);
 			  	}
         }
 
