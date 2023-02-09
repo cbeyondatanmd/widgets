@@ -318,7 +318,7 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg width="16" height="16"
 			cell.id = caption;
 //this.shadowRoot.activeElement.getBoundingClientRect()
 cell.classList.add("dropdown");
-cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="16" height="16" viewBox="0 0 '+icons[icon][0]+' '+icons[icon][1]+'"><path d="' + icons[icon] + '"></path></svg><span class="childtext">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</span></a>';	
+cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="16" height="16" viewBox="0 0 '+icons[icon][0]+' '+icons[icon][1]+'"><path d="' + icons[icon][4] + '"></path></svg><span class="childtext">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</span></a>';	
 			if (caption==="LAYOUTS")
 			{
 			cell.addEventListener('mouseleave', (event) => {
