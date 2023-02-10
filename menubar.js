@@ -397,7 +397,11 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
 			};
 		}
 		onCustomWidgetAfterUpdate(changedProperties) {
-
+			if ("items" in changedProperties) {
+				this.$items = changedProperties["items"];
+			}
+			
+			console.log(this.$items);
 		}
 	}
 	customElements.define("com-cbeyondata-menubar", MenuBar);
