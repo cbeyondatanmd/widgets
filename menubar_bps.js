@@ -7,7 +7,7 @@
 				<table>
 					<tr>
 						<td>Items</td>
-						<td><input id="bps_items" type="text" size="10" maxlength="10"></td>
+						<td><input id="bps_items" type="text" size="10"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
