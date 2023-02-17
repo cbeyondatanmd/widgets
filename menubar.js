@@ -398,6 +398,11 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
 		}
 		onCustomWidgetAfterUpdate(changedProperties) {
 			if ("items" in changedProperties) {
+			var row = this.shadowRoot.getElementById("rowMenu");
+			while(row.cells.length > 0) 
+				{
+					row.deleteCell(0);
+			  	}				
 				this.$items = changedProperties["items"];
                 var itemArray = this.$items.split("|");
                 for (var i = 0; i < itemArray.length; i++)
