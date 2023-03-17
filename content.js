@@ -36,7 +36,7 @@ postMessage(message) {
 	{
 	iframe.contentWindow.postMessage("REFRESH","*");
 	}*/
-	showScreen(this._selectedItem, message);
+	this.showScreen(this._selectedItem, message);
     return "";
     }	 
 		
