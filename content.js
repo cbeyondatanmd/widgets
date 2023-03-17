@@ -34,7 +34,7 @@ postMessage(message) {
 	
 		if (iframe)
 	{
-	iframe.contentWindow.postMessage(message,"*");
+	iframe.contentWindow.postMessage("REFRESH","*");
 	}
     return "";
     }	 
