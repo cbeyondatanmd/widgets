@@ -30,13 +30,12 @@ this.shadowRoot.appendChild(iframe);
     }	  
 
 postMessage(message) {
-    /*var iframe = this.shadowRoot.getElementById(this._selectedItem);
+    var iframe = this.shadowRoot.getElementById(this._selectedItem);
 	
 		if (iframe)
 	{
 	iframe.contentWindow.postMessage("REFRESH","*");
-	}*/
-	this.showScreen(this._selectedItem, message);
+	}
     return "";
     }	 
 		
