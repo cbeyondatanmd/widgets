@@ -31,8 +31,6 @@ this.shadowRoot.appendChild(iframe);
 
 postMessage(message) {
     var iframe = this.shadowRoot.getElementById(this._selectedItem);
-	console.log("postMessage:"+message);
-	console.log(iframe);
 	
 		if (iframe)
 	{
