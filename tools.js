@@ -18,7 +18,7 @@
       .then(response => response.text())
       .then(html => {
         
-        shadowRoot.innerHTML = html;
+        shadowRoot.innerHTML = "HELLO";
       });	  
 
 	  
