@@ -11,7 +11,7 @@
 	class Tools extends HTMLElement {
 		constructor() {
 			super();
-    fetch(this.getAttribute('src'))
+    fetch("https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/ui/tenants/89c3d/bo/application/4440C400929F5B7F088D18DD21CD4AB2?mode=embed")
       .then(response => response.html())
       .then(html => {
         let shadowRoot = this.attachShadow({ mode: 'closed' });
