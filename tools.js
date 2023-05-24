@@ -14,8 +14,8 @@
     fetch(this.getAttribute('src'))
       .then(response => response.html())
       .then(html => {
-        const shadow = this.attachShadow({ mode: 'closed' });
-        shadow.innerHTML = html;
+        let shadowRoot = this.attachShadow({ mode: 'closed' });
+        shadowRoot.innerHTML = html;
       });
 			/*			
 			let shadowRoot = this.attachShadow({
