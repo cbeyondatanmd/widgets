@@ -20,7 +20,9 @@
 
             xhr.open('GET', 'https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/ui/tenants/89c3d/bo/application/4440C400929F5B7F088D18DD21CD4AB2?mode=embed',false);
             xhr.send();                
-            shadowRoot.innerHTML = `
+            shadowRoot.innerHTML = '
+
+
 
 <!DOCTYPE html>
 <!-- Important Note: Please edit the associated template file. The html file is generated automatically. -->
@@ -28,7 +30,7 @@
   <head>
 <!-- begin: headPrelude -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 
     <meta http-equiv="Cache-Control" content="no-cache"/>
     <meta http-equiv="Pragma" content="no-cache"/>
@@ -74,7 +76,7 @@
                     _isLWV = false;
                 } else {
                     _isLWV = ((hash) => {
-    if (hash && navigator.userAgent.indexOf('JavaScriptCore') === -1) {
+    if (hash && navigator.userAgent.indexOf("JavaScriptCore") === -1) {
         const parseQuery = (query, delim = "&") => {
             return (query || "").split(delim).reduce((params, pair) => {
                 const [key, value] = pair.split("=");
@@ -910,12 +912,12 @@
                 },
                 userFriendlyPerfTimeStart: (widgetMeasure, widgetType, widgetId, widgetSubmeasure) => {
                     const raptrId = widgetMeasure + "_" + widgetType + "_" + widgetId;
-                    const widgetSubmeasureStr = widgetSubmeasure ? ', Submeasure: "' + widgetSubmeasure + '"' : "";
+                    const widgetSubmeasureStr = widgetSubmeasure ? ", Submeasure: "" + widgetSubmeasure + """ : "";
                     orca.perfTimeStart("Measure: " + widgetMeasure + ", Type: " + widgetType + ", ID: " + widgetId + widgetSubmeasureStr, null, null, raptrId);
                 },
                 userFriendlyPerfTimeEnd: (widgetMeasure, widgetType, widgetTitle, widgetId, widgetSubmeasure, keyValueData) => {
                     const raptrId = widgetMeasure + "_" + widgetType + "_" + widgetId;
-                    const widgetSubmeasureStr = widgetSubmeasure ? ', Submeasure: "' + widgetSubmeasure + '"' : "";
+                    const widgetSubmeasureStr = widgetSubmeasure ? ", Submeasure: "" + widgetSubmeasure + """ : "";
                     orca.perfTimeEnd("Measure: " + widgetMeasure + ", Type: " + widgetType + ", ID: " + widgetId + widgetSubmeasureStr, null, raptrId, null, "ONE", "userFriendly", {widgetTitle: widgetTitle, keyValueData: keyValueData});
                 },
                 userFriendlyPerfTimeActionStart: message => orca.perfTimeStart(message),
@@ -1142,7 +1144,8 @@
     <div id="content"></div>
   </body>
 </html>
-`;  
+
+';  
 	    
 
 	  
