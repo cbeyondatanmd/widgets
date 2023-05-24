@@ -11,11 +11,19 @@
 	class Tools extends HTMLElement {
 		constructor() {
 			super();
+    fetch(this.getAttribute('src'))
+      .then(response => response.html())
+      .then(html => {
+        const shadow = this.attachShadow({ mode: 'closed' });
+        shadow.innerHTML = html;
+      });
+			/*			
 			let shadowRoot = this.attachShadow({
 				mode: "open"
 			});
+			
 			shadowRoot.appendChild(template.content.cloneNode(true));
-
+*/
 			this._props = {};
 			var _selectedItem;
 			var _oldSelectedItem = "";
