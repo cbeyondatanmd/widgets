@@ -10,7 +10,7 @@
 
 	class Tools extends HTMLElement {
   connectedCallback() {
-    fetch(this.getAttribute('https://www.google.com/'))
+    fetch('https://www.google.com/')
       .then(response => response.html)
       .then(html => {
         const shadow = this.attachShadow({ mode: 'closed' });
