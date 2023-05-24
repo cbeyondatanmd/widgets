@@ -9,26 +9,14 @@
 
 
 	class Tools extends HTMLElement {
-		constructor() {
-			super();
-    fetch("https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/ui/tenants/89c3d/bo/application/4440C400929F5B7F088D18DD21CD4AB2?mode=embed")
-      .then(response => {response.html()})
+  connectedCallback() {
+    fetch(this.getAttribute('https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/ui/tenants/89c3d/app.html#/analyticapp?shellMode=embed&/aa/DCA51B07DC422EC444F798706825F870/?view_id=appBuilding&url_api=true'))
+      .then(response => response.html())
       .then(html => {
-        let shadowRoot = this.attachShadow({ mode: 'closed' });
-        shadowRoot.innerHTML = html;
+        const shadow = this.attachShadow({ mode: 'closed' });
+        shadow.innerHTML = html;
       });
-			/*			
-			let shadowRoot = this.attachShadow({
-				mode: "open"
-			});
-			
-			shadowRoot.appendChild(template.content.cloneNode(true));
-*/
-			this._props = {};
-			var _selectedItem;
-			var _oldSelectedItem = "";
-
-		}
+  }
 
 		postMessage(url, body, csrf) {
 			var xhr = new XMLHttpRequest();
