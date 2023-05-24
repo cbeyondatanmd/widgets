@@ -20,11 +20,7 @@
 
             xhr.open('GET', 'https://cbeyondata.us10.hcs.cloud.sap/sap/fpa/ui/tenants/89c3d/bo/application/4440C400929F5B7F088D18DD21CD4AB2?mode=embed',false);
             xhr.send();                
-            shadowRoot.innerHTML = '
-
-
-
-<!DOCTYPE html>
+            shadowRoot.innerHTML = `<!DOCTYPE html>
 <!-- Important Note: Please edit the associated template file. The html file is generated automatically. -->
 <html>
   <head>
@@ -1143,9 +1139,7 @@
   <body class="sapUiBody" role="application">
     <div id="content"></div>
   </body>
-</html>
-
-';  
+</html>`;  
 	    
 
 	  
