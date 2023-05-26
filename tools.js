@@ -2,9 +2,15 @@
 	let template = document.createElement("template");
 	template.innerHTML = `
 <head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body id="ASA12312SASDCX">
-<img src="https://cbeyondatanmd.github.io/widgets/icon.svg" alt="Trulli" width="500" height="333">
+<p>Some Font Awesome icons:</p>
+<i class="fas fa-band-aid"></i>
+<i class="fas fa-cat"></i>
+<i class="fas fa-dragon"></i>
+<i class="far fa-clock"></i>
+<i class="fas fa-clock"></i>
 </body>
 `;
 
