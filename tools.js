@@ -6,7 +6,7 @@
 </head>
 <body id="ASA12312SASDCX">
 <p>Some Font Awesome icons:</p>
-<i class="fas fa-band-aid"></i>
+<i class="fas fa-band-aid" style="font-size:60px;color:red;"></i>
 <i class="fas fa-cat"></i>
 <i class="fas fa-dragon"></i>
 <i class="far fa-clock"></i>
