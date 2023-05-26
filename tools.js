@@ -2,15 +2,9 @@
 	let template = document.createElement("template");
 	template.innerHTML = `
 <head>
-<link rel="stylesheet" href="https://cbeyondatanmd.github.io/widgets/font-awesome.min.css">
 </head>
 <body id="ASA12312SASDCX">
-<h1>fa fa-address-book</h1>
-
-<i class="fa fa-address-book"></i>
-<i class="fa fa-address-book" style="font-size:24px"></i>
-<i class="fa fa-address-book" style="font-size:36px"></i>
-<i class="fa fa-address-book" style="font-size:48px;color:red"></i>
+<img src="https://cbeyondatanmd.github.io/widgets/icon.svg" alt="Trulli" width="500" height="333">
 </body>
 `;
 
