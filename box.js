@@ -98,6 +98,9 @@ td:active {
 <p><i class="fa-solid fa-user"></i>NAVIGATION</p>
 <table id="tableNavigation">
 </table>
+<p><i class="fa-solid fa-user"></i>RA - PLANNING</p>
+<table id="tableRAPlanning">
+</table>
 <p>ADMIN</p>
 <table id="tableAdmin">
 </table>
