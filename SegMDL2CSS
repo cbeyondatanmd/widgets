@@ -1,0 +1,9 @@
+/* tifinagh */
+@font-face {
+  font-family: 'SegMDL2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://cbeyondatanmd.github.io/widgets/SegMDL2.ttf) format('woff2');
+  unicode-range: U+02C7, U+0301-0302, U+0304, U+0306-0307, U+0309, U+0323, U+0331, U+200C-200D, U+202E, U+25CC, U+2D30-2D7F;
+}
