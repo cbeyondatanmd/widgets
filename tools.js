@@ -5,6 +5,7 @@
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body id="ASA12312SASDCX">
+<div data-sap-ui="__button14" id="__button14">__button14</div>
 <p>Some Font Awesome icons:</p>
 <i class="fas fa-band-aid" style="font-size:60px;color:red;"></i>
 <i class="fas fa-cat"></i>
