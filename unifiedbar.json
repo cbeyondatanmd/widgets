@@ -1,0 +1,406 @@
+{
+    "id": "com.cbeyondata.unifiedbar",
+    "version": "1.0.0",
+    "name": "unifiedbar",
+    "description": "BAS Unified Side Bar",
+    "newInstancePrefix": "unifiedbar",
+    "icon": "https://cbeyondatanmd.github.io/widgets/icon.svg",
+    "vendor": "cBeyondata",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-cbeyondata-unifiedbar",
+        "url": "https://cbeyondatanmd.github.io/widgets/unifiedbar.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {},
+    "methods": {
+      "editActivate": {
+        "description": "Enables editing of sidebar."
+      },    
+      "editDeactivate": {
+        "description": "Disables editing of sidebar."
+      },  
+      "getEditSideBar": {
+        "description": "Gets items in the edited sidebar"
+      },  
+      "addNewSection": {
+        "description": "Creates section item.",
+        "parameters": [{
+          "name": "name",
+          "type": "string",
+          "description" : "Name of section hierarchy item"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description" : "Description of section hierarchy item"
+        }]
+      },
+      "addNewChild": {
+        "description": "Creates child item.",
+        "parameters": [{
+          "name": "name",
+          "type": "string",
+          "description" : "Name of new child item"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description" : "Description of new child item"
+        },
+        {
+          "name": "link",
+          "type": "string",
+          "description" : "Link for new child item"
+        }]
+      },
+      "addNewHier": {
+        "description": "Creates hierarchy item.",
+        "parameters": [{
+          "name": "name",
+          "type": "string",
+          "description" : "Name of new hierarchy item"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description" : "Description of new hierarchy item"
+        }]
+      },
+      "addToHier": {
+          "description": "Add an item to a hierarchy.",
+          "parameters": [{
+            "name": "parentID",
+            "type": "string",
+            "description" : "String of parent"
+          },
+          {
+            "name": "child",
+            "type": "string",
+            "description" : "Your new child to be appended"
+          }]
+        },
+      "othersPrep": {
+        "description": "Prepares items for usage."
+      },
+      "initialize": {
+        "description": "Prepares items for usage."
+      },
+      "loadEditSidebar": {
+          "description": "WIP BUT IT WORKS CROSSING FINGERS"
+      },
+      "setParameters": {
+        "description": "Sets the parameter of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        },
+        {
+          "name": "newVal",
+          "type": "string",
+          "description" : "New value for method in question"
+        }]
+      },
+      "setIcon": {
+        "description": "Sets the icon of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        },
+        {
+          "name": "newVal",
+          "type": "string",
+          "description" : "New value for method in question"
+        }]
+      },
+      "setModel": {
+        "description": "Sets the model of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        },
+        {
+          "name": "newVal",
+          "type": "string",
+          "description" : "New value for method in question"
+        }]
+      },
+      "setLink": {
+        "description": "Sets the link of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        },
+        {
+          "name": "newVal",
+          "type": "string",
+          "description" : "New value for method in question"
+        }]
+      },
+      "setTitle": {
+        "description": "Sets the title of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        },
+        {
+          "name": "newVal",
+          "type": "string",
+          "description" : "New value for method in question"
+        }]
+      },
+      "setParent": {
+        "description": "Sets the parent of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        },
+        {
+          "name": "newVal",
+          "type": "string",
+          "description" : "New value for method in question"
+        }]
+      },
+      "setLinkType": {
+        "description": "Sets the link type of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        },
+        {
+          "name": "newVal",
+          "type": "string",
+          "description" : "New value for method in question"
+        }]
+      },
+      "setDescription": {
+        "description": "Sets the description object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        },
+        {
+          "name": "newVal",
+          "type": "string",
+          "description" : "New value for method in question"
+        }]
+      },
+      "getParameters": {
+        "description": "Gets the parameter of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        }]
+      },
+      "getIcon": {
+        "description": "Gets the icon of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        }]
+      },
+      "getModel": {
+        "description": "Gets the model of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        }]
+      },
+      "getLink": {
+        "description": "Gets the link of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        }]
+      },
+      "getTitle": {
+        "description": "Gets the title of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        }]
+      },
+      "getParent": {
+        "description": "Gets the parent of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        }]
+      },
+      "getLinkType": {
+        "description": "Gets the link type of an object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        }]
+      },
+      "getDescription": {
+        "description": "Gets the description object.",
+        "parameters": [{
+          "name": "item",
+          "type": "string",
+          "description" : "Item upon which the method is called"
+        }]
+      },
+      "writeToMainSidebar": {
+        "description": "Writes to main sidebar given an array",
+        "parameters": [{
+          "name": "array",
+          "type": "string[][]",
+          "description" : "String array sourced from edit sidebar"
+        }]
+      },
+      "getDeletedObject": {
+        "description": "Grabs the current item up to be deleted.",
+        "returnType": "string"
+      },
+      "getEditObject": {
+        "description": "Grabs the current item up to be edited.",
+        "returnType": "string[]"
+      },
+      "getFullEditSideBar": {
+        "description": "Retrieves full edit sidebar for population of main sidear",
+        "returnType": "string[][]"
+      },
+      "deleteObject": {
+        "description": "Deletes sideBar element, used in tangent with delete button."
+      },
+      "confirmEdit": {
+        "description": "Edits sideBar element, used in tangent with edit button.",
+        "parameters": [{
+          "name": "id",
+          "type": "string",
+          "description" : "Id of edited item"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description" : "Description of edited item"
+        },
+        {
+          "name": "link",
+          "type": "string",
+          "description" : "Link of edited item"
+        },
+        {
+          "name": "newID",
+          "type": "string",
+          "description" : "newID of edited item"
+        }]
+      },
+      "getClientHeight": {
+        "returnType": "string",
+        "description": "Returns the height required to show all items."
+      },    
+      "getSelected": {
+        "returnType": "string",
+        "description": "Returns the selected sidebar item."
+      },
+      "setSelected": {
+        "description": "Sets the selected sidebar item.",
+        "parameters": [
+          {
+            "name": "newSelected",
+            "type": "string",
+            "description": "Selected item ID."
+          }
+        ]
+      },
+      "addNavigation": {
+        "description": "Adds navigation members to sidebar.",
+        "parameters": [
+          {
+            "name": "caption",
+            "type": "string",
+            "description": "Text to display in the sidebar."
+          },
+          {
+            "name": "icon",
+            "type": "string",
+            "description": "BASE64 encoded SVG."
+          },
+          {
+            "name": "parentname",
+            "type": "string",
+            "description": "Name of parent node. Blank if not parent, asterisk if is parent."
+          }
+        ]
+      },
+      "addAdmin": {
+        "description": "Adds admin members to sidebar.",
+        "parameters": [
+          {
+            "name": "caption",
+            "type": "string",
+            "description": "Text to display in the sidebar."
+          },
+          {
+            "name": "icon",
+            "type": "string",
+            "description": "BASE64 encoded SVG."
+          }
+        ]
+      },
+      "addContext": {
+        "description": "Adds context members to sidebar.",
+        "parameters": [
+          {
+            "name": "caption",
+            "type": "string",
+            "description": "Text to display in the sidebar."
+          },
+          {
+            "name": "icon",
+            "type": "string",
+            "description": "BASE64 encoded SVG."
+          }
+        ]
+      },
+      "clearContext": {
+        "description": "Clears context members from sidebar."
+      },
+      "setContextHeader": {
+        "description": "Updates context header caption.",
+        "parameters": [
+          {
+            "name": "caption",
+            "type": "string",
+            "description": "Text to display in the sidebar context header."
+          }
+        ]
+      }
+    },
+    "events": {
+      "onClick": {
+        "description": "Called when the user clicks the Sidebar."
+      },
+      "onEdit": {
+        "description": "Called when the Sidebar is edited"
+      },
+      "onDelete": {
+        "description": "Called when the Sidebar is edited"
+      }
+    }
+  
+  }
+  
