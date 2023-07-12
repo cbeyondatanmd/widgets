@@ -1,7 +1,7 @@
 {
     "id": "com.cbeyondata.unifiedbar",
     "version": "1.0.0",
-    "name": "unifiedbar",
+    "name": "Unifiedbar",
     "description": "BAS Unified Side Bar",
     "newInstancePrefix": "unifiedbar",
     "icon": "https://cbeyondatanmd.github.io/widgets/icon.svg",
