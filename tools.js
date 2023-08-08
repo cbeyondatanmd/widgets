@@ -57,7 +57,7 @@
 			return rtn.join("|");
 
             }	  
-		postMessageContentType(url, body, csrf, contentType) {
+		postMessageWithContentType(url, body, csrf, contentType) {
 			var xhr = new XMLHttpRequest();
 			xhr.withCredentials = true;
 
