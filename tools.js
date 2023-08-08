@@ -36,7 +36,9 @@
 			
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			var ele = this.shadowRoot.getElementById("uploadButton");
-			ele.onclick = function() {         var files = this.shadowRoot.getElementById('file_upload').files;
+			ele.onclick = function() {         
+				debugger;
+				var files = this.shadowRoot.getElementById('file_upload').files;
         console.log(files);
         if(files.length==0){
           alert("Please choose any file...");
