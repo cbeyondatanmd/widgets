@@ -36,7 +36,7 @@
 			
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			var ele = this.shadowRoot.getElementById("uploadButton");
-			ele.onclick = function() { upload(); };
+			ele.onclick = function() { this.upload(); };
 			this._props = {};
 			var _selectedItem;
 			var _oldSelectedItem = "";
