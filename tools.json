@@ -65,7 +65,11 @@
             "description": "Content Type."
           }
         ]
-      }	    
+      },       
+      "getCSRFToken": {
+	  "returnType": "string",
+        "description": "CSRF Token."
+      }	    	    
     },
       "events": {
     "onClick": {
