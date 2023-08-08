@@ -1,21 +1,11 @@
 (function() {
 	let template = document.createElement("template");
 	template.innerHTML = `
-<head>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body id="ASA12312SASDCX">
-<div data-sap-ui="__button14" id="__button14">__button14</div>
-<p>Some Font Awesome icons:</p>
-<i class="fas fa-band-aid" style="font-size:60px;color:red;"></i>
-<i class="fas fa-cat"></i>
-<i class="fas fa-dragon"></i>
-<i class="far fa-clock"></i>
-<i class="fas fa-clock"></i>
-    <input type="file" id="file_upload" />
-    <button onclick="upload()" class="btn btn-primary">Upload</button>  
+
+
+  <head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script>
      
       // Method to upload a valid csv file
@@ -52,10 +42,23 @@
 
       }
     }
-       
-    </script>
-</body>
+    
+      
+   
+    </script>    
+  </head>
+  <body>
+  <div class="container">
 
+    <input type="file" id="file_upload" />
+    <button onclick="upload()" class="btn btn-primary">Upload</button>  
+    <br>
+    <br>
+    <!-- table to display the csv data -->
+    <table class="table table-bordered table-striped" id="display_csv_data"></table>
+ </div>
+
+  </body>
 `;
 
 
