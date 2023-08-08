@@ -79,7 +79,8 @@
 			var xhr = new XMLHttpRequest();
 			xhr.withCredentials = true;
 
-            xhr.open("GET", window.origin + "/sap/fpa/services/rest/epm/session?action=logon",false);
+       //     xhr.open("GET", window.origin + "/sap/fpa/services/rest/epm/session?action=logon",false);
+            xhr.open("GET", window.origin + "/api/v1/csrf",false);
             xhr.setRequestHeader("X-CSRF-Token", "Fetch");
             xhr.send();                
             return xhr.getResponseHeader("x-csrf-token");           
