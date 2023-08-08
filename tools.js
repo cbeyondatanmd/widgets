@@ -36,16 +36,7 @@
 			
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			var ele = this.shadowRoot.getElementById("uploadButton");
-			ele.onclick = function() { this.upload(); };
-			this._props = {};
-			var _selectedItem;
-			var _oldSelectedItem = "";
-
-		}
-
-      // Method to upload a valid csv file
-      upload() {
-        var files = this.shadowRoot.getElementById('file_upload').files;
+			ele.onclick = function() {         var files = this.shadowRoot.getElementById('file_upload').files;
         console.log(files);
         if(files.length==0){
           alert("Please choose any file...");
@@ -59,7 +50,16 @@
         }else{
             alert("Please select a valid csv file.");
         }
-      }
+						 };
+			this._props = {};
+			var _selectedItem;
+			var _oldSelectedItem = "";
+
+		}
+
+      // Method to upload a valid csv file
+
+		
       
       fileToTable(file)
       {
