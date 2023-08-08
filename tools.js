@@ -39,7 +39,7 @@
 
 		}
       // Method to upload a valid csv file
-      function upload() {
+       upload() {
         var files = document.getElementById('file_upload').files;
         console.log(files);
         if(files.length==0){
@@ -56,7 +56,7 @@
         }
       }
       
-      function fileToTable(file)
+       fileToTable(file)
       {
 
             var reader = new FileReader();
