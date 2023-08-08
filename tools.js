@@ -36,7 +36,8 @@
 			
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			var ele = this.shadowRoot.getElementById("uploadButton");
-			ele.onclick = (()=>   {       
+			ele..addEventListener("click", () => {
+			      
 				debugger;
 				var files = this.shadowRoot.getElementById('file_upload').files;
         console.log(files);
