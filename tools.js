@@ -3,58 +3,81 @@
 	template.innerHTML = `
 
 
-  <head>
+  <body onload="myFunction()">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<input type="file" id="myFile" multiple size="50" onchange="myFunction()">
 
-  </head>
-  <body>
-  <script>
-      function upload() {
-        var files = document.getElementById('file_upload').files;
-        console.log(files);
-        if(files.length==0){
-          alert("Please choose any file...");
-          return;
+<p id="demo"></p>
+
+<script>
+
+function myFunction(){
+  var x = document.getElementById("myFile");
+  
+  var txt = "";
+  if ('files' in x) {
+    if (x.files.length == 0) {
+      txt = "Select one or more files.";
+    } else {
+      for (var i = 0; i < x.files.length; i++) {
+        txt += "<br><strong>" + (i+1) + ". file</strong><br>";
+        var file = x.files[i];
+        console.log(file);
+        var reader = new FileReader();
+reader.onload = function() {
+    makeTable(reader.result);
+}
+reader.readAsText(file);
+        
+        if ('name' in file) {
+          txt += "name: " + file.name + "<br>";
         }
-        var filename = files[0].name;
-        var extension = filename.substring(filename.lastIndexOf(".")).toUpperCase();
-        if (extension == '.CSV') {
-            //Here calling another method to read CSV file into json
-            fileToTable(files[0]);
-        }else{
-            alert("Please select a valid csv file.");
+        if ('size' in file) {
+          txt += "size: " + file.size + " bytes <br>";
         }
       }
-      
-      function fileToTable(file)
-      {
+    }
+  } 
+  else {
+    if (x.value == "") {
+      txt += "Select one or more files.";
+    } else {
+      txt += "The files property is not supported by your browser!";
+      txt  += "<br>The path of the selected file: " + x.value; // If the browser does not support the files property, it will return the path of the selected file instead. 
+    }
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
 
-            var reader = new FileReader();
-            reader.readAsBinaryString(file);
-            reader.onload = function(e) {
-            var s = e.target.result;
-            s=s.replaceAll("\r\n","</td><tr><td>");
-            s=s.replaceAll(",","</td><td>");
-                s= "<tr><td>"+s+"</td></tr>";
-                var table=document.getElementById("display_csv_data");
-                table.innerHTML=s;
-          // console.log(s)
+function makeTable ( csv ) {
 
-      }
-    }  
-  </script>
-  <div class="container">
+    var rows = csv.split('\n'),
+    table = document.createElement('table'),
+    tr = null, td = null,
+    tds = null;
 
-    <input type="file" id="file_upload" />
-    <button onclick="upload()" class="btn btn-primary">Upload</button>  
-    <br>
-    <br>
-    <!-- table to display the csv data -->
-    <table class="table table-bordered table-striped" id="display_csv_data"></table>
- </div>
+    console.log(rows);
+    
+    for ( var i = 0; i < rows.length; i++ ) {
+        tr = document.createElement('tr');
+        tds = rows[i].split(',');
+        for ( var j = 0; j < tds.length; j++ ) {
+           td = document.createElement('td');
+           td.innerHTML = tds[j];
+           tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
 
-  </body>
+    document.body.appendChild(table);
+
+}
+
+</script>
+
+<p><strong>Tip:</strong> Use the Control or the Shift key to select multiple files.</p>
+
+</body>
 `;
 
 
