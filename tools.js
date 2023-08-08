@@ -8,40 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script>
      
-      // Method to upload a valid csv file
-      function upload() {
-        var files = document.getElementById('file_upload').files;
-        console.log(files);
-        if(files.length==0){
-          alert("Please choose any file...");
-          return;
-        }
-        var filename = files[0].name;
-        var extension = filename.substring(filename.lastIndexOf(".")).toUpperCase();
-        if (extension == '.CSV') {
-            //Here calling another method to read CSV file into json
-            fileToTable(files[0]);
-        }else{
-            alert("Please select a valid csv file.");
-        }
-      }
-      
-      function fileToTable(file)
-      {
 
-            var reader = new FileReader();
-            reader.readAsBinaryString(file);
-            reader.onload = function(e) {
-            var s = e.target.result;
-            s=s.replaceAll("\r\n","</td><tr><td>");
-            s=s.replaceAll(",","</td><td>");
-                s= "<tr><td>"+s+"</td></tr>";
-                var table=document.getElementById("display_csv_data");
-                table.innerHTML=s;
-          // console.log(s)
-
-      }
-    }
     
       
    
@@ -77,7 +44,40 @@
 			var _oldSelectedItem = "";
 
 		}
+      // Method to upload a valid csv file
+      function upload() {
+        var files = document.getElementById('file_upload').files;
+        console.log(files);
+        if(files.length==0){
+          alert("Please choose any file...");
+          return;
+        }
+        var filename = files[0].name;
+        var extension = filename.substring(filename.lastIndexOf(".")).toUpperCase();
+        if (extension == '.CSV') {
+            //Here calling another method to read CSV file into json
+            fileToTable(files[0]);
+        }else{
+            alert("Please select a valid csv file.");
+        }
+      }
+      
+      function fileToTable(file)
+      {
 
+            var reader = new FileReader();
+            reader.readAsBinaryString(file);
+            reader.onload = function(e) {
+            var s = e.target.result;
+            s=s.replaceAll("\r\n","</td><tr><td>");
+            s=s.replaceAll(",","</td><td>");
+                s= "<tr><td>"+s+"</td></tr>";
+                var table=document.getElementById("display_csv_data");
+                table.innerHTML=s;
+          // console.log(s)
+
+      }
+    }
 		postMessage(url, body, csrf) {
 			var xhr = new XMLHttpRequest();
 			xhr.withCredentials = true;
