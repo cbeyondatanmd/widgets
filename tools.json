@@ -39,7 +39,33 @@
             "description": "CSRF Token."
           }
         ]
-      }        
+      },       
+      "postMessageWithContentType": {
+	  "returnType": "string",
+        "description": "HTTP Post.",
+        "parameters": [
+          {
+            "name": "url",
+            "type": "string",
+            "description": "Post to URL."
+          },
+          {
+            "name": "body",
+            "type": "string",
+            "description": "Content to post."
+          },
+          {
+            "name": "csrf",
+            "type": "string",
+            "description": "CSRF Token."
+          },
+          {
+            "name": "contentType",
+            "type": "string",
+            "description": "Content Type."
+          }
+        ]
+      }	    
     },
       "events": {
     "onClick": {
