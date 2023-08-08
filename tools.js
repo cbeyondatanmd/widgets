@@ -36,8 +36,8 @@
 			
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			var ele = this.shadowRoot.getElementById("uploadButton");
-			ele.onclick = function() {         
-				debugger;
+			ele.onclick = (()=>   {       
+				
 				var files = this.shadowRoot.getElementById('file_upload').files;
         console.log(files);
         if(files.length==0){
@@ -52,7 +52,7 @@
         }else{
             alert("Please select a valid csv file.");
         }
-						 };
+        })();
 			this._props = {};
 			var _selectedItem;
 			var _oldSelectedItem = "";
