@@ -35,25 +35,7 @@
 			});
 			
 			shadowRoot.appendChild(template.content.cloneNode(true));
-			var ele = this.shadowRoot.getElementById("uploadButton");
-			ele.onclick(() => {
-			      
-				debugger;
-				var files = this.shadowRoot.getElementById('file_upload').files;
-        console.log(files);
-        if(files.length==0){
-          alert("Please choose any file...");
-          return;
-        }
-        var filename = files[0].name;
-        var extension = filename.substring(filename.lastIndexOf(".")).toUpperCase();
-        if (extension == '.CSV') {
-            //Here calling another method to read CSV file into json
-            fileToTable(files[0]);
-        }else{
-            alert("Please select a valid csv file.");
-        }
-        });
+
 			this._props = {};
 			var _selectedItem;
 			var _oldSelectedItem = "";
