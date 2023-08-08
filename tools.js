@@ -57,7 +57,31 @@
 			return rtn.join("|");
 
             }	  
+		postMessageContentType(url, body, csrf, contentType) {
+			var xhr = new XMLHttpRequest();
+			xhr.withCredentials = true;
 
+			xhr.open("POST",window.origin + url,false);
+
+            if (csrf)
+            {
+                xhr.setRequestHeader("X-CSRF-Token", csrf);                
+            }
+
+            xhr.setRequestHeader("Content-Type", contentType);
+			xhr.send(body);
+
+            const obj = JSON.parse(xhr.responseText);
+            var rtn = [];
+            //document.getElementById("demo").innerHTML = obj.Data.header.findIndex((x) => x === "ID");
+            for (let i = 0; i < obj.Data.member.length; i++) 
+            {
+                rtn.push(obj.Data.member[i][obj.Data.header.findIndex((x) => x === "ID")]);
+            }
+
+			return rtn.join("|");
+
+            }	  
         getCSRFToken()
         {
 			var xhr = new XMLHttpRequest();
