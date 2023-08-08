@@ -71,15 +71,7 @@
             xhr.setRequestHeader("Content-Type", contentType);
 			xhr.send(body);
 
-            const obj = JSON.parse(xhr.responseText);
-            var rtn = [];
-            //document.getElementById("demo").innerHTML = obj.Data.header.findIndex((x) => x === "ID");
-            for (let i = 0; i < obj.Data.member.length; i++) 
-            {
-                rtn.push(obj.Data.member[i][obj.Data.header.findIndex((x) => x === "ID")]);
-            }
-
-			return rtn.join("|");
+			return xhr.responseText;
 
             }	  
         getCSRFToken()
