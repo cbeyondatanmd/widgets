@@ -115,7 +115,7 @@
                 xhr.setRequestHeader("X-CSRF-Token", this.getCSRFToken2());                
 
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-			var body = '{"action":"update","data":{"dimensionId":[dimensionId],"cubeId":[cubeId],"refreshDACInBackground":true,"insertedMembers":{"bIncrementalUpdate":true,"header":[[header]],"member":[[member]]}}}';
+			var body = '{"action":"update","data":{"dimensionId":"[dimensionId]","cubeId":"[cubeId]","refreshDACInBackground":true,"insertedMembers":{"bIncrementalUpdate":true,"header":[[header]],"member":[[member]]}}}';
 			body = body.replaceAll("[dimensionId]",dimensionId);
 			body = body.replaceAll("[cubeId]",cubeId);
 			body = body.replaceAll("[header]",header);
