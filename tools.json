@@ -65,7 +65,33 @@
             "description": "Content Type."
           }
         ]
-      },       
+      },    
+      "createMembers": {
+	  "returnType": "string",
+        "description": "Create Members.",
+        "parameters": [
+          {
+            "name": "dimensionId",
+            "type": "string",
+            "description": "Dimension ID."
+          },
+          {
+            "name": "cubeId",
+            "type": "string",
+            "description": "Cube ID."
+          },
+          {
+            "name": "header",
+            "type": "string",
+            "description": "Header."
+          },
+          {
+            "name": "member",
+            "type": "string",
+            "description": "Member."
+          }
+        ]
+      }, 	    
       "getCSRFToken": {
 	  "returnType": "string",
         "description": "CSRF Token."
