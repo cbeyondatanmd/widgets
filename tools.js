@@ -104,7 +104,27 @@
 
 			return xhr.responseText;
 
-            }	  
+            }	 
+		createMembers(dimensionId, cubeId, header, member) {
+			var xhr = new XMLHttpRequest();
+			xhr.withCredentials = true;
+
+			xhr.open("POST",window.origin + "/sap/fpa/services/rest/fpa/member?tenant=A",false);
+
+
+                xhr.setRequestHeader("X-CSRF-Token", this.getCSRFToken());                
+
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			var body = '{"action":"update","data":{"dimensionId":[dimensionId],"cubeId":[cubeId],"refreshDACInBackground":true,"insertedMembers":{"bIncrementalUpdate":true,"header":[[header]],"member":[[member]]}}}';
+			body = body.replaceAll("[dimensionId]",dimensionId);
+			body = body.replaceAll("[cubeId]",cubeId);
+			body = body.replaceAll("[header]",header);
+			body = body.replaceAll("[member]",member);
+			xhr.send(body);
+
+			return xhr.responseText;
+
+            }			
         getCSRFToken()
         {
 			var xhr = new XMLHttpRequest();
