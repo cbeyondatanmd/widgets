@@ -112,7 +112,7 @@
 			xhr.open("POST",window.origin + "/sap/fpa/services/rest/fpa/member?tenant=A",false);
 
 
-                xhr.setRequestHeader("X-CSRF-Token", this.getCSRFToken());                
+                xhr.setRequestHeader("X-CSRF-Token", this.getCSRFToken2());                
 
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 			var body = '{"action":"update","data":{"dimensionId":[dimensionId],"cubeId":[cubeId],"refreshDACInBackground":true,"insertedMembers":{"bIncrementalUpdate":true,"header":[[header]],"member":[[member]]}}}';
@@ -137,6 +137,18 @@
             return xhr.getResponseHeader("x-csrf-token");           
         }
 
+        getCSRFToken2()
+        {
+			var xhr = new XMLHttpRequest();
+			xhr.withCredentials = true;
+
+            xhr.open("GET", window.origin + "/sap/fpa/services/rest/epm/session?action=logon",false);
+         //   xhr.open("GET", window.origin + "/api/v1/csrf",false);
+            xhr.setRequestHeader("X-CSRF-Token", "Fetch");
+            xhr.send();                
+            return xhr.getResponseHeader("x-csrf-token");           
+        }
+		
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = {
 				...this._props,
