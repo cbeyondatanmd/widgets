@@ -21,9 +21,13 @@
     "methods": {
       "fileContents": {
 	  "returnType": "string",
+        "description": "Get contents of selected file.",
+        "parameters": []
+      },
+      "browseFiles": {
         "description": "Select file contents.",
         "parameters": []
-      }
+      }	    
     },
       "events": {
     "onClick": {
