@@ -19,26 +19,10 @@
     ],
     "properties": {},
     "methods": {
-      "postMessage": {
+      "fileContents": {
 	  "returnType": "string",
-        "description": "HTTP Post.",
-        "parameters": [
-          {
-            "name": "url",
-            "type": "string",
-            "description": "Post to URL."
-          },
-          {
-            "name": "body",
-            "type": "string",
-            "description": "Content to post."
-          },
-          {
-            "name": "csrf",
-            "type": "string",
-            "description": "CSRF Token."
-          }
-        ]
+        "description": "Select file contents.",
+        "parameters": []
       }
     },
       "events": {
