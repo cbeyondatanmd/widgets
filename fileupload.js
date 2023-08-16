@@ -45,6 +45,21 @@ class FileUpload extends HTMLElement {
     this.select('input').onchange = (e) => this.handleChange(e);
     this.select('button').onclick = () => this.handleRemove();
   }
+      fileToTable(file)
+      {
+            var reader = new FileReader();
+            reader.readAsBinaryString(file);
+            reader.onload = function(e) {
+            var s = e.target.result;
+            s=s.replaceAll("\r\n","</td><tr><td>");
+            s=s.replaceAll(",","</td><td>");
+                s= "<tr><td>"+s+"</td></tr>";
+                var table=this.shadowRoot.getElementById("display_csv_data");
+                table.innerHTML=s;
+          // console.log(s)
+
+      }
+      }
   handleChange(e) {
       const file = e.target.files[0];
       this.select('section').style.display = "block";
