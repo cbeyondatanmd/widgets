@@ -15,7 +15,7 @@
   <div class="container">
 
     <input type="file" id="file_upload" />
-    <button id="uploadButton" class="btn btn-primary">Upload</button>  
+    <button id="uploadButton" onclick="this.fileToTable()" class="btn btn-primary">Upload</button>  
     <br>
     <br>
     <!-- table to display the csv data -->
