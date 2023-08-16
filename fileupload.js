@@ -25,13 +25,18 @@ template.innerHTML = /*html*/`
           content: '\\2716';
       }
   </style>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
   <article>
     <label part="upload-button" for="fileUpload">Upload</label>
     <section hidden>
       <span></span><button></button>
     </section>
   </article>
+  
   <input hidden id="fileUpload" type="file" />
+  <table class="table table-bordered table-striped" id="display_csv_data"></table>
 `;
 class FileUpload extends HTMLElement {
   constructor() {
