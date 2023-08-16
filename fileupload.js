@@ -52,7 +52,7 @@ class FileUpload extends HTMLElement {
             reader.readAsBinaryString(file);
             reader.onload = function(e) {
             var s = e.target.result;
-              this._fileContents = e;
+              this._fileContents = s;
             s=s.replaceAll("\r\n","</td><tr><td>");
             s=s.replaceAll(",","</td><td>");
                 s= "<tr><td>"+s+"</td></tr>";
