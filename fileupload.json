@@ -1,0 +1,49 @@
+{
+    "id": "com.cbeyondata.fileupload",
+    "version": "1.0.0",
+    "name": "BAS File Upload",
+    "description": "BAS File Upload",
+    "newInstancePrefix": "FileUpload",
+  "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODQgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTI1NiAwdjEyOGgxMjhMMjU2IDB6TTIyNCAxMjhMMjI0IDBINDhDMjEuNDkgMCAwIDIxLjQ5IDAgNDh2NDE2QzAgNDkwLjUgMjEuNDkgNTEyIDQ4IDUxMmgyODhjMjYuNTEgMCA0OC0yMS40OSA0OC00OFYxNjBoLTEyNy4xQzIzOC4zIDE2MCAyMjQgMTQ1LjcgMjI0IDEyOHpNMjg4LjEgMzQ0LjFDMjg0LjMgMzQ5LjcgMjc4LjIgMzUyIDI3MiAzNTJzLTEyLjI4LTIuMzQ0LTE2Ljk3LTcuMDMxTDIxNiAzMDUuOVY0MDhjMCAxMy4yNS0xMC43NSAyNC0yNCAyNHMtMjQtMTAuNzUtMjQtMjRWMzA1LjlsLTM5LjAzIDM5LjAzYy05LjM3NSA5LjM3NS0yNC41NiA5LjM3NS0zMy45NCAwcy05LjM3NS0yNC41NiAwLTMzLjk0bDgwLTgwYzkuMzc1LTkuMzc1IDI0LjU2LTkuMzc1IDMzLjk0IDBsODAgODBDMjk4LjMgMzIwLjQgMjk4LjMgMzM1LjYgMjg4LjEgMzQ0LjF6Ii8+PC9zdmc+",
+    "vendor": "cBeyondata",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-cbeyondata-fileupload",
+        "url": "https://cbeyondatanmd.github.io/widgets/fileupload.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {},
+    "methods": {
+      "postMessage": {
+	  "returnType": "string",
+        "description": "HTTP Post.",
+        "parameters": [
+          {
+            "name": "url",
+            "type": "string",
+            "description": "Post to URL."
+          },
+          {
+            "name": "body",
+            "type": "string",
+            "description": "Content to post."
+          },
+          {
+            "name": "csrf",
+            "type": "string",
+            "description": "CSRF Token."
+          }
+        ]
+      }
+    },
+      "events": {
+    "onClick": {
+      "description": "Called when the user clicks the Objects."
+    }
+  }
+}
