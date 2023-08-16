@@ -74,4 +74,4 @@ class FileUpload extends HTMLElement {
     return this.shadowRoot.querySelector.bind(this.shadowRoot);
   }
 }
-window.customElements.define('file-upload', FileUpload);
+window.customElements.define('com-cbeyondata-fileupload', FileUpload);
