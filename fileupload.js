@@ -40,12 +40,13 @@ class FileUpload extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
-    var _fileContents = "";
+
 	  
     // Add event listeners
     this.select('input').onchange = (e) => this.handleChange(e);
     this.select('button').onclick = () => this.handleRemove();
-    
+    this._props = {};
+    var _fileContents = "";    
   }
       fileToTable(file)
       {
@@ -97,5 +98,14 @@ class FileUpload extends HTMLElement {
   get select() {
     return this.shadowRoot.querySelector.bind(this.shadowRoot);
   }
+		onCustomWidgetBeforeUpdate(changedProperties) {
+			this._props = {
+				...this._props,
+				...changedProperties
+			};
+		}
+		onCustomWidgetAfterUpdate(changedProperties) {
+
+		}	
 }
 window.customElements.define('com-cbeyondata-fileupload', FileUpload);
