@@ -52,13 +52,13 @@ class FileUpload extends HTMLElement {
       {
             var reader = new FileReader();
             reader.readAsBinaryString(file);
-            reader.onload = function(e) {
+            reader.onload = (e) => {
             var s = e.target.result;
               this._fileContents = s;
             s=s.replaceAll("\r\n","</td><tr><td>");
             s=s.replaceAll(",","</td><td>");
                 s= "<tr><td>"+s+"</td></tr>";
-                var table=document.getElementsByTagName('com-cbeyondata-fileupload')[0].shadowRoot.getElementById('display_csv_data');
+                var table=this.shadowRoot.getElementById('display_csv_data');
                 table.innerHTML=s;
           // console.log(s)
 
