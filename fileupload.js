@@ -44,6 +44,7 @@ class FileUpload extends HTMLElement {
     // Add event listeners
     this.select('input').onchange = (e) => this.handleChange(e);
     this.select('button').onclick = () => this.handleRemove();
+    var _fileContents = "";
   }
       fileToTable(file)
       {
@@ -51,6 +52,7 @@ class FileUpload extends HTMLElement {
             reader.readAsBinaryString(file);
             reader.onload = function(e) {
             var s = e.target.result;
+              this._fileContents = e;
             s=s.replaceAll("\r\n","</td><tr><td>");
             s=s.replaceAll(",","</td><td>");
                 s= "<tr><td>"+s+"</td></tr>";
