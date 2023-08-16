@@ -1,5 +1,5 @@
 const template = document.createElement('template');
-template.innerHTML = /*html*/`
+template.innerHTML = /*html*/ `
   <style>
       :host {
         font-size: 13px;
@@ -35,69 +35,74 @@ template.innerHTML = /*html*/`
   <table class="table table-bordered table-striped" id="display_csv_data"></table>
 `;
 class FileUpload extends HTMLElement {
-  constructor() {
-    // Inititialize custom component
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    constructor() {
+        // Inititialize custom component
+        super();
+        this.attachShadow({
+            mode: 'open'
+        });
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-	  
-    // Add event listeners
-    this.select('input').onchange = (e) => this.handleChange(e);
-    this.select('button').onclick = () => this.handleRemove();
 
-    this._fileContents = "";    
-  }
-      fileToTable(file)
-      {
-            var reader = new FileReader();
-            reader.readAsBinaryString(file);
-            reader.onload = (e) => {
+        // Add event listeners
+        this.select('input').onchange = (e) => this.handleChange(e);
+        this.select('button').onclick = () => this.handleRemove();
+
+        this._fileContents = "";
+    }
+    fileToTable(file) {
+        var reader = new FileReader();
+        reader.readAsBinaryString(file);
+        reader.onload = (e) => {
             var s = e.target.result;
-              this._fileContents = s;
-            s=s.replaceAll("\r\n","</td><tr><td>");
-            s=s.replaceAll(",","</td><td>");
-                s= "<tr><td>"+s+"</td></tr>";
-                var table=this.shadowRoot.getElementById('display_csv_data');
-                table.innerHTML=s;
-          // console.log(s)
+            this._fileContents = s;
+            s = s.replaceAll("\r\n", "</td><tr><td>");
+            s = s.replaceAll(",", "</td><td>");
+            s = "<tr><td>" + s + "</td></tr>";
+            var table = this.shadowRoot.getElementById('display_csv_data');
+            table.innerHTML = s;
+            // console.log(s)
 
-      	}
-      }
-fileContents() {
-	this.shadowRoot.getElementById("fileUpload").click();
-      return this._fileContents;
-		}  
-  handleChange(e) {
-      const file = e.target.files[0];
-      this.fileToTable(file);
-      this.select('section').style.display = "block";
-      this.select('span').innerText = file.name;
-      //this.dispatch('change', file);
-    this.dispatch('onClick');
-  }
-  handleRemove() {
-    const el = this.select('input');
-    const file = el.files[0];
-    el.value = "";
-    this.select('section').style.display = "none";
-    this.dispatch('change', file);
-  }
-  static get observedAttributes() {
-    return ['upload-label'];
-  }
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'upload-label') {
-        if (newValue && newValue !== '') {
-            this.select('label').innerText = newValue;
         }
     }
-  }
-  dispatch(event, arg) {
-    this.dispatchEvent(new CustomEvent(event, {detail: arg}));
-  }
-  get select() {
-    return this.shadowRoot.querySelector.bind(this.shadowRoot);
-  }	
+    fileContents() {
+        return this._fileContents;
+    }
+    browseFiles() {
+        this.shadowRoot.getElementById("fileUpload").click();
+    }
+    handleChange(e) {
+        const file = e.target.files[0];
+        this.fileToTable(file);
+        this.select('section').style.display = "block";
+        this.select('span').innerText = file.name;
+        //this.dispatch('change', file);
+        this.dispatch('onChange');
+    }
+    handleRemove() {
+        const el = this.select('input');
+        const file = el.files[0];
+        el.value = "";
+        this.select('section').style.display = "none";
+        this.dispatch('change', file);
+    }
+    static get observedAttributes() {
+        return ['upload-label'];
+    }
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'upload-label') {
+            if (newValue && newValue !== '') {
+                this.select('label').innerText = newValue;
+            }
+        }
+    }
+    dispatch(event, arg) {
+        this.dispatchEvent(new CustomEvent(event, {
+            detail: arg
+        }));
+    }
+    get select() {
+        return this.shadowRoot.querySelector.bind(this.shadowRoot);
+    }
 }
 window.customElements.define('com-cbeyondata-fileupload', FileUpload);
