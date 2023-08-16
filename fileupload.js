@@ -54,7 +54,7 @@ class FileUpload extends HTMLElement {
             s=s.replaceAll("\r\n","</td><tr><td>");
             s=s.replaceAll(",","</td><td>");
                 s= "<tr><td>"+s+"</td></tr>";
-                var table=this.shadowRoot.getElementById("display_csv_data");
+                var table=document.getElementsByTagName('com-cbeyondata-fileupload')[0].shadowRoot.getElementById('display_csv_data');
                 table.innerHTML=s;
           // console.log(s)
 
