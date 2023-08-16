@@ -25,9 +25,6 @@ template.innerHTML = /*html*/`
           content: '\\2716';
       }
   </style>
-  <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  </head>
   <article>
     <label part="upload-button" for="fileUpload">Upload</label>
     <section hidden>
