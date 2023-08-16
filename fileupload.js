@@ -31,9 +31,7 @@ template.innerHTML = /*html*/`
       <span></span><button></button>
     </section>
   </article>
-  
   <input hidden id="fileUpload" type="file" />
-  <table class="table table-bordered table-striped" id="display_csv_data"></table>
 `;
 class FileUpload extends HTMLElement {
   constructor() {
@@ -48,27 +46,10 @@ class FileUpload extends HTMLElement {
   }
   handleChange(e) {
       const file = e.target.files[0];
-    this.fileToTable(file);
       this.select('section').style.display = "block";
       this.select('span').innerText = file.name;
       this.dispatch('change', file);
   }
-
-      fileToTable(file)
-      {
-            var reader = new FileReader();
-            reader.readAsBinaryString(file);
-            reader.onload = function(e) {
-            var s = e.target.result;
-            s=s.replaceAll("\r\n","</td><tr><td>");
-            s=s.replaceAll(",","</td><td>");
-                s= "<tr><td>"+s+"</td></tr>";
-                var table=this.shadowRoot.getElementById("display_csv_data");
-                table.innerHTML=s;
-          // console.log(s)
-
-      }
-        
   handleRemove() {
     const el = this.select('input');
     const file = el.files[0];
