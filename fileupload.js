@@ -62,9 +62,10 @@ class FileUpload extends HTMLElement {
                 table.innerHTML=s;
           // console.log(s)
 
+      	}
       }
-      }
-		fileContents() {
+fileContents() {
+	this.shadowRoot.getElementById("fileUpload").click();
       return this._fileContents;
 		}  
   handleChange(e) {
