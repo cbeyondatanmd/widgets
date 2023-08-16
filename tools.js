@@ -15,7 +15,7 @@
   <div class="container">
 
     <input type="file" id="file_upload" />
-    <button id="uploadButton" onclick="this.fileToTable()" class="btn btn-primary">Upload</button>  
+    <button id="uploadButton" onclick="document.getElementsByTagName('com-cbeyondata-tools')[0].shadowRoot.fileToTable()" class="btn btn-primary">Upload</button>  
     <br>
     <br>
     <!-- table to display the csv data -->
@@ -46,9 +46,9 @@
 
 		
       
-      fileToTable(file)
+      fileToTable()
       {
-
+	var file = document.getElementsByTagName('com-cbeyondata-tools')[0].shadowRoot.getElementById('file_upload').files[0];
             var reader = new FileReader();
             reader.readAsBinaryString(file);
             reader.onload = function(e) {
