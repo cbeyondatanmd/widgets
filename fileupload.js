@@ -62,6 +62,9 @@ class FileUpload extends HTMLElement {
 
       }
       }
+		fileContents() {
+      return this._fileContents;
+		}  
   handleChange(e) {
       const file = e.target.files[0];
       this.fileToTable(file);
