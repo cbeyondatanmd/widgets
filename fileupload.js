@@ -32,6 +32,7 @@ template.innerHTML = /*html*/`
     </section>
   </article>
   <input hidden id="fileUpload" type="file" />
+  <table class="table table-bordered table-striped" id="display_csv_data"></table>
 `;
 class FileUpload extends HTMLElement {
   constructor() {
