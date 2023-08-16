@@ -67,7 +67,8 @@ class FileUpload extends HTMLElement {
       this.fileToTable(file);
       this.select('section').style.display = "block";
       this.select('span').innerText = file.name;
-      this.dispatch('change', file);
+      //this.dispatch('change', file);
+    this.dispatch('onClick');
   }
   handleRemove() {
     const el = this.select('input');
