@@ -1,4 +1,4 @@
-const template = document.createElement('template');
+let template = document.createElement("template");
 template.innerHTML = /*html*/ `
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">  
