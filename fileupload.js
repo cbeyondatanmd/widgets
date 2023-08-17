@@ -99,9 +99,13 @@ class FileUpload extends HTMLElement {
     }
     handleChange(e) {
         const file = e.target.files[0];
+        var reader = new FileReader();
+        reader.readAsBinaryString(file);
+        reader.onload = (e) => {
+            this._fileContents = e.target.result;
+        }      
         this.select('section').style.display = "block";
         this.select('span').innerText = file.name;
-        //this.dispatch('change', file);
         this.dispatch('onChange');
     }
     handleRemove() {
