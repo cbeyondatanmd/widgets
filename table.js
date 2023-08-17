@@ -7,13 +7,6 @@ template.innerHTML = /*html*/ `
   </head>
   <body>
   <div class="container">
-    <h3>Upload a CSV file to display in Bootstrap Table</h3>
-    <!-- Input element to upload an csv file -->
-    <input type="file" id="file_upload" />
-    <button onclick="upload()" class="btn btn-primary">Upload</button>  
-    <br>
-    <br>
-    <!-- table to display the csv data -->
     <table class="table table-bordered table-striped" id="display_csv_data"></table>
  </div>
  </body>
