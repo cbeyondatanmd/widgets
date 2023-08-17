@@ -1,0 +1,42 @@
+{
+    "id": "com.cbeyondata.table",
+    "version": "1.0.0",
+    "name": "BAS Table",
+    "description": "BAS Table",
+    "newInstancePrefix": "Table",
+  "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTQ0OCAzMkM0ODMuMyAzMiA1MTIgNjAuNjUgNTEyIDk2VjQxNkM1MTIgNDUxLjMgNDgzLjMgNDgwIDQ0OCA0ODBINjRDMjguNjUgNDgwIDAgNDUxLjMgMCA0MTZWOTZDMCA2MC42NSAyOC42NSAzMiA2NCAzMkg0NDh6TTIyNCAyNTZWMTYwSDY0VjI1NkgyMjR6TTY0IDMyMFY0MTZIMjI0VjMyMEg2NHpNMjg4IDQxNkg0NDhWMzIwSDI4OFY0MTZ6TTQ0OCAyNTZWMTYwSDI4OFYyNTZINDQ4eiIvPjwvc3ZnPg==",
+    "vendor": "cBeyondata",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-cbeyondata-table",
+        "url": "https://cbeyondatanmd.github.io/widgets/table.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {},
+    "methods": {
+      "loadTableFromCSV": {
+        "description": "Create a table based on csv sting.",
+        "parameters": [
+
+        {
+          "name": "s",
+          "type": "string",
+          "description": "CSV string."
+        }
+]
+      }	    
+    },
+      "events": {
+    "onClick": {
+      "description": "Called when the user clicks the Objects."
+    },
+    "onChange": {
+      "description": "Called when a file is selected."
+    }	      
+  }
+}
