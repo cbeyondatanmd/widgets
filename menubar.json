@@ -15,9 +15,22 @@
       "url": "https://cbeyondatanmd.github.io/widgets/menubar.js",
       "integrity": "",
       "ignoreIntegrity": true
-    }
+    },
+		{
+			"kind": "builder",
+			"tag": "com-demo-menubar-bps",
+			"url": "https://cbeyondatanmd.github.io/widgets/menubar_bps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
   ],
-  "properties": {},
+  "properties": {
+		"items": {
+			"type": "string",
+			"description": "Menu Item List",
+			"default": ""
+		}
+},
   "methods": {
     "getClientHeight": {
       "returnType": "string",
@@ -104,6 +117,12 @@
   "events": {
     "onClick": {
       "description": "Called when the user clicks the Menubar."
+    },
+    "onExpand": {
+      "description": "Called when dropdown menu expands."
+    },
+    "onCollapse": {
+      "description": "Called when dropdown menu collapses."
     }
   }
 }
