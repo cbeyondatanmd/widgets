@@ -1,59 +1,155 @@
 {
-  "id": "com.sap.sac.datePicker",
-  "version": "1.0.0",
-  "name": "Date Picker",
-  "description": "Date Picker",
-  "newInstancePrefix": "datePicker",
-  "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTE1MiA2NEgyOTZWMjRDMjk2IDEwLjc1IDMwNi43IDAgMzIwIDBDMzMzLjMgMCAzNDQgMTAuNzUgMzQ0IDI0VjY0SDM4NEM0MTkuMyA2NCA0NDggOTIuNjUgNDQ4IDEyOFY0NDhDNDQ4IDQ4My4zIDQxOS4zIDUxMiAzODQgNTEySDY0QzI4LjY1IDUxMiAwIDQ4My4zIDAgNDQ4VjEyOEMwIDkyLjY1IDI4LjY1IDY0IDY0IDY0SDEwNFYyNEMxMDQgMTAuNzUgMTE0LjcgMCAxMjggMEMxNDEuMyAwIDE1MiAxMC43NSAxNTIgMjRWNjR6TTQ4IDI0OEgxMjhWMTkySDQ4VjI0OHpNNDggMjk2VjM2MEgxMjhWMjk2SDQ4ek0xNzYgMjk2VjM2MEgyNzJWMjk2SDE3NnpNMzIwIDI5NlYzNjBINDAwVjI5NkgzMjB6TTQwMCAxOTJIMzIwVjI0OEg0MDBWMTkyek00MDAgNDA4SDMyMFY0NjRIMzg0QzM5Mi44IDQ2NCA0MDAgNDU2LjggNDAwIDQ0OFY0MDh6TTI3MiA0MDhIMTc2VjQ2NEgyNzJWNDA4ek0xMjggNDA4SDQ4VjQ0OEM0OCA0NTYuOCA1NS4xNiA0NjQgNjQgNDY0SDEyOFY0MDh6TTI3MiAxOTJIMTc2VjI0OEgyNzJWMTkyeiIvPjwvc3ZnPg==",
-  "vendor": "cBeyondata",
-  "eula": "",
-  "license": "",
-  "imports": [ "input-controls" ],
-  "webcomponents": [
-    {
-      "kind": "main",
-      "tag": "com-sap-sac-datepicker",
-      "url": "https://cbeyondatanmd.github.io/widgets/datepicker.js",
-      "integrity": "",
-      "ignoreIntegrity": true
-    }
-  ],
-  "properties": {
-    "metadata": {
-      "type": "string",
-      "description": "For internal use",
-      "default": ""
-    },
-    "date": {
-      "type": "string",
-      "description": "Date",
-      "default": ""
-    }
-  },
-  "methods": {
-    "getDate": {
-      "returnType": "string",
-      "description": "Get date",
-      "parameters": [],
-      "body": "return this.date;"
-    },
-    "setDate": {
-      "description": "Set date",
-      "parameters": [
-        {
-          "name": "value",
-          "type": "string",
-          "description": "The new date"
-        }
-      ],
-      "body": "this.date = value;"
-    }
-
-  },
-  "events": {
-    "onStart": {
-      "description": "onStart events trigger"
-    }
- 
-  }
+	"name": "BAS Date Picker",
+	"description": "The Datepicker Custom Widget provides a sophisticated input field for date values and date ranges. The date formatting is customizable and a dark mode is provided.",
+	"newInstancePrefix": "datePicker",
+	"eula": "",
+	"vendor": "cBeyondata",
+	"license": "",
+	"id": "com.cbeyondata.datepicker",
+	"version": "1.0.0",
+	"icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTE1MiA2NEgyOTZWMjRDMjk2IDEwLjc1IDMwNi43IDAgMzIwIDBDMzMzLjMgMCAzNDQgMTAuNzUgMzQ0IDI0VjY0SDM4NEM0MTkuMyA2NCA0NDggOTIuNjUgNDQ4IDEyOFY0NDhDNDQ4IDQ4My4zIDQxOS4zIDUxMiAzODQgNTEySDY0QzI4LjY1IDUxMiAwIDQ4My4zIDAgNDQ4VjEyOEMwIDkyLjY1IDI4LjY1IDY0IDY0IDY0SDEwNFYyNEMxMDQgMTAuNzUgMTE0LjcgMCAxMjggMEMxNDEuMyAwIDE1MiAxMC43NSAxNTIgMjRWNjR6TTQ4IDI0OEgxMjhWMTkySDQ4VjI0OHpNNDggMjk2VjM2MEgxMjhWMjk2SDQ4ek0xNzYgMjk2VjM2MEgyNzJWMjk2SDE3NnpNMzIwIDI5NlYzNjBINDAwVjI5NkgzMjB6TTQwMCAxOTJIMzIwVjI0OEg0MDBWMTkyek00MDAgNDA4SDMyMFY0NjRIMzg0QzM5Mi44IDQ2NCA0MDAgNDU2LjggNDAwIDQ0OFY0MDh6TTI3MiA0MDhIMTc2VjQ2NEgyNzJWNDA4ek0xMjggNDA4SDQ4VjQ0OEM0OCA0NTYuOCA1NS4xNiA0NjQgNjQgNDY0SDEyOFY0MDh6TTI3MiAxOTJIMTc2VjI0OEgyNzJWMTkyeiIvPjwvc3ZnPg==",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-cbeyondata-datepicker",
+			"url": "https://cbeyondatanmd.github.io/widgets/datepicker.js",
+			"integrity": ""
+		},
+		{
+			"kind": "styling",
+			"tag": "com-cbeyondata-datepicker-aps",
+			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.1/aps_datepicker.js",
+			"integrity": ""
+		}
+	],
+	"properties": {
+		"dateVal": {
+			"type": "Date",
+			"description": "default (start) date"
+		},
+		"secondDateVal": {
+			"type": "Date",
+			"description": "default end date"
+		},
+		"format": {
+			"type": "string",
+			"description": "date format",
+			"default": ""
+		},
+		"width": {
+			"type": "integer",
+			"default": 192
+		},
+		"height": {
+			"type": "integer",
+			"default": 32
+		},
+		"darktheme": {
+			"type": "boolean",
+			"default": false
+		},
+		"enablerange": {
+			"type": "boolean",
+			"default": false
+		},
+		"minDateVal": {
+			"type": "Date",
+			"description": "The minimum Date value that can be selected. (optional)"
+		},
+		"maxDateVal": {
+			"type": "Date",
+			"description": "The maximum Date value that can be selected. (optional)"
+		}
+	},
+	"methods": {
+		"clear": {
+			"description": "unset the selected date value"
+		},
+		"getDateVal": {
+			"returnType": "Date",
+			"description": "get the date. (start date if range selection is enabled, returns undefined when no date is selecteds)",
+			"parameters": []
+		},
+		"setDateVal": {
+			"description": "set the date. (start date if range selection is enabled)",
+			"parameters": [
+				{
+					"name": "dv",
+					"type": "Date",
+					"description": "The new date"
+				}
+			],
+			"body": "this.dateVal = dv;"
+		},
+		"getSecondDateVal": {
+			"returnType": "Date",
+			"description": "get the end date. (returns undefined if range selection is not enabled)",
+			"parameters": [],
+			"body": " var x = new Date(); x = undefined; if (this.enablerange) { return this.secondDateVal; } else { return x; }"
+		},
+		"setSecondDateVal": {
+			"description": "set the end date. (has no effect if range selection is not enabled)",
+			"parameters": [
+				{
+					"name": "dv",
+					"type": "Date",
+					"description": "The new date"
+				}
+			],
+			"body": "this.secondDateVal = dv;"
+		},
+		"isRangeEnabled": {
+			"description": "Returns whether range selection is enabled",
+			"parameters": [],
+			"body": "return this.enablerange;",
+			"returnType": "boolean"
+		},
+		"getMinimumDateVal": {
+			"returnType": "Date",
+			"description": "get the date minimum. (might return undefined if value is not set)",
+			"parameters": [],
+			"body": "return this.minDateVal || undefined;"
+		},
+		"setMinimumDateVal": {
+			"description": "set the date minimum.",
+			"parameters": [
+				{
+					"name": "dv",
+					"type": "Date",
+					"description": "The new minimum date"
+				}
+			],
+			"body": "this.minDateVal = dv;"
+		},
+		"clearMinimumDateVal": {
+			"description": "clear the date minimum.",
+			"body": "this.minDateVal = undefined;"
+		},
+		"getMaximumDateVal": {
+			"returnType": "Date",
+			"description": "get the date maximum. (might return undefined if value is not set)",
+			"parameters": [],
+			"body": "return this.maxDateVal || undefined;"
+		},
+		"setMaximumDateVal": {
+			"description": "set the date maximum.",
+			"parameters": [
+				{
+					"name": "dv",
+					"type": "Date",
+					"description": "The new minimum date"
+				}
+			],
+			"body": "this.maxDateVal = dv;"
+		},
+		"clearMaximumDateVal": {
+			"description": "clear the date maximum.",
+			"body": "this.maxDateVal = undefined;"
+		}
+	},
+	"events": {
+		"onChange": {
+			"description": "Called when the user changes the selected date."
+		}
+	}
 }

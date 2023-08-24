@@ -1,253 +1,132 @@
-(function()  {
-    let _shadowRoot;
-    let _id;
-    let _date;   
+(function () {
+    let version = "1.0.0";
+    let tmpl = document.createElement('template');
+    tmpl.innerHTML = `<link rel="stylesheet" type="text/css" href="https://cbeyondatanmd.github.io/widgets/light.css"/>`;
 
-    let tmpl = document.createElement("template");
-     tmpl.innerHTML = `
-     <style>
-     </style>
-     <div id="ui5_content" name="ui5_content">
-       <slot name="content"></slot>
-     </div>
+    class DatePicker extends HTMLElement {
+        constructor() {
+            super();
+            this.init();
+            this.checkForUpdates();
+        }
 
-    <script id="oView" name="oView" type="sapui5/xmlview">
-    <mvc:View
-	    controllerName="sap.m.sample.DatePicker.Group"
-	    xmlns:mvc="sap.ui.core.mvc"
-	    xmlns:l="sap.ui.layout"
-        xmlns:m="sap.m"
-	   >
-	    <m:Panel
-		    id ="DatePanel"
-		    headerText=""
-		    width="auto">
-		    <m:Label text="" labelFor="dateInput"/>
-		    <m:DatePicker
-			    id="dateInput"
-			    placeholder="mon dd, yyyy"
-			    change="onButtonPressed"
-			    class="sapUiNoMargin"/>
-		    
-	    </m:Panel>
-	   
-    </mvc:View>
-   </script>   
-     `;
- 
-     class DatePicker extends HTMLElement {
-         constructor() {
-             super(); 
-             _shadowRoot = this.attachShadow({
-                 mode: "open"
-             });
-             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
+        async checkForUpdates() {
+            try {
+                const contribution = await (await fetch("https://cbeyondatanmd.github.io/widgets/datepicker.json")).json();
+                if (contribution.version > version) {
+                    console.log("A newer version of the Datepicker Custom Widget is available. Please contact your system administrator");
+                }
+            } catch (error) { }
+        }
 
-             _id = createGuid();
-
-             _shadowRoot.querySelector("#oView").id = _id + "_oView";
-
-             this._export_settings = {};
-             this._export_settings.date = "";
-
-             this.addEventListener("click", event => {
-               
-                 console.log('click');
-             });
-
-
-                 
-         }
- 
-         //Fired when the widget is added to the html DOM of the page
-         connectedCallback() {
-             try {
-                 if (window.commonApp) {
-                     let outlineContainer = commonApp.getShell().findElements(true, ele => ele.hasStyleClass && ele.hasStyleClass("sapAppBuildingOutline"))[0]; // sId: "__container0"
-
-                     if (outlineContainer && outlineContainer.getReactProps) {
-                         let parseReactState = state => {
-                             let components = {};
-
-                             let globalState = state.globalState;
-                             let instances = globalState.instances;
-                             let app = instances.app["[{\"app\":\"MAIN_APPLICATION\"}]"];
-                             let names = app.names;
-
-                             for (let key in names) {
-                                 let name = names[key];
-
-                                 let obj = JSON.parse(key).pop();
-                                 let type = Object.keys(obj)[0];
-                                 let id = obj[type];
-
-                                 components[id] = {
-                                     type: type,
-                                     name: name
-                                 };
-                             }
-
-                             for (let componentId in components) {
-                                 let component = components[componentId];
-                             }
-
-                             let metadata = JSON.stringify({
-                                 components: components,
-                                 vars: app.globalVars
-                             });
-
-                             if (metadata != this.metadata) {
-                                 this.metadata = metadata;
-
-                                 this.dispatchEvent(new CustomEvent("propertiesChanged", {
-                                     detail: {
-                                         properties: {
-                                             metadata: metadata
-                                         }
-                                     }
-                                 }));
-                             }
-                         };
-
-                         let subscribeReactStore = store => {
-                             this._subscription = store.subscribe({
-                                 effect: state => {
-                                     parseReactState(state);
-                                     return {
-                                         result: 1
-                                     };
-                                 }
-                             });
-                         };
-
-                         let props = outlineContainer.getReactProps();
-                         if (props) {
-                             subscribeReactStore(props.store);
-                         } else {
-                             let oldRenderReactComponent = outlineContainer.renderReactComponent;
-                             outlineContainer.renderReactComponent = e => {
-                                 let props = outlineContainer.getReactProps();
-                                 subscribeReactStore(props.store);
-
-                                 oldRenderReactComponent.call(outlineContainer, e);
-                             }
-                         }
-                     }
-                 }
-             } catch (e) { }
-         }
- 
-          //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
-         disconnectedCallback() {
-             if (this._subscription) {
-                 this._subscription();
-                 this._subscription = null;
-             }
-         
-         }
- 
-          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
-         onCustomWidgetBeforeUpdate(oChangedProperties) {
-             if ("designMode" in oChangedProperties) {
-                 this._designMode = oChangedProperties["designMode"];
-             }
- 
-         }
- 
-         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
-         onCustomWidgetAfterUpdate(oChangedProperties) {
-             loadthis(this);  
-         }
-
-
-         _firePropertiesChanged() {
-             this.date = "";
-             this.dispatchEvent(new CustomEvent("propertiesChanged", {
-                 detail: {
-                     properties: {
-                         date: this.date
-                     }
-                 }
-             }));
-         }
-         // SETTINGS
-         get date() {
-             return this._export_settings.date;
-         }
-
-         set date(value) {
-             value = _date;
-             this._export_settings.date = value;
-         }
-         static get observedAttributes() {
-             return [
-                 "date"
-             ];
-         }
-         attributeChangedCallback(name, oldValue, newValue) {
-             if (oldValue != newValue) {
-                 this[name] = newValue;
-             }
-         }
-         
-     }
-    customElements.define("com-sap-sac-datepicker", DatePicker);
-
-    // UTILS
-    function loadthis(that) {
-        var that_ = that;
-
-        let content = document.createElement('div');
-        content.slot = "content";
-        that_.appendChild(content);
-
-        sap.ui.getCore().attachInit(function () {
-            "use strict";
-
-            //### Controller ###
-            sap.ui.define([
-                "jquery.sap.global",
-                "sap/ui/core/mvc/Controller"
-            ], function (jQuery, Controller) {
-                "use strict";
-
-                return Controller.extend("sap.m.sample.DatePicker.Group", {
-                    onButtonPressed: function (oEvent) {
-                        console.log(oView.byId("dateInput").getDateValue());
-                        _date = oView.byId("dateInput").getDateValue().toString();
-                        that._firePropertiesChanged();
-                        console.log(_date);
-
-                        this.settings = {};
-                        this.settings.date = "";
-
-                        that.dispatchEvent(new CustomEvent("onStart", {
-                            detail: {
-                                settings: this.settings
-                            }
-                        }));
-                    }
-                });
-            });
-
-            //### THE APP: place the XMLView somewhere into DOM ###
-            var oView = sap.ui.xmlview({
-                viewContent: jQuery(_shadowRoot.getElementById(_id + "_oView")).html(),
-            });
-            oView.placeAt(content);
-
-           
-            if (that_._designMode) {
-                oView.byId("dateInput").setEnabled(false);
+        init(skipChildrenCheck) {
+            if (skipChildrenCheck !== true && this.children.length === 2) return; //constructor called during drag+drop
+            if (!this.querySelector("link")) {
+                this.appendChild(tmpl.content.cloneNode(true));
             }
-        });
+            var ctor = sap.m.DatePicker;
+            if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
+            this.DP = new ctor({
+                change: function () {
+                    this.fireChanged();
+                    this.dispatchEvent(new Event("onChange"));
+                }.bind(this)
+            }).addStyleClass("datePicker");
+            if (this._format) {
+                this.DP.setDisplayFormat(this._format);
+            }
+            if (this._minDate) {
+                this.updateMinDate();
+            }
+            if (this._maxDate) {
+                this.updateMaxDate();
+            }
+            this.DP.placeAt(this);
+        }
+
+        fireChanged() {
+            var properties = { dateVal: this.DP.getDateValue() };
+            if (this._enablerange) { properties.secondDateVal = this.DP.getSecondDateValue(); }
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+                detail: {
+                    properties: properties
+                }
+            }));
+        }
+
+        clear() {
+            this.DP.setValue("");
+        }
+
+        getDateVal() {
+            return this.DP.getDateValue() || undefined;
+        }
+
+        set dateVal(value) {
+            if (value == undefined || !this.DP) return;
+            if (typeof (value) === "string") value = new Date(value);
+            this.DP.setDateValue(value);
+        }
+
+        set secondDateVal(value) {
+            if (value == undefined || !this.DP || !this._enablerange) return;
+            if (typeof (value) === "string") value = new Date(value);
+            this.DP.setSecondDateValue(value);
+        }
+
+        set format(value) {
+            if (!this.DP) return;
+            this._format = value;
+            this.DP.setDisplayFormat(value);
+        }
+
+        set darktheme(value) {
+            this.querySelector("link").setAttribute("href", `https://widgets.nkappler.de/datepicker/releases/${version}/${value ? "dark" : "light"}.css`);
+        }
+
+        set enablerange(value) {
+            if (value == undefined || !this.DP) return;
+            this._enablerange = value;
+            this.DP.destroy();
+            this.init(true);
+        }
+
+        set minDateVal(date) {
+            if (!this.DP) return;
+            this._minDate = date;
+            this.updateMinDate();
+        }
+
+        set maxDateVal(date) {
+            if (!this.DP) return;
+            this._maxDate = date;
+            this.updateMaxDate();
+        }
+
+        updateMaxDate() {
+            if (!!this._maxDate) {
+                if (this.DP.getDateValue() > this._maxDate) {
+                    this.DP.setDateValue(this._maxDate);
+                }
+                if (this._enablerange && this.DP.getSecondDateValue() > this._maxDate) {
+                    this.DP.setSecondDateValue(this._maxDate);
+                }
+            }
+            this.DP.setMaxDate(this._maxDate);
+        }
+
+        updateMinDate() {
+            if (!!this._maxDate) {
+                if (this.DP.getDateValue() < this._minDate) {
+                    this.DP.setDateValue(this._minDate);
+                }
+                if (this._enablerange && this.DP.getSecondDateValue() < this._minDate) {
+                    this.DP.setSecondDateValue(this._minDate);
+                }
+            }
+            this.DP.setMinDate(this._minDate);
+        }
     }
 
-    function createGuid() {
-        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, c => {
-            let r = Math.random() * 16 | 0,
-                v = c === "x" ? r : (r & 0x3 | 0x8);
-            return v.toString(16);
-        });
-    }  
+    customElements.define('com-cbeyondata-datepicker', DatePicker);
 })();
