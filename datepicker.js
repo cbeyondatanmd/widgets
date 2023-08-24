@@ -81,7 +81,7 @@
         }
 
         set darktheme(value) {
-            this.querySelector("link").setAttribute("href", `https://widgets.nkappler.de/datepicker/releases/${version}/${value ? "dark" : "light"}.css`);
+            this.querySelector("link").setAttribute("href", `https://cbeyondatanmd.github.io/widgets/${value ? "dark" : "light"}.css`);
         }
 
         set enablerange(value) {
