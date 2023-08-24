@@ -383,6 +383,12 @@ cell.innerHTML = '<a href="" onclick="return false;"><svg class="child" width="1
 
 		setContextHeader(caption) {
 			this.$items = caption;	
+                var itemArray = this.$items.split("|");
+                for (var i = 0; i < itemArray.length; i++)
+                {
+                    var item = itemArray[i].split("=");
+                    this.addNavigation(item[0],item[1],"");
+                }			
         }
 
         eventFire(el, etype){
