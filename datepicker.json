@@ -1,6 +1,6 @@
 {
 	"name": "BAS Date Picker",
-	"description": "The Datepicker Custom Widget provides a sophisticated input field for date values and date ranges. The date formatting is customizable and a dark mode is provided.",
+	"description": "BAS Date Picker",
 	"newInstancePrefix": "datePicker",
 	"eula": "",
 	"vendor": "cBeyondata",
@@ -18,7 +18,7 @@
 		{
 			"kind": "styling",
 			"tag": "com-cbeyondata-datepicker-aps",
-			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.1/aps_datepicker.js",
+			"url": "https://cbeyondatanmd.github.io/widgets/aps_datepicker.js",
 			"integrity": ""
 		}
 	],
