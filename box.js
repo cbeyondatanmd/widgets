@@ -95,13 +95,13 @@ td:active {
 </style>
 </head>
 <body>
-<p><i class="fa-solid fa-user"></i>NAVIGATION</p>
+<p id="navigation"><i class="fa-solid fa-user"></i>NAVIGATION</p>
 <table id="tableNavigation">
 </table>
 <p id="userDefined"><i class="fa-solid fa-user"></i></p>
 <table id="tableUserDefined">
 </table>
-<p>ADMIN</p>
+<p id="admin">ADMIN</p>
 <table id="tableAdmin">
 </table>
 <p id="context"></p>
