@@ -346,9 +346,9 @@ td:active {
 			p.innerHTML = caption;			
         }
 		setUserDefinedHeader(caption) {
-			var p = this.shadowRoot.getElementById("userDefined");
-			
-			p.innerHTML = caption;			
+    var p = this.shadowRoot.getElementById(caption.split("=")[0]);
+    
+    p.innerHTML = caption.split("=")[1];		
         }
 
         eventFire(el, etype){
