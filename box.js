@@ -337,7 +337,7 @@ td:active {
 			});		
    */
 			var parentname = "";
-			var table = this.shadowRoot.getElementById("tableNavigation");
+			var table = this.shadowRoot.getElementById("tableAdmin");
 			var row = table.insertRow(0);
 			var cell = row.insertCell(0);
 			cell.id = caption;
