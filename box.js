@@ -329,6 +329,7 @@ td:active {
 			var table = this.shadowRoot.getElementById("tableAdmin");
 			var row = table.insertRow(0);
 			var cell = row.insertCell(0);
+   var parentname = "";
 			cell.id = caption;
 			cell.innerHTML = '<a id="'+caption+'A" href="" onclick="return false;"><img class="icon" src="data:image/svg+xml;base64,' + icon + '"/>&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</a>';	
 			cell.addEventListener("click", () => {
