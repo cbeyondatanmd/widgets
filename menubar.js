@@ -334,7 +334,7 @@ cell.classList.add("dropdown");
 
 			if (icon==="diagram-next")
 			{
-cell.innerHTML = '<a href="" onclick="return false;"><svg transform="rotate(180)" class="child" width="16" height="16" viewBox="0 0 '+icons[icon][0]+' '+icons[icon][1]+'"><path d="' + icons[icon][4] + '"></path></svg><span class="childtext">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</span></a>';	
+cell.innerHTML = '<a href="" onclick="return false;"><svg transform="rotate(180) " class="child" width="16" height="16" viewBox="0 0 '+icons[icon][0]+' '+icons[icon][1]+'"><path d="' + icons[icon][4] + '"></path></svg><span class="childtext">&nbsp;&nbsp;' + caption + '&nbsp;&nbsp;</span></a>';	
 			}
 			else
 			{
