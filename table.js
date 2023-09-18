@@ -29,7 +29,7 @@ class Table extends HTMLElement {
             s = "<tr><td>" + s + "</td></tr>";
             var table = this.shadowRoot.getElementById('display_csv_data');
             table.innerHTML = s;
-            // console.log(s)
+         console.log(s)
 
 
     }
