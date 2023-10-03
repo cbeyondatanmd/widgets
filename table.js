@@ -8,7 +8,7 @@
   </head>
   <body>
   <div class="container">
-    <table class="table table-bordered table-striped" id="display_csv_data"></table>
+    <table style="overflow:scroll" class="table table-bordered table-striped" id="display_csv_data"></table>
  </div>
  </body>
 `;
