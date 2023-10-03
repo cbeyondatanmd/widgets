@@ -7,7 +7,7 @@
   </head>
   <body>
   
-  <div class="container" style="overflow-x:auto;height:30vh">
+  <div class="container" style="overflow-x:auto;height:45vh">
     <table class="table table-bordered table-striped" id="display_csv_data">
     <tr>
       <th>First Name</th>
