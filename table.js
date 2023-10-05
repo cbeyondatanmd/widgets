@@ -63,7 +63,10 @@ class Table extends HTMLElement {
 	    {
 		    if (b)
 		    {
+			if (cell.classList.contains("intro"))
+			{
 			  row.classList.add('hide');
+			}
 		    }
 		    else
 		    {		    
