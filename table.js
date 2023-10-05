@@ -51,6 +51,20 @@ class Table extends HTMLElement {
 
 
     }
+    filterRejectedOnly(b) {
+
+        var table = this.shadowRoot.getElementById('display_csv_data');
+	for (let row of table.rows) 
+	{
+	    for(let cell of row.cells) 
+	    {
+	       console.log(cell.innerText)
+	       console.log(cell.classList.contains('intro'))
+	    }
+	}
+
+
+    }	
 }
 window.customElements.define('com-cbeyondata-table', Table);
 })();
