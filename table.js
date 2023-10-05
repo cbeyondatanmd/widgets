@@ -2,8 +2,25 @@
 	let template = document.createElement("template");
 	template.innerHTML =  `
   <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<style>
+	table, th, td {
+	  border: 1px dotted grey;
+	  border-collapse: collapse;
+	  font-family: Calibri, Helvetica, sans-serif;
+	  font-size: 12px;
+	
+	
+	}
+	
+	tr:nth-child(even) {
+	  background-color: rgba(150, 212, 212, 0.4);
+	}
+	
+	.intro {
+	  background-color: yellow;
+	}
+	
+	</style>
   </head>
   <body>
   
