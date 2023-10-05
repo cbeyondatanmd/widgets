@@ -43,7 +43,7 @@ class Table extends HTMLElement {
 
             s = s.replaceAll("\r\n", "</td><tr><td>");
             s = s.replaceAll(",", "</td><td>");
-            s = "<tr><td>" + s + "</td></tr>";
+            s = "<tr style="height:50px"><td>" + s + "</td></tr>";
             var table = this.shadowRoot.getElementById('display_csv_data');
             table.innerHTML = s;
          console.log(s)
