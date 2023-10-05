@@ -7,7 +7,7 @@
 	  border-bottom: 1px dotted #ABB4BE;
 	  border-collapse: collapse;
 	  font-family: Segoe UI, sans-serif;
-	  font-size: 14px;
+	  font-size: 12px;
 	
 	
 	}
