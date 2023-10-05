@@ -69,8 +69,12 @@ class Table extends HTMLElement {
 			}
 		    }
 		    else
-		    {		    
+		    {	
+			if (row.classList.contains("hide"))
+			{
 			  row.classList.remove('hide');
+			}			    
+			  
 		    }
 	    }
 	}
