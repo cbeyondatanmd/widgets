@@ -6,7 +6,7 @@
 	table, th, td {
 	  border-bottom: 1px dotted #ABB4BE;
 	  border-collapse: collapse;
-	  font-family: Calibri, Helvetica, sans-serif;
+	  font-family: Segoe UI, sans-serif;
 	  font-size: 16px;
 	
 	
