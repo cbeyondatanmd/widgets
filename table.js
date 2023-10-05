@@ -46,7 +46,7 @@ class Table extends HTMLElement {
 
             s = s.replaceAll("\r\n", "</td><tr style='height:35px'><td>");
             s = s.replaceAll(",", "</td><td>");
-            s = "<tr style='height:40px;font-weight:bold'><td>" + s + "</td></tr>";
+            s = "<tr class='hdr' style='height:40px;font-weight:bold'><td>" + s + "</td></tr>";
 	    s = s.replaceAll("<td>FPAC_FBV</td>", "<td class='intro'>FPAC_FBV</td>");
             var table = this.shadowRoot.getElementById('display_csv_data');
             table.innerHTML = s;
@@ -63,9 +63,12 @@ class Table extends HTMLElement {
 	    {
 		    if (b)
 		    {
-			if (cell.classList.contains("intro"))
+			if (!cell.classList.contains("intro"))
 			{
-			  row.classList.add('hide');
+				if (!row.classList.contains("hdr") 
+				    {
+			  		row.classList.add('hide');
+				}
 			}
 		    }
 		    else
