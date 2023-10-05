@@ -29,7 +29,18 @@
           "description": "CSV string."
         }
 ]
-      }	    
+      },
+      "filterRejectedOnly": {
+        "description": "Create a table based on csv sting.",
+        "parameters": [
+
+        {
+          "name": "b",
+          "type": "boolean",
+          "description": "Show Rejected Rows only or All Rows."
+        }
+]
+      }        
     },
       "events": {
     "onClick": {
