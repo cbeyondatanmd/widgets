@@ -7,7 +7,7 @@
 	  border: 1px dotted grey;
 	  border-collapse: collapse;
 	  font-family: Calibri, Helvetica, sans-serif;
-	  font-size: 12px;
+	  font-size: 16px;
 	
 	
 	}
