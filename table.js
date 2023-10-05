@@ -13,7 +13,7 @@
 	}
 	
 	tr:nth-child(even) {
-	  background-color: rgba(150, 212, 212, 0.4);
+	  background-color: #F9FBFD;
 	}
 	
 	.intro {
@@ -43,7 +43,7 @@ class Table extends HTMLElement {
 
             s = s.replaceAll("\r\n", "</td><tr style='height:30px'><td>");
             s = s.replaceAll(",", "</td><td>");
-            s = "<tr style='height:30px'><td>" + s + "</td></tr>";
+            s = "<tr style='height:30px;font-weight:bold'><td>" + s + "</td></tr>";
             var table = this.shadowRoot.getElementById('display_csv_data');
             table.innerHTML = s;
          console.log(s)
