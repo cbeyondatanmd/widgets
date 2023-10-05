@@ -19,7 +19,10 @@
 	.intro {
 	  background-color: #FCFFA6;
 	}
-	
+ 
+	.hide {
+		display: none;
+	}
 	</style>
   </head>
   <body>
@@ -58,8 +61,14 @@ class Table extends HTMLElement {
 	{
 	    for(let cell of row.cells) 
 	    {
-	       console.log(cell.innerText)
-	       console.log(cell.classList.contains('intro'))
+		    if (b)
+		    {
+			  row.classList.add('hide');
+		    }
+		    else
+		    {		    
+			  row.classList.remove('hide');
+		    }
 	    }
 	}
 
