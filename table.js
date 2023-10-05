@@ -4,7 +4,7 @@
   <head>
 	<style>
 	table, th, td {
-	  border: 1px dotted grey;
+	  border-bottom: 1px dotted grey;
 	  border-collapse: collapse;
 	  font-family: Calibri, Helvetica, sans-serif;
 	  font-size: 16px;
