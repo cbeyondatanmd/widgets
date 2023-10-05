@@ -4,7 +4,7 @@
   <head>
 	<style>
 	table, th, td {
-	  border-bottom: 1px dotted grey;
+	  border-bottom: 1px dotted #ABB4BE;
 	  border-collapse: collapse;
 	  font-family: Calibri, Helvetica, sans-serif;
 	  font-size: 16px;
@@ -13,7 +13,7 @@
 	}
 	
 	tr:nth-child(even) {
-	  background-color: #F9FBFD;
+	  background-color: #F4F7FB;
 	}
 	
 	.intro {
