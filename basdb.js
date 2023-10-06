@@ -52,7 +52,7 @@ class BASDB extends HTMLElement {
     onCustomWidgetAfterUpdate(changedProperties) {
     if ("db" in changedProperties) {
         //this._updateData(changedProperties.myDataBinding);
-        console.log(this.db.data);
+        console.log(changedProperties.db.data);
     }
     }
 }
