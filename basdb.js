@@ -48,13 +48,17 @@ class BASDB extends HTMLElement {
     onCustomWidgetBeforeUpdate(changedProperties) {
         this._props = { ...this._props, ...changedProperties };
     }
-
-    onCustomWidgetAfterUpdate(changedProperties) {
-    if ("db" in changedProperties) {
-        //this._updateData(changedProperties.myDataBinding);
-        console.log(changedProperties.db.data);
+    
+    set db(dataBinding) {
+      this._db = dataBinding;
+        console.log(this._db.data);
     }
-    }
+//    onCustomWidgetAfterUpdate(changedProperties) {
+//    if ("db" in changedProperties) {
+//        //this._updateData(changedProperties.myDataBinding);
+//        console.log(changedProperties.db.data);
+//    }
+//    }
 }
 
 customElements.define('com-cbeyondata-basdb', BASDB);
