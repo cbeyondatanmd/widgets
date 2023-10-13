@@ -2,5 +2,6 @@
   font-family: 'SegMDL2';
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: url('https://raw.githubusercontent.com/cbeyondatanmd/widgets/ee6d823f7c0a3bb241d47cf5a1f9ea8588723257/SegMDL2.ttf') format('truetype');
 }
