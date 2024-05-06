@@ -1,6 +1,6 @@
-(function()  {
-	let template = document.createElement("template");
-	template.innerHTML = `
+(function () {
+    let template = document.createElement("template");
+    template.innerHTML = `
 		<form id="form">
 			<fieldset>
 				<legend>Menu Properties</legend>
@@ -21,33 +21,33 @@
 		</style>
 	`;
 
-	class MenubarBps extends HTMLElement {
-		constructor() {
-			super();
-			this._shadowRoot = this.attachShadow({mode: "open"});
-			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
-		}
+    class MenubarBps extends HTMLElement {
+        constructor() {
+            super();
+            this._shadowRoot = this.attachShadow({ mode: "open" });
+            this._shadowRoot.appendChild(template.content.cloneNode(true));
+            this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
+        }
 
-		_submit(e) {
-			e.preventDefault();
-			this.dispatchEvent(new CustomEvent("propertiesChanged", {
-					detail: {
-						properties: {
-							items: this.items
-						}
-					}
-			}));
-		}
+        _submit(e) {
+            e.preventDefault();
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+                detail: {
+                    properties: {
+                        items: this.items
+                    }
+                }
+            }));
+        }
 
-		set items(itemList) {
-			this._shadowRoot.getElementById("bps_items").value = itemList;
-		}
+        set items(itemList) {
+            this._shadowRoot.getElementById("bps_items").value = itemList;
+        }
 
-		get items() {
-			return this._shadowRoot.getElementById("bps_items").value;
-		}
-	}
+        get items() {
+            return this._shadowRoot.getElementById("bps_items").value;
+        }
+    }
 
-	customElements.define("com-demo-menubar-bps", MenubarBps);
+    customElements.define("com-demo-menubar-bps", MenubarBps);
 })();
