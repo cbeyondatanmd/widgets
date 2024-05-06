@@ -12,14 +12,14 @@
     {
       "kind": "main",
       "tag": "com-cbeyondata-menubar",
-      "url": "https://cbeyondatanmd.github.io/widgets/menubar.js",
+      "url": "/menubar.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
 		{
 			"kind": "builder",
 			"tag": "com-demo-menubar-bps",
-			"url": "https://cbeyondatanmd.github.io/widgets/menubar_bps.js",
+			"url": "/menubar_bps.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
