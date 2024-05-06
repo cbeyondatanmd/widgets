@@ -1,0 +1,279 @@
+{
+    "id": "com.cbeyondata.candybar",
+    "version": "1.0.0",
+    "name": "CandyBar",
+    "description": "BAS Candy Bar",
+    "newInstancePrefix": "CandyBar",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTAgOTZDMCA2MC42NSAyOC42NSAzMiA2NCAzMkg0NDhDNDgzLjMgMzIgNTEyIDYwLjY1IDUxMiA5NlY0MTZDNTEyIDQ1MS4zIDQ4My4zIDQ4MCA0NDggNDgwSDY0QzI4LjY1IDQ4MCAwIDQ1MS4zIDAgNDE2Vjk2ek02NCA0MTZIMjI0VjE2MEg2NFY0MTZ6TTQ0OCAxNjBIMjg4VjQxNkg0NDhWMTYweiIvPjwvc3ZnPg==",
+    "vendor": "cBeyondata",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-cbeyondata-candybar",
+            "url": "/CandyBar.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {},
+    "types": {
+        "LinkType": {
+            "extends": "Enum",
+            "description": "Link Type Describes how to open the object link.",
+            "properties": [
+                {
+                    "name": "APP",
+                    "description": "Create SAC Application Link."
+                },
+                {
+                    "name": "STORY",
+                    "description": "Create SAC Story Link."
+                },
+                {
+                    "name": "URL",
+                    "description": "Open specified URL."
+                }
+            ]
+        }
+    },
+    "methods": {
+        "getUserDefault": {
+            "description": "Returns the height required to show all items.",
+            "parameters": [
+                {
+                    "name": "model",
+                    "type": "string",
+                    "description": "Model ID."
+                },
+                {
+                    "name": "userId",
+                    "type": "string",
+                    "description": "User ID."
+                }
+            ]
+        },
+        "getApp": {
+            "returnType": "string",
+            "description": "User default app."
+        },
+        "getDefaultScreen": {
+            "returnType": "string",
+            "description": "User default screen."
+        },
+        "getClientHeight": {
+            "returnType": "string",
+            "description": "Returns the height required to show all items."
+        },
+        "getSelected": {
+            "returnType": "Selection",
+            "description": "Returns the selected sidebar item."
+        },
+        "getParameters": {
+            "returnType": "Selection",
+            "description": "Returns the parameters related to the selected sidebar item."
+        },
+        "getAllItems": {
+            "returnType": "Object<Selection>",
+            "description": "Returns the parameters related to the selected sidebar item."
+        },
+        "removeItem": {
+            "description": "Remove sidebar item.",
+            "parameters": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "description": "Item ID to remove."
+                }
+            ]
+        },
+        "itemExists": {
+            "returnType": "boolean",
+            "description": "Check if item exists.",
+            "parameters": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "description": "Item ID to check."
+                }
+            ]
+        },
+        "removeAll": {
+            "description": "Remove all sidebar items."
+        },
+        "setSelected": {
+            "description": "Sets the selected sidebar item.",
+            "parameters": [
+                {
+                    "name": "newSelected",
+                    "type": "string",
+                    "description": "Selected item ID."
+                }
+            ]
+        },
+        "addParent": {
+            "description": "Adds navigation members to sidebar.",
+            "parameters": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "description": "ID/Key for Parent."
+                },
+                {
+                    "name": "caption",
+                    "type": "string",
+                    "description": "Text to display in the sidebar."
+                },
+                {
+                    "name": "icon",
+                    "type": "string",
+                    "description": "SVG Path."
+                },
+                {
+                    "name": "viewBox",
+                    "type": "string",
+                    "description": "SVG View Box."
+                },
+                {
+                    "name": "section",
+                    "type": "string",
+                    "description": "ID/Key of related section."
+                }
+            ]
+        },
+        "addChild": {
+            "description": "Adds navigation members to sidebar.",
+            "parameters": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "description": "ID/Key for Parent."
+                },
+                {
+                    "name": "caption",
+                    "type": "string",
+                    "description": "Text to display in the sidebar."
+                },
+                {
+                    "name": "parent",
+                    "type": "string",
+                    "description": "ID/Key of related parent."
+                },
+                {
+                    "name": "section",
+                    "type": "string",
+                    "description": "ID/Key of related section."
+                },
+                {
+                    "name": "title",
+                    "type": "string",
+                    "description": "Title to display in app header."
+                },
+                {
+                    "name": "link",
+                    "type": "string",
+                    "description": "Link to open."
+                },
+                {
+                    "name": "linktype",
+                    "type": "string",
+                    "description": "Type of link: APP, STORY, URL."
+                }
+            ]
+        },
+        "addAdult": {
+            "description": "Adds navigation members to sidebar.",
+            "parameters": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "description": "ID/Key for Parent."
+                },
+                {
+                    "name": "caption",
+                    "type": "string",
+                    "description": "Text to display in the sidebar."
+                },
+                {
+                    "name": "icon",
+                    "type": "string",
+                    "description": "SVG Path."
+                },
+                {
+                    "name": "viewBox",
+                    "type": "string",
+                    "description": "SVG View Box."
+                },
+                {
+                    "name": "section",
+                    "type": "string",
+                    "description": "ID/Key of related section."
+                },
+                {
+                    "name": "title",
+                    "type": "string",
+                    "description": "Title to display in app header."
+                },
+                {
+                    "name": "link",
+                    "type": "string",
+                    "description": "Link to open."
+                },
+                {
+                    "name": "linktype",
+                    "type": "string",
+                    "description": "Type of link: APP, STORY, URL."
+                }                
+            ]
+        },
+        "quickLoad": {
+            "description": "USE API to Load Bar.",
+            "parameters": [
+                {
+                    "name": "model",
+                    "type": "string",
+                    "description": "Sidebar model to use."
+                },
+                {
+                    "name": "hierarchy",
+                    "type": "string",
+                    "description": "Hierarchy to query."
+                },
+                {
+                    "name": "application",
+                    "type": "string",
+                    "description": "Application (parent node) to query."
+                }
+            ]
+        },
+        "addSection": {
+            "description": "Adds section members sidebar.",
+            "parameters": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "description": "Section ID."
+                },
+                {
+                    "name": "caption",
+                    "type": "string",
+                    "description": "Text to display in the sidebar."
+                },
+                {
+                    "name": "textColor",
+                    "type": "string",
+                    "description": "HEX or HTML text color."
+                }
+            ]
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the Sidebar."
+        },
+        "onSelect": {
+            "description": "Called when the user clicks a Sidebar Child Item."
+        }
+    }
+}
