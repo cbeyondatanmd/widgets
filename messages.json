@@ -1,0 +1,76 @@
+{
+    "id": "com.cbeyondata.messages",
+    "version": "1.0.0",
+    "name": "BAS Messages",
+    "description": "BAS Messages",
+    "newInstancePrefix": "Messages",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTI1NiAzMS4xYy0xNDEuNCAwLTI1NS4xIDkzLjEyLTI1NS4xIDIwOGMwIDQ5LjYyIDIxLjM1IDk0Ljk4IDU2Ljk3IDEzMC43Yy0xMi41IDUwLjM3LTU0LjI3IDk1LjI3LTU0Ljc3IDk1Ljc3Yy0yLjI1IDIuMjUtMi44NzUgNS43MzQtMS41IDguNzM0YzEuMjQ5IDMgNC4wMjEgNC43NjYgNy4yNzEgNC43NjZjNjYuMjUgMCAxMTUuMS0zMS43NiAxNDAuNi01MS4zOWMzMi42MyAxMi4yNSA2OS4wMiAxOS4zOSAxMDcuNCAxOS4zOWMxNDEuNCAwIDI1NS4xLTkzLjEzIDI1NS4xLTIwNy4xUzM5Ny40IDMxLjEgMjU2IDMxLjF6TTEyNy4xIDI3MS4xYy0xNy43NSAwLTMyLTE0LjI1LTMyLTMxLjFzMTQuMjUtMzIgMzItMzJzMzIgMTQuMjUgMzIgMzJTMTQ1LjcgMjcxLjEgMTI3LjEgMjcxLjF6TTI1NiAyNzEuMWMtMTcuNzUgMC0zMS4xLTE0LjI1LTMxLjEtMzEuMXMxNC4yNS0zMiAzMS4xLTMyczMxLjEgMTQuMjUgMzEuMSAzMlMyNzMuOCAyNzEuMSAyNTYgMjcxLjF6TTM4My4xIDI3MS4xYy0xNy43NSAwLTMyLTE0LjI1LTMyLTMxLjFzMTQuMjUtMzIgMzItMzJzMzIgMTQuMjUgMzIgMzJTNDAxLjcgMjcxLjEgMzgzLjEgMjcxLjF6Ii8+PC9zdmc+",
+    "vendor": "cBeyondata",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-cbeyondata-messages",
+            "url": "/messages.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {},
+    "types": {
+        "message": {
+            "description": "Message.",
+            "properties": [
+                {
+                    "name": "content",
+                    "type": "Object<Selection>",
+                    "description": "Message Content."
+                }
+            ]
+        }
+    },
+    "methods": {
+        "sendMessage": {
+            "description": "Send Message to registered listener.",
+            "parameters": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "description": "Listener ID to send Message to."
+                },
+                {
+                    "name": "message",
+                    "type": "message",
+                    "description": "Message to send."
+                }
+            ]
+        },
+        "getMessage": {
+            "returnType": "message",
+            "description": "Get Message."
+        },
+        "register": {
+            "description": "Register for messages.",
+            "parameters": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "description": "Listener ID to send Message to."
+                }
+            ]
+        },
+        "initMessage": {
+            "returnType": "message",
+            "description": "Used to Initailize Message Variable."
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the Sidebar."
+        },
+        "messageReceived": {
+            "description": "Called when the user clicks the Sidebar."
+        }
+    }
+}
