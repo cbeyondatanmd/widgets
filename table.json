@@ -12,7 +12,7 @@
       {
         "kind": "main",
         "tag": "com-cbeyondata-table",
-        "url": "https://cbeyondatanmd.github.io/widgets/table.js",
+        "url": "/table.js",
         "integrity": "",
         "ignoreIntegrity": true
       }
