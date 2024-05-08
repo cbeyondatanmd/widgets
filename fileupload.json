@@ -12,7 +12,7 @@
       {
         "kind": "main",
         "tag": "com-cbeyondata-fileupload",
-        "url": "https://cbeyondatanmd.github.io/widgets/fileupload.js",
+        "url": "/fileupload.js",
         "integrity": "",
         "ignoreIntegrity": true
       }
