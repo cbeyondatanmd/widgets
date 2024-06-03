@@ -1,0 +1,137 @@
+{
+    "name": "BAS Horizontal Dashboard",
+    "description": "BAS Horizontal Dashboard",
+    "newInstancePrefix": "BASHDASH",
+    "eula": "",
+    "license": "",
+    "id": "com.cbeyondata.bashdash",
+    "version": "1.0.0",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTQ0OCAzMkM0ODMuMyAzMiA1MTIgNjAuNjUgNTEyIDk2VjQxNkM1MTIgNDUxLjMgNDgzLjMgNDgwIDQ0OCA0ODBINjRDMjguNjUgNDgwIDAgNDUxLjMgMCA0MTZWOTZDMCA2MC42NSAyOC42NSAzMiA2NCAzMkg0NDh6TTIyNCAyNTZWMTYwSDY0VjI1NkgyMjR6TTY0IDMyMFY0MTZIMjI0VjMyMEg2NHpNMjg4IDQxNkg0NDhWMzIwSDI4OFY0MTZ6TTQ0OCAyNTZWMTYwSDI4OFYyNTZINDQ4eiIvPjwvc3ZnPg==",
+    "vendor": "cBeyondata",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-cbeyondata-bashdash",
+        "url": "/bashdash.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {
+      "width": {
+        "type": "integer",
+        "default": 600
+      },
+      "height": {
+        "type": "integer",
+        "default": 420
+      },
+      "dimensionFeed": {
+        "type": "string[]",
+        "default": []
+      },
+      "measureFeed": {
+        "type": "string[]",
+        "default": []
+      },
+      "caption": {
+        "type": "string",
+        "description": "",
+        "default": ""
+      }
+    },
+    "methods": {
+      "openSelectModelDialog": {
+        "parameters": [],
+        "body": "this.dataBindings.getDataBinding('db').openSelectModelDialog();"
+      },
+      "getDimensions": {
+        "parameters": [],
+        "body": "return this.dataBindings.getDataBinding('db').getDataSource().getDimensions();",
+        "returnType": "DimensionInfo[]"
+      },
+      "getMeasures": {
+        "parameters": [],
+        "body": "return this.dataBindings.getDataBinding('db').getDataSource().getMeasures();",
+        "returnType": "MeasureInfo[]"
+      },
+      "addDimension": {
+        "parameters": [
+          {
+            "name": "dimensionId",
+            "type": "string"
+          }
+        ]
+      },
+      "addMeasure": {
+        "parameters": [
+          {
+            "name": "measureId",
+            "type": "string"
+          }
+        ]
+      },
+      "removeDimension": {
+        "parameters": [
+          {
+            "name": "dimensionId",
+            "type": "string"
+          }
+        ]
+      },
+      "removeMeasure": {
+        "parameters": [
+          {
+            "name": "measureId",
+            "type": "string"
+          }
+        ]
+      },
+      "getDimensionsOnFeed": {
+        "parameters": [],
+        "returnType": "string[]"
+      },
+      "getMeasuresOnFeed": {
+        "parameters": [],
+        "returnType": "string[]"
+      },
+      "getDataSource": {
+        "parameters": [],
+        "body": "return this.dataBindings.getDataBinding('db').getDataSource();",
+        "returnType": "DataSource"
+      },
+      "setModel": {
+        "parameters": [
+          {
+            "name": "modelId",
+            "type": "string"
+          }
+        ],
+        "body": "this.dataBindings.getDataBinding('db').setModel(modelId);"
+      }
+    },
+    "events": {
+      "onResultChanged": {
+        "description": "called when the result set of the widget changes"
+      },
+      "onClick": {
+        "description": "called when the result set of the widget changes"
+      }
+    },
+    "dataBindings": {
+      "db": {
+        "feeds": [
+          {
+            "id": "dimensions",
+            "description": "Dimensions",
+            "type": "dimension"
+          },
+          {
+            "id": "measures",
+            "description": "Measures",
+            "type": "mainStructureMember"
+          }
+        ]
+      }
+    }
+  }

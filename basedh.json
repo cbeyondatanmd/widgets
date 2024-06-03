@@ -1,0 +1,56 @@
+{
+  "name": "BAS Employee Details Header",
+  "description": "BAS Employee Details Header",
+  "newInstancePrefix": "BASEDH",
+  "eula": "",
+  "license": "",
+  "id": "com.cbeyondata.basedh",
+  "version": "1.0.0",
+  "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTQ0OCAzMkM0ODMuMyAzMiA1MTIgNjAuNjUgNTEyIDk2VjQxNkM1MTIgNDUxLjMgNDgzLjMgNDgwIDQ0OCA0ODBINjRDMjguNjUgNDgwIDAgNDUxLjMgMCA0MTZWOTZDMCA2MC42NSAyOC42NSAzMiA2NCAzMkg0NDh6TTIyNCAyNTZWMTYwSDY0VjI1NkgyMjR6TTY0IDMyMFY0MTZIMjI0VjMyMEg2NHpNMjg4IDQxNkg0NDhWMzIwSDI4OFY0MTZ6TTQ0OCAyNTZWMTYwSDI4OFYyNTZINDQ4eiIvPjwvc3ZnPg==",
+  "vendor": "cBeyondata",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-cbeyondata-basedh",
+      "url": "/basedh.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {},
+  "methods": {  
+    "getUpdatedEmployee": {
+      "parameters": [],
+      "returnType": "Selection"
+    },
+    "getDataSource": {
+      "parameters": [],
+      "body": "return this.dataBindings.getDataBinding('db').getDataSource();",
+      "returnType": "DataSource"
+    }
+  },
+  "events": {
+    "onResultChanged": {
+      "description": "called when the result set of the widget changes"
+    },
+    "onSave": {
+      "description": "called when the save button is clicked"
+    }
+  },
+  "dataBindings": {
+    "db": {
+      "feeds": [
+        {
+          "id": "dimensions",
+          "description": "Dimensions",
+          "type": "dimension"
+        },
+        {
+          "id": "measures",
+          "description": "Measures",
+          "type": "mainStructureMember"
+        }
+      ]
+    }
+  }
+}
