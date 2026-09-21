@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Excel Data Updater</title>
+    
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Excel Data Updater</h1>
+            <p class="subtitle">Update data from Excel into your Word document</p>
+        </header>
+        
+        <main>
+            <section class="config-section">
+                <h2>Configuration</h2>
+                <div class="form-group">
+                    <label for="excelPath">Excel File Path:</label>
+                    <input type="text" id="excelPath" placeholder="C:\path\to\file.xlsx" />
+                    <button id="browseBtn" class="btn-secondary">Browse</button>
+                </div>
+                
+                <div class="form-group">
+                    <label for="chartName">Chart Name:</label>
+                    <input type="text" id="chartName" value="RevenueChart" placeholder="Enter chart name" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="cellAddress">Cell Address or Named Range:</label>
+                    <input type="text" id="cellAddress" value="TotalBudget" placeholder="A1 or NamedRange" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="placeholder">Text Placeholder:</label>
+                    <input type="text" id="placeholder" value="{{TotalBudget}}" placeholder="{{PlaceholderName}}" />
+                </div>
+            </section>
+            
+            <section class="actions-section">
+                <h2>Actions</h2>
+                <button id="updateBtn" class="btn-primary">
+                    <span class="icon">🔄</span> Update Data
+                </button>
+                
+                <button id="insertChartBtn" class="btn-secondary">
+                    <span class="icon">📊</span> Insert Chart Only
+                </button>
+                
+                <button id="updateTextBtn" class="btn-secondary">
+                    <span class="icon">🔢</span> Update Text Only
+                </button>
+            </section>
+            
+            <section class="status-section">
+                <h2>Status</h2>
+                <div id="statusLog" class="status-log">
+                    <p class="status-item info">Ready to update data...</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p class="version">v1.0.0 - Prototype</p>
+        </footer>
+    </div>
+    
+    <!-- Script -->
+    <script src="taskpane.js"></script>
+</body>
+</html>
