@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Narrative Reporting Formatting Helper (SharePoint test)</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+
+    <link rel="stylesheet" href="taskpane.css" />
+</head>
+<body>
+    <header>
+        <h1>Narrative Reporting Helper</h1>
+        <p class="subtitle">SharePoint-hosted test build — no data connectivity</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Format Selection</h2>
+            <p>
+                Select text containing <code>**bold**</code>, <code>*italic*</code>,
+                and/or <code>{{token}}</code> placeholders, then click below.
+            </p>
+            <button id="format-selection-btn" class="ms-Button">Format Selection</button>
+        </section>
+
+        <section>
+            <h2>2. Insert Section Template</h2>
+            <p>Inserts standard report section headings at the cursor.</p>
+            <button id="insert-template-btn" class="ms-Button">Insert Section Template</button>
+        </section>
+
+        <section id="status-section">
+            <p id="status-message"></p>
+        </section>
+    </main>
+
+    <!-- No bundler here: this is plain vanilla JS, loaded directly -->
+    <script type="text/javascript" src="taskpane.js"></script>
+</body>
+</html>
